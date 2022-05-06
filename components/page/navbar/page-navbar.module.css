@@ -3,5 +3,6 @@
   top: 0;
   width: 100%;
   height: var(--page-padding);
+  padding: 10px var(--page-padding) 0 48px;
   background-color: var(--color-bg-default);
 }
