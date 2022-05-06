@@ -1,0 +1,3 @@
+.root {
+  border: var(--page-padding) solid var(--color-bg-default);
+}
