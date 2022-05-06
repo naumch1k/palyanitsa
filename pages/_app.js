@@ -1,7 +1,5 @@
-import '../styles/globals.css'
+import { App } from '../components/app';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import '../shared/styles/globals.css';
 
-export default MyApp
+export default App;
