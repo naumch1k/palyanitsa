@@ -1,4 +1,5 @@
 module.exports =  {
   mobile: '640px',
   tablet: '800px',
+  desktop: '1440px',
 };

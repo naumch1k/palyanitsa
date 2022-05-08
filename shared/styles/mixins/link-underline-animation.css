@@ -1,0 +1,13 @@
+@define-mixin link-underline-animation {
+  animation: underline .5s;
+
+  @keyframes underline {
+    0% {
+      transform: scaleX(0);
+    }
+
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}

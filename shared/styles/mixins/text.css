@@ -1,0 +1,24 @@
+@define-mixin text {
+  font-family: freight-sans-pro, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@define-mixin text-small {
+  font-size: 14px;
+  line-height: 1.5;
+
+  @media (max-width: $desktop) {
+    font-size: 12px;
+  }
+}
+
+@define-mixin text-link {
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 1.5;
+
+  @media (max-width: $desktop) {
+    font-size: 12px;
+  }
+}
