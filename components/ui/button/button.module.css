@@ -1,0 +1,28 @@
+.button {
+  @mixin text;
+  @mixin text-button;
+
+  min-width: 185px;
+  height: 72px;
+  padding: 12px 18px;
+  border: 1px solid var(--color-text-primary);
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  transition: color .5s, background-color .5s ease;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-text-primary);
+    color: var(--color-bg-primary);
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+}
