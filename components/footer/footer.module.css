@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  height: 550px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 250px;
+
+  @media (max-width: $desktop) {
+    height: 400px;
+    padding-top: 150px;
+  }
+}
+
+.text {
+  @mixin text;
+  @mixin text-small;
+
+  margin: auto 0 0;
+  color: var(--color-text-primary);
+  letter-spacing: 3px;
+}

@@ -1,5 +1,6 @@
 import { Page } from '../page';
 import { Navbar } from '../navbar';
+import { Footer } from '../footer';
 import { Logotype } from '../logotype';
 
 export const AppLayout = ({ children }) => {
@@ -20,6 +21,9 @@ export const AppLayout = ({ children }) => {
         {children}
       </Page.Content>
       <Page.Footer/>
+      <Page.Footer>
+        <Footer/>
+      </Page.Footer>
     </Page>
   );
 };

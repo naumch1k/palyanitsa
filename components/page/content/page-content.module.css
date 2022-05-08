@@ -2,5 +2,9 @@
   position: relative;
   z-index: 1;
   top: var(--page-padding);
-  margin-bottom: 450px;
+  margin-bottom: 600px;
+
+  @media (max-width: $desktop) {
+    margin-bottom: 450px;
+  }
 }
