@@ -1,0 +1,12 @@
+.root {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.bottom-placeholder {
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
+  height: var(--page-padding);
+  background-color: var(--color-bg-default);
+}

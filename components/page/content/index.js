@@ -6,8 +6,8 @@ const cn = classNames.bind(styles);
 
 export const PageContent = ({ children }) => {
   return (
-    <div className={cn('root')}>
+    <main className={cn('root')}>
       {children}
-    </div>
+    </main>
   );
 };
