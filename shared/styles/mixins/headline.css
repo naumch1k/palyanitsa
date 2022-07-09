@@ -1,0 +1,25 @@
+@define-mixin headline {
+  font-family: poppins, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+}
+
+@define-mixin headline1 {
+  font-size: clamp(60px, 21vw, 200px);
+  letter-spacing: -.02em;
+  line-height: .8;
+
+  @media (max-width: $tablet) {
+    font-size: 5em;
+  }
+}
+
+@define-mixin headline-accent {
+  color: var(--color-accent);
+  font-size: .2em;
+  letter-spacing: -.05em;
+
+  @media (max-width: $tablet) {
+    font-size: .4em;
+  }
+}

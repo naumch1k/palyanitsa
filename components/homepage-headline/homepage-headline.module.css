@@ -1,0 +1,37 @@
+.root {
+  display: flex;
+  min-height: calc(100vh - 2 * var(--page-padding));
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-default);
+}
+
+.title {
+  @mixin headline;
+  @mixin headline1;
+
+  max-width: min-content;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.title-accent {
+  @mixin headline-accent;
+
+  display: block;
+  margin: 0 0 15px 20px;
+  text-transform: lowercase;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 15px;
+  }
+}
+
+.dot {
+  position: relative;
+
+  &::before {
+    @mixin dot;
+    @mixin jumping-dot-animation;
+  }
+}

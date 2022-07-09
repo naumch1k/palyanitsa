@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import { AppLayout } from '../components/app-layout/';
+import { HomepageHeadline } from '../components/homepage-headline';
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
           Palyanitsa Game Studio
         </title>
       </Head>
+      <HomepageHeadline/>
     </AppLayout>
   );
 };
