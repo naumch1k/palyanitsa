@@ -7,7 +7,7 @@ const HomePage = () => {
     <AppLayout>
       <Head>
         <title>
-          Polyanitsa Game Studio
+          Palyanitsa Game Studio
         </title>
       </Head>
     </AppLayout>
