@@ -42,3 +42,12 @@
     url("/fonts/FreightSansProSemibold-Regular.woff2") format("woff2"),
     url("/fonts/FreightSansProSemibold-Regular.woff") format("woff");
 }
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url("/fonts/Poppins-Black.woff2") format("woff2"),
+    url("/fonts/Poppins-Black.woff") format("woff");
+}
