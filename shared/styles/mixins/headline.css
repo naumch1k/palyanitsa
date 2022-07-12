@@ -1,25 +1,26 @@
 @define-mixin headline {
+  margin: 0;
   font-family: poppins, Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
 }
 
 @define-mixin headline1 {
-  font-size: clamp(60px, 21vw, 200px);
+  font-size: 15em;
   letter-spacing: -.02em;
   line-height: .8;
 
-  @media (max-width: $tablet) {
-    font-size: 5em;
-  }
+  @media (max-width: $desktop) { font-size: 10em; }
+
+  @media (max-width: $tablet) { font-size: 7em; }
+
+  @media (max-width: $mobile) { font-size: 6em; }
 }
 
 @define-mixin headline-accent {
   color: var(--color-accent);
   font-size: .2em;
-  letter-spacing: -.05em;
+  letter-spacing: -.04em;
 
-  @media (max-width: $tablet) {
-    font-size: .4em;
-  }
+  @media (max-width: $tablet) { font-size: .3em; }
 }
