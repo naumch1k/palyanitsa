@@ -9,7 +9,6 @@ export const AppLayout = ({ children }) => {
       <Page.Content>
         {children}
       </Page.Content>
-      <Page.Footer/>
       <Page.Footer>
         <Footer/>
       </Page.Footer>

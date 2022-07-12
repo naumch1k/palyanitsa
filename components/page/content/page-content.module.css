@@ -7,4 +7,9 @@
   @media (max-width: $desktop) {
     margin-bottom: 450px;
   }
+
+  @media (max-width: $mobile) {
+    top: 0;
+    margin-bottom: 0;
+  }
 }

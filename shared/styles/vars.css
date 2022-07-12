@@ -1,4 +1,12 @@
 :root {
-  --content-max-width: calc(100vw - 2 * var(--page-padding));
+  --min-content-width: 414px;
   --page-padding: 50px;
+
+  @media (max-width: $tablet) {
+    --page-padding: 40px;
+  }
+
+  @media (max-width: $mobile) {
+    --page-padding: 20px;
+  }
 }

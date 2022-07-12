@@ -1,6 +1,6 @@
 .root {
-  max-width: var(--content-max-width);
-  margin: 0 auto;
+  display: grid;
+  min-width: var(--min-content-width);
 }
 
 .bottom-placeholder {

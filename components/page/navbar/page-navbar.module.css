@@ -1,8 +1,11 @@
 .root {
   position: fixed;
   z-index: 2;
-  width: var(--content-max-width);
-  height: var(--page-padding);
+  width: 100%;
   padding-top: 10px;
   background-color: var(--color-bg-default);
+
+  @media (max-width: $tablet) {
+    position: static;
+  }
 }
