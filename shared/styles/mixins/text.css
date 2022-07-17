@@ -6,11 +6,7 @@
 
 @define-mixin text-small {
   font-size: 14px;
-  line-height: 1.5;
-
-  @media (max-width: $desktop) {
-    font-size: 12px;
-  }
+  line-height: 1.3;
 }
 
 @define-mixin text-link {

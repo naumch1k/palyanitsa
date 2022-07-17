@@ -1,4 +1,5 @@
 import { HomepageLayoutHeadline } from './headline';
+import { HomepageLayoutAbout } from './about';
 
 export const HomepageLayout = ({ children }) => {
   return (
@@ -9,3 +10,4 @@ export const HomepageLayout = ({ children }) => {
 };
 
 HomepageLayout.Headline = HomepageLayoutHeadline;
+HomepageLayout.About = HomepageLayoutAbout;

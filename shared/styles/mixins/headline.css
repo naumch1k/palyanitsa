@@ -15,6 +15,20 @@
   @media (max-width: $tablet) { font-size: 7em; }
 
   @media (max-width: $mobile) { font-size: 6em; }
+
+  @define-mixin headline2 {
+    font-size: 80px;
+    letter-spacing: .02em;
+    line-height: 1;
+
+    @media (max-width: $tablet) { font-size: 40px; }
+  }
+
+  @define-mixin headline3 {
+    font-size: 20px;
+    letter-spacing: .04em;
+    line-height: 1;
+  }
 }
 
 @define-mixin headline-accent {
