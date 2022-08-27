@@ -1,0 +1,24 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/text.scss" as text;
+
+.root {
+  display: flex;
+  height: 550px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 250px;
+
+  @media (max-width: breakpoints.$desktop) {
+    height: 400px;
+    padding-top: 160px;
+  }
+}
+
+.text {
+  @include text.text;
+  @include text.text-small;
+
+  margin: auto 0 0;
+  color: var(--color-dark-primary);
+  letter-spacing: 3px;
+}
