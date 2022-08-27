@@ -19,7 +19,21 @@
   @media (max-width: breakpoints.$mobile) { font-size: 6em; }
 }
 
-@mixin headline-accent {
+@mixin headline-medium() {
+  font-size: 80px;
+  letter-spacing: .02em;
+  line-height: 1;
+
+  @media (max-width: breakpoints.$tablet) { font-size: 40px; }
+}
+
+@mixin headline-small() {
+  font-size: 20px;
+  letter-spacing: .04em;
+  line-height: 1;
+}
+
+@mixin headline-accent() {
   font-size: .2em;
   letter-spacing: -.04em;
 
