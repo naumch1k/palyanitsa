@@ -1,0 +1,25 @@
+{
+  "title": "What We Do",
+  "items": [
+    {
+      "icon": "/images/homepage/about/mock-icon.svg",
+      "heading": "Research & Strategy",
+      "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "icon": "/images/homepage/about/mock-icon.svg",
+      "heading": "UX Design",
+      "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "icon": "/images/homepage/about/mock-icon.svg",
+      "heading": "Visual Design",
+      "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "icon": "/images/homepage/about/mock-icon.svg",
+      "heading": "Usability Testing",
+      "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    }
+  ]
+}
