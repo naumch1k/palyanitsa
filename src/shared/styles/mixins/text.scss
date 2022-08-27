@@ -24,3 +24,9 @@
     font-size: 12px;
   }
 }
+
+@mixin text-button() {
+  font-size: 14px;
+  letter-spacing: 4px;
+  line-height: 1;
+}
