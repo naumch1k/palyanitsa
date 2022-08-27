@@ -2,8 +2,10 @@ import { AppLayout } from '../app-layout';
 import { HomepageLayout } from '../homepage-layout';
 import { HomepageHeadline } from '../homepage-headline';
 import { HomepageAbout } from '../homepage-about';
+import { HomepageTeam } from '../homepage-team';
 
 import aboutData from './assets/homepage-about/mock-data.json';
+import teamData from './assets/homepage-team/mock-data.json';
 
 const App = () => (
   <AppLayout>
@@ -17,6 +19,12 @@ const App = () => (
           items={aboutData.items}
         />
       </HomepageLayout.About>
+      <HomepageLayout.Team>
+        <HomepageTeam
+          title={teamData.title}
+          description={teamData.description}
+        />
+      </HomepageLayout.Team>
     </HomepageLayout>
   </AppLayout>
 

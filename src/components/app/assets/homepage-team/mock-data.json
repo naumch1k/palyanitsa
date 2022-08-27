@@ -1,0 +1,58 @@
+{
+  "title": "Meet Our Team",
+  "description": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  ],
+  "team": [
+    {
+      "id": 1,
+      "image": "/images/homepage/about.jpg",
+      "name": "Ivan",
+      "role": "Developer"
+    },
+    {
+      "id": 2,
+      "image": "/images/homepage/about.jpg",
+      "name": "Sasha",
+      "role": "Designer"
+    },
+    {
+      "id": 3,
+      "image": "/images/homepage/about.jpg",
+      "name": "Caue",
+      "role": "Mainly teaches Ivan"
+    },
+    {
+      "id": 4,
+      "image": "/images/homepage/about.jpg",
+      "name": "Julianna",
+      "role": "Designer"
+    },
+    {
+      "id": 5,
+      "image": "/images/homepage/about.jpg",
+      "name": "Dmytro",
+      "role": "Project Manager"
+    },
+    {
+      "id": 6,
+      "image": "/images/homepage/about.jpg",
+      "name": "George",
+      "role": "Designer"
+    },
+    {
+      "id": 7,
+      "image": "/images/homepage/about.jpg",
+      "name": "Artem",
+      "role": "Designer / Team Lead"
+    },
+    {
+      "id": 8,
+      "image": "/images/homepage/about.jpg",
+      "name": "Caleb",
+      "role": "He supports us"
+    }
+  ]
+}
