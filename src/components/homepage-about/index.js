@@ -13,7 +13,8 @@ export const HomepageAbout = ({ title, items }) => (
         >
           <div className={styles.icon}>
             <img
-              src={item.icon}
+              /* TODO: find better solution */
+              src={process.env.PUBLIC_URL + item.icon}
               alt={`An icon for ${item.heading}`}
             />
           </div>
