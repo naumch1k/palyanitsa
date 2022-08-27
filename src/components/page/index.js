@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { PageContent } from './content';
+import { PageFooter } from './footer';
 
 import styles from './page.module.scss';
 
@@ -14,7 +15,8 @@ export const Page = ({ children }) => {
 };
 
 Page.Content = PageContent;
+Page.Footer = PageFooter;
 
 Page.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.array
 };

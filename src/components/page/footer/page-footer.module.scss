@@ -1,0 +1,14 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  position: fixed;
+  z-index: 0;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: var(--page-padding);
+  background-color: var(--color-light-default);
+
+  @media (max-width: breakpoints.$mobile) {
+    position: static;
+  }
+}
