@@ -1,0 +1,53 @@
+@font-face {
+  font-family: freight-big-pro;
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url("/public/fonts/FreightBigPro/FreightBigProLight-Regular.woff2") format("woff2"),
+    url("/public/fonts/FreightBigPro/FreightBigProLight-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: freight-big-pro;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("/public/fonts/FreightBigPro/FreightBigProBook-Regular.woff2") format("woff2"),
+    url("/public/fonts/FreightBigPro/FreightBigProBook-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: freight-sans-pro;
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url("/public/fonts/FreightSansPro/FreightSansProLight-Regular.woff2") format("woff2"),
+    url("/public/fonts/FreightSansPro/FreightSansProLight-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: freight-sans-pro;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("/public/fonts/FreightSansPro/FreightSansProBook-Regular.woff2") format("woff2"),
+    url("/public/fonts/FreightSansPro/FreightSansProBook-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: freight-sans-pro;
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("/public/fonts/FreightSansPro/FreightSansProSemibold-Regular.woff2") format("woff2"),
+    url("/public/fonts/FreightSansPro/FreightSansProSemibold-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url("/public/fonts/Poppins/Poppins-Black.woff2") format("woff2"),
+    url("/public/fonts/Poppins/Poppins-Black.woff") format("woff");
+}
