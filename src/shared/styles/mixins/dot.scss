@@ -1,0 +1,10 @@
+@mixin dot() {
+  position: absolute;
+  top: -.18em;
+  left: .04em;
+  width: .2em;
+  height: .2em;
+  background: var(--color-accent);
+  border-radius: 50%;
+  content: "";
+}
