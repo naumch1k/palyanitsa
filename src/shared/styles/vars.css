@@ -1,0 +1,15 @@
+@use "../../breakpoints.scss" as breakpoints;
+
+:root {
+  --max-content-width: 1280px;
+  --min-content-width: 414px;
+  --page-padding: 50px;
+
+  @media (max-width: $tablet) {
+    --page-padding: 40px;
+  }
+
+  @media (max-width: $mobile) {
+    --page-padding: 20px;
+  }
+}
