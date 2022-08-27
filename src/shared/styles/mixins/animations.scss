@@ -11,3 +11,12 @@
     100% { transform: translateY(0) scale(1.25, .75); }
   }
 }
+
+@mixin link-underline {
+  animation: underline .5s;
+
+  @keyframes underline {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+}

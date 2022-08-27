@@ -1,0 +1,24 @@
+@use "../../../shared/styles/mixins/text.scss" as text;
+@use "../../../shared/styles/mixins/link-underline.scss" as link;
+@use "../../../shared/styles/mixins/animations.scss" as animations;
+
+.link {
+  @include text.text;
+  @include text.text-link;
+
+  position: relative;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+.underline {
+  &:hover::after,
+  &:focus-visible::after {
+    @include link.link-underline;
+    @include animations.link-underline;
+
+    background-color: var(--color-dark-primary-50);
+    transform-origin: 0;
+  }
+}
