@@ -1,0 +1,44 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/headline.scss" as headline;
+@use "../../shared/styles/mixins/dot.scss" as dot;
+@use "../../shared/styles/mixins/animations.scss" as animations;
+
+.title {
+  @include headline.headline;
+  @include headline.headline-large;
+
+  max-width: min-content;
+
+  /* title-accent font-size + it's bottom margin */
+  margin-bottom: calc(.2em + 20px);
+  color: var(--color-dark-primary);
+  text-transform: uppercase;
+
+  @media (max-width: breakpoints.$tablet) {
+    margin-bottom: calc(.3em + 15px);
+  }
+}
+
+.titleAccent {
+  @include headline.headline-accent;
+
+  display: block;
+  margin: 0 0 15px 20px;
+  color: var(--color-accent);
+  text-transform: lowercase;
+
+  @media (max-width: breakpoints.$tablet) {
+    margin: 0 0 15px;
+  }
+}
+
+.dot {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+
+  &::before {
+    @include dot.dot;
+    @include animations.jumping-dot;
+  }
+}
