@@ -1,9 +1,16 @@
-import styles from './app.module.scss';
+import { AppLayout } from '../app-layout';
+import { HomepageLayout } from '../homepage-layout';
+import { HomepageHeadline } from '../homepage-headline';
 
 const App = () => (
-  <h1 className={styles.title}>
-    Hello, world!
-  </h1>
+  <AppLayout>
+    <HomepageLayout>
+      <HomepageLayout.Headline>
+        <HomepageHeadline/>
+      </HomepageLayout.Headline>
+    </HomepageLayout>
+  </AppLayout>
+
 );
 
 export default App;
