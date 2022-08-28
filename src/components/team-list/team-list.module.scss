@@ -1,0 +1,20 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/max-width.scss" as max-width;
+
+.root {
+  @include max-width.page-content;
+
+  padding: 0;
+  margin: 0 auto;
+  column-count: 3;
+  column-gap: 20px;
+  list-style: none;
+
+  @media (max-width: breakpoints.$tablet) {
+    column-count: 2;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    column-count: 1;
+  }
+}
