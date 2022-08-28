@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+import { TeamList } from '../team-list';
+
 import styles from './homepage-team.module.scss';
 
 export const HomepageTeam = ({ title, description, team }) => (
@@ -19,11 +21,16 @@ export const HomepageTeam = ({ title, description, team }) => (
         </div>
       </div>
     </div>
+    <div className={styles.photoGallery}>
+      <TeamList
+        team={team}
+      />
+    </div>
   </>
 );
 
 HomepageTeam.propTypes = {
   title: PropTypes.string,
   description: PropTypes.array,
-  team: PropTypes.object
+  team: PropTypes.array
 };

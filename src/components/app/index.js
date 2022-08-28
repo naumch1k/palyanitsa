@@ -23,6 +23,7 @@ const App = () => (
         <HomepageTeam
           title={teamData.title}
           description={teamData.description}
+          team={teamData.team}
         />
       </HomepageLayout.Team>
     </HomepageLayout>

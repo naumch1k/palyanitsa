@@ -8,49 +8,55 @@
   "team": [
     {
       "id": 1,
-      "image": "/images/homepage/about.jpg",
+      "image": "https://images.unsplash.com/photo-1554410637-1a8267402b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
       "name": "Ivan",
       "role": "Developer"
     },
     {
       "id": 2,
-      "image": "/images/homepage/about.jpg",
+      "image": "https://images.unsplash.com/photo-1554410637-1a8267402b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
       "name": "Sasha",
-      "role": "Designer"
+      "role": "Designer",
+      "cardSize": "Large"
     },
     {
       "id": 3,
-      "image": "/images/homepage/about.jpg",
+      "image": "https://images.unsplash.com/photo-1554410637-1a8267402b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
       "name": "Caue",
-      "role": "Mainly teaches Ivan"
+      "role": "Mainly teaches Ivan",
+      "cardSize": "Medium"
     },
     {
       "id": 4,
-      "image": "/images/homepage/about.jpg",
+      "image": "https://images.unsplash.com/photo-1554410637-1a8267402b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
       "name": "Julianna",
-      "role": "Designer"
+      "role": "Designer",
+      "cardSize": "Medium"
     },
     {
       "id": 5,
-      "image": "/images/homepage/about.jpg",
+      "image": "https://images.unsplash.com/photo-1554410637-1a8267402b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
       "name": "Dmytro",
-      "role": "Project Manager"
+      "role": "Project Manager",
+      "cardSize": "Small"
     },
     {
       "id": 6,
-      "image": "/images/homepage/about.jpg",
+      "image": "https://images.unsplash.com/photo-1554410637-1a8267402b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
       "name": "George",
-      "role": "Designer"
+      "role": "Designer",
+      "cardSize": "Large"
     },
     {
       "id": 7,
-      "image": "/images/homepage/about.jpg",
+      "image": "https://images.unsplash.com/photo-1554410637-1a8267402b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
       "name": "Artem",
-      "role": "Designer / Team Lead"
+      "role": "Designer / Team Lead",
+      "cardSize": "Large"
     },
     {
       "id": 8,
-      "image": "/images/homepage/about.jpg",
+      "image": "https://images.unsplash.com/photo-1554410637-1a8267402b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
       "name": "Caleb",
       "role": "He supports us"
     }
