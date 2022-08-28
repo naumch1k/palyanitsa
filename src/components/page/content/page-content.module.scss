@@ -3,7 +3,7 @@
 .root {
   position: relative;
   z-index: 1;
-  top: var(--page-padding);
+  top: 50px;
   margin-bottom: 600px;
 
   @media (max-width: breakpoint.$desktop) {

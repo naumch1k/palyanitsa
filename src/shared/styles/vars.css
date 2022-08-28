@@ -1,17 +1,4 @@
-/* TODO: avoid hardcoding breakpoint, find a solution */
-
-/* @use "../../breakpoints.scss" as breakpoints; */
-
 :root {
   --max-content-width: 1280px;
   --min-content-width: 414px;
-  --page-padding: 50px;
-
-  @media (max-width: 800px) {
-    --page-padding: 40px;
-  }
-
-  @media (max-width: 640px) {
-    --page-padding: 20px;
-  }
 }
