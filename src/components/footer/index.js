@@ -6,12 +6,14 @@ import styles from './footer.module.scss';
 export const Footer = () => {
   return (
     <div className={styles.root}>
-      <Button
-        href="mailto:naumchikirina@yahoo.com"
-        size="l"
-        isLink
-        label="Email us"
-      />
+      <div className={styles.buttonWrapper}>
+        <Button
+          href="mailto:naumchikirina@yahoo.com"
+          size="l"
+          isLink
+          label="Email us"
+        />
+      </div>
       <p className={styles.text}>designed and built by {' '}
         <TextLink
           href="https://naumchik.me/"

@@ -1,17 +1,11 @@
-@use "../../../shared/breakpoints.scss" as breakpoint;
+@use "../../../shared/breakpoints.scss" as breakpoints;
 
 .root {
   position: relative;
   z-index: 1;
-  top: 50px;
-  margin-bottom: 600px;
+  margin-bottom: 40vh;
 
-  @media (max-width: breakpoint.$desktop) {
-    margin-bottom: 450px;
-  }
-
-  @media (max-width: breakpoint.$mobile) {
-    top: 0;
-    margin-bottom: 0;
+  @media (max-height: breakpoints.$mobile) {
+    margin-bottom: 60vh;
   }
 }
