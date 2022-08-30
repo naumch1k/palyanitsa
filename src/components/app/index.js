@@ -3,9 +3,10 @@ import { HomepageLayout } from '../homepage-layout';
 import { HomepageHeadline } from '../homepage-headline';
 import { HomepageAbout } from '../homepage-about';
 import { HomepageTeam } from '../homepage-team';
+import { HomepageCallToAction } from '../homepage-call-to-action';
 
 import aboutData from './assets/homepage-about/mock-data.json';
-import teamData from './assets/homepage-team/mock-data.json';
+import { teamData } from './assets/homepage-team/mock-data';
 
 const App = () => (
   <AppLayout>
@@ -26,6 +27,9 @@ const App = () => (
           team={teamData.team}
         />
       </HomepageLayout.Team>
+      <HomepageLayout.CallToAction>
+        <HomepageCallToAction/>
+      </HomepageLayout.CallToAction>
     </HomepageLayout>
   </AppLayout>
 

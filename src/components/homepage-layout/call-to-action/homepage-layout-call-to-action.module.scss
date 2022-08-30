@@ -1,0 +1,14 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  position: relative;
+  z-index: -2;
+  display: flex;
+  min-height: 60vh;
+  align-items: center;
+  background: var(--color-accent);
+
+  @media (max-height: breakpoints.$mobile) {
+    min-height: 40vh;
+  }
+}
