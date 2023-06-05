@@ -4,6 +4,7 @@ import JulianaPic from './juliana.jpg';
 import GeorgePic from './george.jpg';
 import DmytroPic from './dmytro.jpg';
 import ArtemPic from './artem.jpg';
+import CalebPic from './caleb.jpg';
 
 export const teamData = {
   title: 'Meet Our Team',
@@ -30,9 +31,19 @@ export const teamData = {
     {
       id: 3,
       image: 'https://images.unsplash.com/photo-1554410637-1a8267402b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
-      name: 'Caue',
-      role: 'Mainly teaches Ivan',
+      name: 'Cauê Waneck',
+      role: 'Mentor',
       cardSize: 'Medium'
+    },
+    {
+      id: 15,
+      name: 'Stef Wu',
+      role: 'Mentor'
+    },
+    {
+      id: 16,
+      name: 'Marian Bolalek',
+      role: 'Mentor'
     },
     {
       id: 4,
@@ -56,6 +67,26 @@ export const teamData = {
       cardSize: 'Small'
     },
     {
+      id: 12,
+      name: 'Dan Brakeley',
+      role: 'Mentor'
+    },
+    {
+      id: 13,
+      name: 'Jean Romero',
+      role: 'Mentor'
+    },
+    {
+      id: 14,
+      name: 'Becca Gray',
+      role: 'Mentor'
+    },
+    {
+      id: 17,
+      name: 'Jack Fader',
+      role: 'Mentor'
+    },
+    {
       id: 7,
       image: ArtemPic,
       name: 'Artem',
@@ -70,9 +101,19 @@ export const teamData = {
     },
     {
       id: 9,
-      image: 'https://images.unsplash.com/photo-1554410637-1a8267402b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
-      name: 'Caleb',
-      role: 'He supports us'
+      image: CalebPic,
+      name: 'Caleb Wheeler',
+      role: 'Mentor'
+    },
+    {
+      id: 10,
+      name: 'Ben Wu',
+      role: 'Mentor'
+    },
+    {
+      id: 11,
+      name: 'Dan Ogles',
+      role: 'Mentor'
     }
   ]
 };

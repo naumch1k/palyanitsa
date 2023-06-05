@@ -1,30 +1,47 @@
-@use "../../../shared/styles/mixins/text.scss" as text;
+@use "../../../shared/styles/mixins/headline.scss" as headline;
 
 .root {
-  @include text.text;
-  @include text.text-button;
+  @include headline.headline;
+  @include headline.headline-small;
 
-  min-width: 185px;
-  height: 72px;
-  padding: 12px 18px;
-  border: 1px solid var(--color-dark-primary);
-  background-color: transparent;
+  position: relative;
+  padding: 20px 50px;
+  border: solid 4px var(--color-accent);
+  background: transparent;
+  color: var(--color-accent);
   cursor: pointer;
   outline: none;
   text-transform: uppercase;
-  transition: color .5s, background-color .5s ease;
 
-  &:hover,
-  &:focus-visible {
-    background-color: var(--color-dark-primary);
-    color: var(--color-light-primary);
+  &::before,
+  &::after {
+    position: absolute;
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background: var(--color-light-default);
+    content: "";
+    transition: all .6s;
+  }
+
+  &::after {
+    transform: translate(5px, 36px) skewX(50deg);
+  }
+
+  &::before {
+    transform: translate(-20px, -27px) skewX(50deg);
+  }
+
+  &:hover::before {
+    transform: translate(100px, -27px) skewX(50deg);
+  }
+
+  &:hover::after {
+    transform: translate(-115px, 36px) skewX(50deg);
   }
 }
 
 .link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: inherit;
+  color: var(--color-accent);
   text-decoration: none;
 }

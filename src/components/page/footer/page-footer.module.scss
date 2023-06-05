@@ -1,10 +1,8 @@
-@use "../../../shared/breakpoints.scss" as breakpoints;
-
 .root {
   position: fixed;
   z-index: 0;
   bottom: 0;
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   background-color: var(--color-light-default);
 }

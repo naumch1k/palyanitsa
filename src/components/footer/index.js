@@ -11,17 +11,21 @@ export const Footer = () => {
           href="mailto:naumchikirina@yahoo.com"
           size="l"
           isLink
-          label="Email us"
+          label="Get in touch"
         />
       </div>
-      <p className={styles.text}>designed and built by {' '}
-        <TextLink
-          href="https://naumchik.me/"
-          isOutsideLink
-        >
-          Irina Naumchik
-        </TextLink>
-      </p>
+      <div className={styles.textContainer}>
+        <p className={styles.text}>designed and built by {' '}
+          <TextLink
+            href="https://naumchik.me/"
+            isOutsideLink
+          >
+            Irina Naumchik
+          </TextLink>
+        </p>
+        <div className={styles.heart}></div>
+      </div>
+
     </div>
   );
 };

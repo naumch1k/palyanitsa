@@ -9,9 +9,17 @@
 
 .buttonWrapper {
   display: flex;
-  height: calc(40vh - 50px - 21px);
+  height: calc(40vh - 30px - 21px);
   align-items: center;
   justify-content: center;
+
+  @media (max-height: breakpoints.$mobile) {
+    height: calc(60vh - 30px - 21px);
+  }
+}
+
+.textContainer {
+  position: relative;
 }
 
 .text {
@@ -22,3 +30,31 @@
   color: var(--color-dark-primary);
   letter-spacing: 3px;
 }
+
+.heart {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 107%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background: url('../../../public/images/footer/hearts.png') no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  animation: fave-heart 1s steps(28);
+}
+
+.heart:hover {
+  background-position: -2240px 0;
+  transition: background 2s steps(28);
+}
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -2240px 0;
+  }
+}
+
