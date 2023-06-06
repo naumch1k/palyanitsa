@@ -25,7 +25,7 @@
   }
 
   &::after {
-    transform: translate(5px, 36px) skewX(50deg);
+    transform: translate(5px, 50px) skewX(50deg);
   }
 
   &::before {
@@ -37,7 +37,7 @@
   }
 
   &:hover::after {
-    transform: translate(-115px, 36px) skewX(50deg);
+    transform: translate(-115px, 50px) skewX(50deg);
   }
 }
 
