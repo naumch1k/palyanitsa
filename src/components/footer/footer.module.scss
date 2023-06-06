@@ -32,22 +32,23 @@
 }
 
 .heart {
+  position: absolute;
+  top: 0;
+  left: 107%;
   width: 80px;
   height: 80px;
-  position: absolute;
-  left: 107%;
-  top: 0;
-  transform: translate(-50%, -50%);
-  background: url('../../../public/images/footer/hearts.png') no-repeat;
+  animation: fave-heart 1s steps(28);
+  background: url("../../../public/images/footer/hearts.png") no-repeat;
   background-position: 0 0;
   cursor: pointer;
-  animation: fave-heart 1s steps(28);
+  transform: translate(-50%, -50%);
 }
 
 .heart:hover {
   background-position: -2240px 0;
   transition: background 2s steps(28);
 }
+
 @keyframes fave-heart {
   0% {
     background-position: 0 0;
@@ -57,4 +58,3 @@
     background-position: -2240px 0;
   }
 }
-
