@@ -1,36 +1,20 @@
 import PropTypes from 'prop-types';
+import { SectionHeadline } from '../section-headline';
 
-import { TeamList } from '../team-list';
-
-import styles from './homepage-team.module.scss';
-
-export const HomepageTeam = ({ title, description, team }) => (
+export const HomepageTeam = ({ tag, title, subtitle, headline_image }) => (
   <>
-    <div className={styles.content}>
-      <div className={styles.contentWrapper}>
-        <h2 className={styles.title}>{title}</h2>
-        <div className={styles.description}>
-          {description && description.map((paragraph, idx) =>
-            <p
-              className={styles.paragraph}
-              key={idx}
-            >
-              {paragraph}
-            </p>
-          )}
-        </div>
-      </div>
-    </div>
-    <div className={styles.photoGallery}>
-      <TeamList
-        team={team}
-      />
-    </div>
+    <SectionHeadline
+      tag={tag}
+      title={title}
+      subtitle={subtitle}
+      image={headline_image}
+    />
   </>
 );
 
 HomepageTeam.propTypes = {
+  tag: PropTypes.string,
   title: PropTypes.string,
-  description: PropTypes.array,
-  team: PropTypes.array
+  subtitle: PropTypes.string,
+  headline_image: PropTypes.string,
 };

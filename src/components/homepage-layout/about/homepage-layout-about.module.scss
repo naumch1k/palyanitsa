@@ -2,19 +2,6 @@
 @use "../../../shared/breakpoints.scss" as breakpoints;
 
 .root {
-  @include max-width.page-content;
-
-  display: grid;
-  padding: 200px 0;
-  margin: 0 auto;
+  margin: 0;
   background-color: var(--color-light-default);
-  gap: 80px;
-
-  @media (max-width: breakpoints.$tablet) {
-    padding: 60px 0 80px;
-  }
-
-  @media (max-width: breakpoints.$mobile) {
-    gap: 80px;
-  }
 }

@@ -5,8 +5,8 @@ import { HomepageAbout } from '../homepage-about';
 import { HomepageTeam } from '../homepage-team';
 import { HomepageCallToAction } from '../homepage-call-to-action';
 
-import aboutData from './assets/homepage-about/mock-data.json';
-import { teamData } from './assets/homepage-team/mock-data';
+import { aboutData } from './assets/homepage-about/mock-data.js';
+import { teamData } from './assets/homepage-team/mock-data.js';
 
 const App = () => (
   <AppLayout>
@@ -16,15 +16,18 @@ const App = () => (
       </HomepageLayout.Headline>
       <HomepageLayout.About>
         <HomepageAbout
+          tag={aboutData.tag}
           title={aboutData.title}
-          items={aboutData.items}
+          subtitle={aboutData.subtitle}
+          headline_image={aboutData.headline_image}
         />
       </HomepageLayout.About>
       <HomepageLayout.Team>
         <HomepageTeam
+          tag={teamData.tag}
           title={teamData.title}
-          description={teamData.description}
-          team={teamData.team}
+          subtitle={teamData.subtitle}
+          headline_image={teamData.headline_image}
         />
       </HomepageLayout.Team>
       <HomepageLayout.CallToAction>

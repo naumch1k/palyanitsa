@@ -1,32 +1,26 @@
 import PropTypes from 'prop-types';
-
+import { SectionHeadline } from '../section-headline';
 import styles from './homepage-about.module.scss';
 
-export const HomepageAbout = ({ title, items }) => (
+export const HomepageAbout = ({ tag, title, subtitle, headline_image }) => (
   <>
-    <h2 className={styles.title}>{title}</h2>
-    <ul className={styles.list}>
-      {items.map((item, idx) =>
-        <li
-          className={styles.listItem}
-          key={idx}
-        >
-          <div className={styles.icon}>
-            <img
-              /* TODO: find better solution */
-              src={process.env.PUBLIC_URL + item.icon}
-              alt={`An icon for ${item.heading}`}
-            />
-          </div>
-          <h3 className={styles.heading}>{item.heading}</h3>
-          <p className={styles.text}>{item.text}</p>
-        </li>
-      )}
-    </ul>
+    <SectionHeadline
+      tag={tag}
+      title={title}
+      subtitle={subtitle}
+      image={headline_image}
+    />
+    <div className={styles.content}>
+      <div className={styles.left}></div>
+      <div className={styles.right}></div>
+    </div>
   </>
+
 );
 
 HomepageAbout.propTypes = {
+  tag: PropTypes.string,
   title: PropTypes.string,
-  items: PropTypes.array
+  subtitle: PropTypes.string,
+  headline_image: PropTypes.string,
 };
