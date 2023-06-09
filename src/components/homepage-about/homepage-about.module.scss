@@ -9,3 +9,109 @@
     flex-direction: column;
   }
 }
+
+.principles {
+  width: 50%;
+  min-height: 500px;
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    width: 100%;
+    min-height: unset;
+  }
+}
+
+.tabs {
+  display: flex;
+  max-width: 585px;
+  flex-direction: column;
+  padding: 110px 15px 100px;
+  margin-left: auto;
+
+  @media (max-width: breakpoints.$desktop) {
+    padding: 110px 15px 100px 40px;
+  }
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    max-width: 750px;
+    padding: 110px 15px 100px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    padding: 0 15px 40px;
+  }
+}
+
+.tabList {
+  display: flex;
+  padding: 0;
+  margin: 0 0 50px;
+  gap: 25px;
+  list-style: none;
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 30px;
+  }
+}
+
+.tab {
+  @include headline.headline;
+  @include headline.headline-small;
+
+  color: var(--color-dark-primary-33);
+  cursor: pointer;
+  outline: none;
+  transition: color .5s, border-bottom .3s ease;
+}
+
+.selected {
+  border-bottom: 3px solid var(--color-accent);
+  color: var(--color-dark-primary);
+}
+
+/* .tabPanel {
+  margin-top: 50px;
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    margin-top: 30px;
+  }
+} */
+
+.tabPanelParagraph {
+  @include text.text;
+  @include text.text-medium;
+
+  max-width: 388px;
+  padding: 0;
+  margin: 0 0 18px;
+  color: var(--color-dark-primary);
+
+  @media (max-width: breakpoints.$tablet) {
+    margin: 0 0 10px;
+  }
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    max-width: unset;
+  }
+}
+
+.right {
+  width: 50%;
+  max-width: 585px;
+  background-color: var(--color-accent);
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    display: none;
+  }
+}
