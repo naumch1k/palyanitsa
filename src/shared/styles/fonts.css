@@ -1,55 +1,28 @@
 @font-face {
-  font-family: freight-big-pro;
+  font-family: poppins;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   src:
-    url("/public/fonts/FreightBigPro/FreightBigProLight-Regular.woff2") format("woff2"),
-    url("/public/fonts/FreightBigPro/FreightBigProLight-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: freight-big-pro;
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url("/public/fonts/FreightBigPro/FreightBigProBook-Regular.woff2") format("woff2"),
-    url("/public/fonts/FreightBigPro/FreightBigProBook-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: freight-sans-pro;
-  font-style: normal;
-  font-weight: 300;
-  src:
-    url("/public/fonts/FreightSansPro/FreightSansProLight-Regular.woff2") format("woff2"),
-    url("/public/fonts/FreightSansPro/FreightSansProLight-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: freight-sans-pro;
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url("/public/fonts/FreightSansPro/FreightSansProBook-Regular.woff2") format("woff2"),
-    url("/public/fonts/FreightSansPro/FreightSansProBook-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: freight-sans-pro;
-  font-style: normal;
-  font-weight: 600;
-  src:
-    url("/public/fonts/FreightSansPro/FreightSansProSemibold-Regular.woff2") format("woff2"),
-    url("/public/fonts/FreightSansPro/FreightSansProSemibold-Regular.woff") format("woff");
+    url("/public/fonts/Poppins/Poppins-ExtraLight.woff2") format("woff2"),
+    url("/public/fonts/Poppins/Poppins-ExtraLight.woff") format("woff");
 }
 
 @font-face {
   font-family: poppins;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 300;
   src:
-    url("/public/fonts/Poppins/Poppins-Black.woff2") format("woff2"),
-    url("/public/fonts/Poppins/Poppins-Black.woff") format("woff");
+    url("/public/fonts/Poppins/Poppins-Light.woff2") format("woff2"),
+    url("/public/fonts/Poppins/Poppins-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/public/fonts/Poppins/Poppins-Regular.woff2") format("woff2"),
+    url("/public/fonts/Poppins/Poppins-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -59,4 +32,13 @@
   src:
     url("/public/fonts/Poppins/Poppins-Bold.woff2") format("woff2"),
     url("/public/fonts/Poppins/Poppins-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url("/public/fonts/Poppins/Poppins-Black.woff2") format("woff2"),
+    url("/public/fonts/Poppins/Poppins-Black.woff") format("woff");
 }
