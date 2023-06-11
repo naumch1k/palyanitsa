@@ -1,17 +1,16 @@
-@use "../../../shared/styles/mixins/headline.scss" as headline;
+@use "../../../shared/styles/mixins/text.scss" as text;
 
 .root {
-  @include headline.headline;
-  @include headline.headline-small;
+  @include text.text;
+  @include text.text-button;
 
   position: relative;
-  padding: 20px 50px;
+  padding: 30px 50px;
   border: solid 4px var(--color-accent);
   background: transparent;
   color: var(--color-accent);
   cursor: pointer;
   outline: none;
-  text-transform: uppercase;
 
   &::before,
   &::after {
@@ -24,21 +23,13 @@
     transition: all .6s;
   }
 
-  &::after {
-    transform: translate(5px, 50px) skewX(50deg);
-  }
+  &::before { transform: translate(10px, -38px) skewX(50deg); }
 
-  &::before {
-    transform: translate(-20px, -27px) skewX(50deg);
-  }
+  &::after { transform: translate(-25px, 56px) skewX(50deg); }
 
-  &:hover::before {
-    transform: translate(100px, -27px) skewX(50deg);
-  }
+  &:hover::before { transform: translate(160px, -38px) skewX(50deg); }
 
-  &:hover::after {
-    transform: translate(-115px, 50px) skewX(50deg);
-  }
+  &:hover::after { transform: translate(-175px, 56px) skewX(50deg); }
 }
 
 .link {

@@ -22,7 +22,9 @@
 }
 
 @mixin text-button() {
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 700;
   letter-spacing: 4px;
-  line-height: 1;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
