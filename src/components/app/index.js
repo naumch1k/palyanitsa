@@ -40,6 +40,7 @@ const App = () => (
           title={teamData.title}
           subtitle={teamData.subtitle}
           headline_image={teamData.headline_image}
+          team={teamData.team}
         />
       </HomepageLayout.Team>
       <HomepageLayout.CallToAction>

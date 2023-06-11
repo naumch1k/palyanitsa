@@ -1,67 +1,29 @@
 @use "../../shared/breakpoints.scss" as breakpoints;
-@use "../../shared/styles/mixins/max-width.scss" as max-width;
-@use "../../shared/styles/mixins/headline.scss" as headline;
-@use "../../shared/styles/mixins/text.scss" as text;
 
-.content {
-  padding: 120px 0 60px;
-  background-color: var(--color-light-primary);
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 25%;
+  padding-bottom: 25%;
 
-  @media (max-width: breakpoints.$tablet) {
-    padding: 60px 0;
+  /* TODO: some fancy transition? */
+
+  @media (max-width: breakpoints.$desktop) {
+    width: 50%;
+    padding-bottom: 50%;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    width: 100%;
+    padding-bottom: 100%;
   }
 }
 
-.contentWrapper {
-  display: grid;
-
-  @include max-width.page-content;
-
-  margin: 0 auto;
-  gap: 80px;
-  grid-template-columns: 25% 1fr;
-
-  @media (max-width: breakpoints.$tablet) {
-    gap: 30px;
-    grid-template-columns: unset;
-  }
-}
-
-.title {
-  @include headline.headline;
-  @include headline.headline-medium;
-
-  width: min-content;
-  height: fit-content;
-  padding-bottom: 20px;
-  border-bottom: 3px solid var(--color-accent);
-  margin-left: auto;
-  text-align: end;
-  text-transform: uppercase;
-
-  @media (max-width: breakpoints.$tablet) {
-    width: max-content;
-    border-bottom: none;
-    margin-left: unset;
-  }
-}
-
-.description {
-  text-align: justify;
-}
-
-.paragraph {
-  @include text.text;
-  @include text.text-medium;
-
-  margin: 0 0 20px;
-
-  &:last-of-type {
-    margin: 0;
-  }
-}
-
-.photoGallery {
-  background: url("../../../public/images/homepage/team/bg.jpg") no-repeat;
-  background-size: 100% 200px;
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
