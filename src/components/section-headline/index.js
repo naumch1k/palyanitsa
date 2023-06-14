@@ -6,6 +6,7 @@ export const SectionHeadline = ({
   subtitle,
   tag,
   image,
+  children,
 }) => {
 
   return (
@@ -13,7 +14,10 @@ export const SectionHeadline = ({
       <div className={styles.imageColumn}>
         <div className={styles.imageWrapper}>
           <img className={styles.image} src={image}/>
+        </div>
+        <div className={styles.imageColumnContent}>
           <span className={styles.tag}>{tag}</span>
+          {children}
         </div>
       </div>
       <div className={styles.contentColumn}>
@@ -25,8 +29,9 @@ export const SectionHeadline = ({
 };
 
 SectionHeadline.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  tag: PropTypes.string,
-  image: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  children: PropTypes.node,
 };
