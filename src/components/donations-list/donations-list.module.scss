@@ -1,0 +1,20 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+
+.container {
+  padding: 130px 0;
+
+  @media (max-width: breakpoints.$mid-desktop) { padding: 90px 0; }
+
+  @media (max-width: breakpoints.$tablet) { padding: 70px 0; }
+
+  @media (max-width: breakpoints.$mobile) { padding: 0 0 70px; }
+}
+
+.root {
+  max-width: 800px;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+
+  @media (max-width: breakpoints.$mid-desktop) { max-width: calc(100% - 40px); }
+}
