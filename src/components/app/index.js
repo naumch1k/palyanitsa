@@ -11,6 +11,7 @@ import { aboutData } from './assets/homepage-about/mock-data.js';
 import { disciplinesData } from './assets/homepage-disciplines/mock-data';
 import { teamData } from './assets/homepage-team/mock-data.js';
 import { donationsData } from './assets/homepage-donations/mock-data.js';
+import { callToActionData } from './assets/homepage-call-to-action/mock-data';
 
 const App = () => (
   <AppLayout>
@@ -55,7 +56,12 @@ const App = () => (
         />
       </HomepageLayout.Donations>
       <HomepageLayout.CallToAction>
-        <HomepageCallToAction/>
+        <HomepageCallToAction
+          tag={callToActionData.tag}
+          title={callToActionData.title}
+          subtitle={callToActionData.subtitle}
+          headline_image={callToActionData.headline_image}
+        />
       </HomepageLayout.CallToAction>
     </HomepageLayout>
   </AppLayout>

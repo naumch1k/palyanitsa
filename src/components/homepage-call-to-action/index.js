@@ -1,17 +1,27 @@
 import PropTypes from 'prop-types';
+import { SectionHeadline } from '../section-headline';
 
-import styles from './homepage-call-to-action.module.scss';
+// import styles from './homepage-call-to-action.module.scss';
 
-export const HomepageCallToAction = ({ title }) => (
+export const HomepageCallToAction = ({
+  tag,
+  title,
+  subtitle,
+  headline_image,
+}) => (
   <>
-    <div className={styles.content}>
-      <h2 className={styles.title}>
-        Hey, let&apos;s talk&nbsp;
-      </h2>
-    </div>
+    <SectionHeadline
+      tag={tag}
+      title={title}
+      subtitle={subtitle}
+      image={headline_image}
+    />
   </>
 );
 
 HomepageCallToAction.propTypes = {
-  title: PropTypes.string
+  tag: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  headline_image: PropTypes.string,
 };
