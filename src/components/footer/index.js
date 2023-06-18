@@ -4,8 +4,8 @@ import styles from './footer.module.scss';
 export const Footer = () => {
   return (
     <div className={styles.root}>
-      <div className={styles.textContainer}>
-        <p className={styles.text}>designed and built by {' '}
+      <div className={styles.copyright}>
+        <p className={styles.text}>built by {' '}
           <TextLink
             href="https://naumchik.me/"
             isOutsideLink

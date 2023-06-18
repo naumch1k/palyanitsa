@@ -15,10 +15,6 @@
 @mixin text-small() {
   font-size: 14px;
   line-height: 1.5;
-
-  @media (max-width: breakpoints.$tablet) {
-    font-size: 12px;
-  }
 }
 
 @mixin text-button() {

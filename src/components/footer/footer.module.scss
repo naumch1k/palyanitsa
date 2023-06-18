@@ -7,8 +7,9 @@
   align-items: center;
 }
 
-.textContainer {
+.copyright {
   position: relative;
+  padding-top: 30px;
 }
 
 .text {
@@ -22,8 +23,8 @@
 
 .heart {
   position: absolute;
-  top: 0;
-  left: 107%;
+  top: 30px; // must be equal to copyright top padding
+  left: 110%;
   width: 80px;
   height: 80px;
   animation: fave-heart 1s steps(28);
