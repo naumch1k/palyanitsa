@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
+import styles from './homepage-call-to-action.module.scss';
 import { SectionHeadline } from '../section-headline';
-
-// import styles from './homepage-call-to-action.module.scss';
+import { ContactForm } from '../contact-form';
 
 export const HomepageCallToAction = ({
   tag,
@@ -16,6 +16,12 @@ export const HomepageCallToAction = ({
       subtitle={subtitle}
       image={headline_image}
     />
+    <div className={styles.content}>
+      <div className={styles.formWrapper}>
+        <ContactForm/>
+      </div>
+      <div className={styles.right}></div>
+    </div>
   </>
 );
 

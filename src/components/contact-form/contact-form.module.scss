@@ -1,0 +1,40 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/text.scss" as text;
+
+.root {
+  display: flex;
+  width: 100%;
+  max-width: 585px;
+  flex-direction: column;
+  padding: 90px;
+  margin-left: auto;
+  gap: 5px;
+
+  @media (max-width: breakpoints.$desktop) { padding: 60px; }
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    max-width: 585px;
+    padding: 0 20px 60px;
+  }
+}
+
+.submitGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.submitGroupMessage {
+  @include text.text;
+  @include text.text-medium;
+
+  min-height: 21px;
+  margin: 0;
+  text-align: center;
+}
