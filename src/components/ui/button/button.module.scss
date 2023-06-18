@@ -2,37 +2,25 @@
 
 .root {
   @include text.text;
-  @include text.text-button;
+  @include text.text-medium;
 
-  position: relative;
-  padding: 30px 50px;
-  border: solid 4px var(--color-accent);
-  background: transparent;
-  color: var(--color-accent);
-  cursor: pointer;
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  background-color: var(--color-accent);
+  border-radius: 3px;
+  color: var(--color-light-default);
+  font-weight: 600;
+  letter-spacing: 1.2px;
   outline: none;
+  text-transform: uppercase;
+}
 
-  &::before,
-  &::after {
-    position: absolute;
-    display: inline-block;
-    width: 15px;
-    height: 10px;
-    background: var(--color-light-default);
-    content: "";
-    transition: all .6s;
-  }
-
-  &::before { transform: translate(10px, -38px) skewX(50deg); }
-
-  &::after { transform: translate(-25px, 56px) skewX(50deg); }
-
-  &:hover::before { transform: translate(160px, -38px) skewX(50deg); }
-
-  &:hover::after { transform: translate(-175px, 56px) skewX(50deg); }
+.root:disabled {
+  background-color: var(--color-dark-primary-33);
+  cursor: not-allowed;
 }
 
 .link {
-  color: var(--color-accent);
   text-decoration: none;
 }

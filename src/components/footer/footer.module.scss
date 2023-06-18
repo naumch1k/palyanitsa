@@ -7,17 +7,6 @@
   align-items: center;
 }
 
-.buttonWrapper {
-  display: flex;
-  height: calc(40vh - 30px - 21px);
-  align-items: center;
-  justify-content: center;
-
-  @media (max-height: breakpoints.$mobile) {
-    height: calc(60vh - 30px - 21px);
-  }
-}
-
 .textContainer {
   position: relative;
 }

@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './button.module.scss';
 
 export const Button = (props) => {
   const {
     type = 'button',
-    href = '/',
+    href,
     isLink,
     label,
     disabled = false,
