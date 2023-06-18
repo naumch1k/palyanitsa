@@ -1,6 +1,6 @@
 .root {
   display: flex;
-  min-height: calc(100vh - 2 * var(--page-padding));
+  min-height: calc(100vh - 50px);
   align-items: center;
   justify-content: center;
   background: var(--color-light-default);

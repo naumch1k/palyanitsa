@@ -20,3 +20,12 @@
     100% { transform: scaleX(1); }
   }
 }
+
+@mixin text-shadow {
+  animation: move-circles 25s linear infinite;
+
+  @keyframes move-circles {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% -100%; }
+  }
+}

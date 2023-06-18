@@ -3,15 +3,13 @@
 
 .root {
   display: flex;
-  height: 550px;
   flex-direction: column;
   align-items: center;
-  padding-top: 250px;
+}
 
-  @media (max-width: breakpoints.$desktop) {
-    height: 400px;
-    padding-top: 160px;
-  }
+.copyright {
+  position: relative;
+  padding-top: 30px;
 }
 
 .text {
@@ -21,4 +19,32 @@
   margin: auto 0 0;
   color: var(--color-dark-primary);
   letter-spacing: 3px;
+}
+
+.heart {
+  position: absolute;
+  top: 30px; // must be equal to copyright top padding
+  left: 110%;
+  width: 80px;
+  height: 80px;
+  animation: fave-heart 1s steps(28);
+  background: url("../../../public/images/footer/hearts.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.heart:hover {
+  background-position: -2240px 0;
+  transition: background 2s steps(28);
+}
+
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -2240px 0;
+  }
 }

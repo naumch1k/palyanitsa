@@ -1,0 +1,84 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/headline.scss" as headline;
+@use "../../shared/styles/mixins/text.scss" as text;
+
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 40px 30px;
+  gap: 40px;
+
+  @media (max-width: breakpoints.$mobile) { padding: 30px 0; }
+}
+
+.qrCode {
+  width: 200px;
+
+  @media (max-width: breakpoints.$tablet) { display: none; }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  @include text.text;
+  @include text.text-medium;
+
+  max-width: 600px;
+  margin: 0 0 15px;
+  color: var(--color-dark-primary);
+}
+
+.link {
+  @include headline.headline;
+  @include headline.headline-small;
+
+  display: flex;
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.7 !important;
+  outline: none;
+  text-decoration: none;
+  transition: color .3s ease;
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
+
+  &:active {
+    color: var(--color-accent);
+  }
+}
+
+.arrows {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 24px;
+  margin-left: 10px;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 26px;
+  line-height: 0;
+  transition: transform .3s ease;
+
+  @media (max-width: breakpoints.$tablet) { font-size: 20px; }
+}
+
+.arrow:nth-child(2) {
+  transform: translate(-40px);
+}
+
+.link:hover .arrow:first-child {
+  transform: translate(40px);
+}
+
+.link:hover .arrow:nth-child(2) {
+  transform: translate(0);
+}

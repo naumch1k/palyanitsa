@@ -1,0 +1,70 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/text.scss" as text;
+@use "../../shared/styles/mixins/animations.scss" as animations;
+
+.buttons {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+
+  @media (max-width: 1440px) { gap: 15px; }
+
+  @media (max-width: breakpoints.$tablet) { gap: .9em; }
+}
+
+.button {
+  @include text.text;
+  @include text.text-button;
+
+  position: relative;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.button.selected {
+  &::after {
+    @include animations.link-underline;
+
+    position: absolute;
+    bottom: -2px;
+    left: -1px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-accent);
+    content: "";
+    transform-origin: 0;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 25%;
+  padding-bottom: 25%;
+
+  /* TODO: some fancy transition? */
+
+  @media (max-width: breakpoints.$desktop) {
+    width: 50%;
+    padding-bottom: 50%;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

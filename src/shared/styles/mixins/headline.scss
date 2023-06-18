@@ -4,15 +4,15 @@
   margin: 0;
   font-family: poppins, Arial, sans-serif;
   font-style: normal;
-  font-weight: 900;
 }
 
 @mixin headline-large() {
   font-size: 15em;
+  font-weight: 900;
   letter-spacing: -.02em;
   line-height: .8;
 
-  @media (max-width: breakpoints.$desktop) { font-size: 10em; }
+  @media (max-width: 1440px) { font-size: 10em; }
 
   @media (max-width: breakpoints.$tablet) { font-size: 7em; }
 
@@ -20,17 +20,22 @@
 }
 
 @mixin headline-medium() {
-  font-size: 80px;
-  letter-spacing: .02em;
-  line-height: 1;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
 
-  @media (max-width: breakpoints.$tablet) { font-size: 40px; }
+  @media (max-width: breakpoints.$desktop) { font-size: 36px; }
+
+  @media (max-width: breakpoints.$tablet) { font-size: 24px; }
 }
 
 @mixin headline-small() {
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: .04em;
-  line-height: 1;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 @mixin headline-accent() {

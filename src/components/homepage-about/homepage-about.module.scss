@@ -2,62 +2,116 @@
 @use "../../shared/styles/mixins/headline.scss" as headline;
 @use "../../shared/styles/mixins/text.scss" as text;
 
-.title {
-  @include headline.headline;
-  @include headline.headline-medium;
-
-  text-transform: uppercase;
-}
-
-.list {
-  display: grid;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  gap: 40px;
-  grid-template-columns: repeat(auto-fit, 240px);
-  list-style: none;
+.content {
+  display: flex;
 
   @media (max-width: breakpoints.$tablet) {
-    gap: 60px;
-  }
-
-  @media (max-width: breakpoints.$mobile) {
-    gap: 80px;
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 }
 
-.listItem {
-  display: flex;
-  max-width: 200px;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  text-align: center;
+.principles {
+  width: 50%;
+  min-height: 500px;
 
-  @media (max-width: breakpoints.$mobile) {
+  @media (max-width: breakpoints.$mid-desktop) {
+    width: 100%;
+    min-height: unset;
+  }
+}
+
+.tabs {
+  display: flex;
+  max-width: 585px;
+  flex-direction: column;
+  padding: 110px 15px 100px;
+  margin-left: auto;
+
+  @media (max-width: breakpoints.$desktop) {
+    padding: 110px 15px 100px 40px;
+  }
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    max-width: 750px;
+    padding: 110px 15px 100px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    padding: 0 15px 40px;
+  }
+}
+
+.tabList {
+  display: flex;
+  padding: 0;
+  margin: 0 0 50px;
+  gap: 25px;
+  list-style: none;
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 30px;
+  }
+}
+
+.tab {
+  @include headline.headline;
+  @include headline.headline-small;
+
+  color: var(--color-dark-primary-33);
+  cursor: pointer;
+  outline: none;
+  transition: color .5s, border-bottom .3s ease;
+}
+
+.selected {
+  border-bottom: 3px solid var(--color-accent);
+  color: var(--color-dark-primary);
+}
+
+/* .tabPanel {
+  margin-top: 50px;
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    margin-top: 30px;
+  }
+} */
+
+.tabPanelParagraph {
+  @include text.text;
+  @include text.text-medium;
+
+  max-width: 388px;
+  padding: 0;
+  margin: 0 0 18px;
+  color: var(--color-dark-primary);
+
+  @media (max-width: breakpoints.$tablet) {
+    margin: 0 0 10px;
+  }
+
+  @media (max-width: breakpoints.$mid-desktop) {
     max-width: unset;
   }
 }
 
-.icon {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-}
+.right {
+  width: 50%;
+  max-width: 585px;
+  background-color: var(--color-accent);
 
-.heading {
-  @include headline.headline;
-  @include headline.headline-small;
-
-  margin-bottom: 20px;
-}
-
-.text {
-  @include text.text;
-  @include text.text-medium;
-
-  margin: 0;
+  @media (max-width: breakpoints.$mid-desktop) {
+    display: none;
+  }
 }

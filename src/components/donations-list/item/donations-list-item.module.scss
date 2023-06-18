@@ -1,0 +1,45 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+@use "../../../shared/styles/mixins/headline.scss" as headline;
+
+.root {
+  padding: 15px;
+}
+
+.arrowIcon {
+  align-self: flex-end;
+  color: var(--color-dark-primary);
+  font-size: 22px;
+  transition: color .3s ease;
+
+  &.isExpanded {
+    color: var(--color-accent);
+  }
+}
+
+.header {
+  @include headline.headline;
+  @include headline.headline-small;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-dark-primary);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color .3s ease;
+
+  &.isExpanded {
+    color: var(--color-accent);
+  }
+
+  &:hover,
+  &:hover > .arrowIcon {
+    color: var(--color-accent);
+  }
+}
+
+.plusMinusIcon {
+  margin-right: 20px;
+
+  @media (max-width: breakpoints.$mobile) { display: none; }
+}

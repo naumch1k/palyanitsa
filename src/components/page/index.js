@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 
+import { PageHeader } from './header';
 import { PageContent } from './content';
 import { PageFooter } from './footer';
 
@@ -9,11 +10,11 @@ export const Page = ({ children }) => {
   return (
     <div className={styles.root}>
       {children}
-      <div className={styles.bottomPlaceholder}/>
     </div>
   );
 };
 
+Page.Header = PageHeader;
 Page.Content = PageContent;
 Page.Footer = PageFooter;
 

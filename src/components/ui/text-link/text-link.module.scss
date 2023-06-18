@@ -4,7 +4,7 @@
 
 .link {
   @include text.text;
-  @include text.text-link;
+  @include text.text-small;
 
   position: relative;
   color: inherit;
@@ -18,7 +18,7 @@
     @include link.link-underline;
     @include animations.link-underline;
 
-    background-color: var(--color-dark-primary-50);
+    background-color: var(--color-dark-primary-55);
     transform-origin: 0;
   }
 }

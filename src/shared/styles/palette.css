@@ -1,7 +1,8 @@
 :root {
   --color-light-default: rgb(255 255 255);
   --color-light-primary: rgb(248 248 248);
-  --color-dark-primary: rgb(1 1 9);
-  --color-dark-primary-50: rgb(1 1 9 / 50%);
+  --color-dark-primary: rgb(1 1 9 / 90%);
+  --color-dark-primary-55: rgb(1 1 9 / 55%);
+  --color-dark-primary-33: rgb(1 1 9 / 33%);
   --color-accent: rgb(193 1 5);
 }
