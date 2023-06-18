@@ -92,7 +92,7 @@
 
   @media (max-width: breakpoints.$desktop) { padding: 90px 60px; }
 
-  @media (max-width: breakpoints.$tablet) { padding: 40px 15px 60px; }
+  @media (max-width: breakpoints.$tablet) { padding: 30px 15px 60px; }
 }
 
 .title {
@@ -101,11 +101,17 @@
 
   max-width: 400px;
   color: var(--color-dark-primary);
+
+  @media (max-width: breakpoints.$tablet) {
+    display: inline;
+  }
 }
 
 .titleAccent {
   margin-right: 12px;
   color: var(--color-accent);
+
+  @media (max-width: breakpoints.$tablet) { display: none; }
 }
 
 .subtitle {
@@ -126,8 +132,9 @@
   }
 
   @media (max-width: breakpoints.$tablet) {
+    display: inline;
     max-width: unset;
-    margin: 25px 0 0;
+    margin: 0 0 0 10px;
     font-size: 24px;
   }
 }
