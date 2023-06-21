@@ -1,0 +1,50 @@
+@use "../../shared/styles/mixins/headline.scss" as headline;
+@use "../../shared/styles/mixins/text.scss" as text;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  gap: 60px;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  column-gap: 25px;
+  grid-template-areas:
+    "icon heading"
+    "icon text   ";
+  grid-template-columns: 40px 1fr;
+}
+
+.icon {
+  color: var(--color-light-primary);
+  font-size: 40px;
+  grid-area: icon;
+}
+
+.heading {
+  @include headline.headline;
+  @include headline.headline-small;
+
+  color: var(--color-light-primary);
+  grid-area: heading;
+  letter-spacing: 1.2px;
+}
+
+.paragraphs {
+  margin: 0;
+}
+
+.paragraph {
+  @include text.text;
+  @include text.text-medium;
+
+  display: block;
+  color: var(--color-light-primary);
+  grid-area: text;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}

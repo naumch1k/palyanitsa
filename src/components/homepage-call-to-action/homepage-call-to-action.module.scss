@@ -3,7 +3,7 @@
 .content {
   display: flex;
 
-  @media (max-width: breakpoints.$tablet) { flex-direction: column; }
+  @media (max-width: breakpoints.$mid-desktop) { flex-direction: column; }
 }
 
 .formWrapper {
@@ -12,12 +12,19 @@
   @media (max-width: breakpoints.$mid-desktop) { width: 100%; }
 }
 
-.right {
+.generalInfoWrapper {
+  display: flex;
   width: 50%;
   max-width: 585px;
+  align-items: center;
+  padding: 90px;
   background-color: var(--color-accent);
 
   @media (max-width: breakpoints.$mid-desktop) {
-    display: none;
+    width: 100%;
+    max-width: unset;
+    padding: 100px 90px;
   }
+
+  @media (max-width: breakpoints.$mobile) { padding: 60px 40px; }
 }

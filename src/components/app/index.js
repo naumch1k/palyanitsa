@@ -61,6 +61,7 @@ const App = () => (
           title={callToActionData.title}
           subtitle={callToActionData.subtitle}
           headline_image={callToActionData.headline_image}
+          general_info={callToActionData.general_info}
         />
       </HomepageLayout.CallToAction>
     </HomepageLayout>

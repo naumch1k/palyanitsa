@@ -81,7 +81,7 @@ export const ContactForm = () => {
         onChange={handleChange}
         minLength={2}
         maxLength={1000}
-        rows={7}
+        rows={6}
         required
       />
       <div className={styles.submitGroup}>
