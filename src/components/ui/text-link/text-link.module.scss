@@ -4,10 +4,11 @@
 
 .link {
   @include text.text;
-  @include text.text-small;
+  @include text.text-medium;
 
   position: relative;
   color: inherit;
+  letter-spacing: 3px;
   outline: none;
   text-decoration: none;
 }
@@ -18,7 +19,7 @@
     @include link.link-underline;
     @include animations.link-underline;
 
-    background-color: var(--color-dark-primary-55);
+    background-color: var(--color-dark-primary-33);
     transform-origin: 0;
   }
 }
