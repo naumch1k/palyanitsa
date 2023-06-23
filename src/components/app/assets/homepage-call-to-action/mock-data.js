@@ -16,14 +16,14 @@ export const callToActionData = {
       icon: TfiBriefcase,
       heading: 'Our studio',
       paragraphs: [
-        'Palyanitsa Foundation',
+        'Palianytsia Foundation',
       ],
     },
     {
       icon: TfiEmail,
       heading: 'General inquiries',
       paragraphs: [
-        'naumchikirina@yahoo.com',
+        'hello@pgds.xyz',
       ],
     },
     {
