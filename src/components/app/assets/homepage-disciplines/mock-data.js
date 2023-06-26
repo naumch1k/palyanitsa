@@ -1,4 +1,3 @@
-// TODO: purchase and replace HeadlineImage
 import HeadlineImage from './headline-image.jpg';
 import GameDevIcon from './game-dev-icon.svg';
 import WebIcon from './web-icon.svg';

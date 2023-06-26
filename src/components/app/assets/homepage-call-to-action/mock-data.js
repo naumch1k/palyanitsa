@@ -3,7 +3,6 @@ import {
   TfiEmail,
   TfiClipboard,
 } from 'react-icons/tfi';
-// TODO: purchase and replace HeadlineImage
 import HeadlineImage from './headline-image.jpg';
 
 export const callToActionData = {
