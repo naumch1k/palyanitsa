@@ -5,7 +5,7 @@ import styles from './donations-list.module.scss';
 const Component = ({ children }) => {
 
   return (
-    <div className={styles.container}>
+    <div id="donations-anchor" className={styles.container}>
       <ul className={styles.root}>
         {children}
       </ul>

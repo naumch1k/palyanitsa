@@ -1,0 +1,38 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+@use "../../../shared/styles/mixins/text.scss" as text;
+
+.root {
+  @include text.text;
+  @include text.text-large;
+
+  display: flex;
+  width: 55px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border: none;
+  background-color: var(--color-accent);
+  border-radius: 30px;
+  box-shadow: rgb(0 0 0 / 15%) 0 2px 8px;
+  color: var(--color-light-primary);
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  transition: width .5s ease;
+
+  &:hover {
+    width: 130px;
+  }
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+
+    &:hover {
+      width: 75px;
+    }
+  }
+}

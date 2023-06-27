@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-
 import { Page } from '../page';
 import { Footer } from '../footer';
+import { DonateButton } from '../ui/donate-button';
 
 export const AppLayout = ({ children }) => {
   return (
@@ -13,6 +13,9 @@ export const AppLayout = ({ children }) => {
       <Page.Footer>
         <Footer/>
       </Page.Footer>
+      <Page.DonateButton>
+        <DonateButton/>
+      </Page.DonateButton>
     </Page>
   );
 };
