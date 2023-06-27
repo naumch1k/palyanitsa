@@ -1,0 +1,41 @@
+@use "../../shared/styles/mixins/text.scss" as text;
+
+.root {
+  margin: 20px 0;
+  color: var(--color-light-primary);
+  text-align: justify;
+}
+
+.text {
+  @include text.text;
+  @include text.text-large;
+
+  position: relative;
+  padding: 40px 0;
+}
+
+.author {
+  @include text.text;
+  @include text.text-medium;
+
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.quotesLeft,
+.quotesRight {
+  position: absolute;
+  color: var(--color-light-primary);
+  font-size: 22px;
+}
+
+.quotesLeft {
+  top: 0;
+  left: 0;
+}
+
+.quotesRight {
+  right: 0;
+  bottom: 0;
+}

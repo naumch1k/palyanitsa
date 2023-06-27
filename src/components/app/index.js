@@ -26,6 +26,7 @@ const App = () => (
           subtitle={aboutData.subtitle}
           headline_image={aboutData.headline_image}
           principles={aboutData.principles}
+          quote={aboutData.quote}
         />
       </HomepageLayout.About>
       <HomepageLayout.Disciplines>

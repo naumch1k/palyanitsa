@@ -10,7 +10,7 @@
   }
 }
 
-.principles {
+.primaryContent {
   width: 50%;
   min-height: 500px;
 
@@ -76,18 +76,6 @@
   color: var(--color-dark-primary);
 }
 
-/* .tabPanel {
-  margin-top: 50px;
-
-  @media (max-width: breakpoints.$mid-desktop) {
-    margin-top: 40px;
-  }
-
-  @media (max-width: breakpoints.$tablet) {
-    margin-top: 30px;
-  }
-} */
-
 .tabPanelParagraph {
   @include text.text;
   @include text.text-medium;
@@ -106,9 +94,12 @@
   }
 }
 
-.right {
+.accentBox {
+  display: flex;
   width: 50%;
   max-width: 585px;
+  align-items: center;
+  padding: 90px;
   background-color: var(--color-accent);
 
   @media (max-width: breakpoints.$mid-desktop) {

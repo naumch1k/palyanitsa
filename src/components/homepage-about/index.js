@@ -1,9 +1,17 @@
 import PropTypes from 'prop-types';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { SectionHeadline } from '../section-headline';
+import { Quote } from '../quote';
 import styles from './homepage-about.module.scss';
 
-export const HomepageAbout = ({ tag, title, subtitle, headline_image, principles }) => (
+export const HomepageAbout = ({
+  tag,
+  title,
+  subtitle,
+  headline_image,
+  principles,
+  quote,
+}) => (
   <>
     <SectionHeadline
       tag={tag}
@@ -12,7 +20,7 @@ export const HomepageAbout = ({ tag, title, subtitle, headline_image, principles
       image={headline_image}
     />
     <div className={styles.content}>
-      <div className={styles.principles}>
+      <div className={styles.primaryContent}>
         {/* TODO: refactor into a separate component */}
         <Tabs
           className={styles.tabs}
@@ -37,10 +45,14 @@ export const HomepageAbout = ({ tag, title, subtitle, headline_image, principles
           ))}
         </Tabs>
       </div>
-      <div className={styles.right}></div>
+      <div className={styles.accentBox}>
+        <Quote
+          text={quote.text}
+          author={quote.author}
+        />
+      </div>
     </div>
   </>
-
 );
 
 HomepageAbout.propTypes = {
@@ -49,4 +61,5 @@ HomepageAbout.propTypes = {
   subtitle: PropTypes.string,
   headline_image: PropTypes.string,
   principles: PropTypes.array,
+  quote: PropTypes.object,
 };
