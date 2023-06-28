@@ -3,7 +3,7 @@ import styles from './donate-button.module.scss';
 
 export const DonateButton = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [buttonText, setButtonText] = useState('D');
+  const [buttonText, setButtonText] = useState('');
 
   useEffect(() => {
     let typingInterval;
@@ -31,6 +31,8 @@ export const DonateButton = () => {
       } else {
         setButtonText('D');
       }
+    } else {
+      setButtonText('D');
     }
 
     return () => clearInterval(typingInterval);
