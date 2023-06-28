@@ -17,9 +17,7 @@
     "build": "react-scripts build",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"src/**/*.css\" --fix and stylelint \"src/**/*.scss\" --fix",
-    "precommit": "npm run lint:js && npm run lint:scss",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "precommit": "npm run lint:js && npm run lint:scss"
   },
   "browserslist": {
     "production": [
@@ -39,7 +37,6 @@
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-react": "7.31.1",
     "eslint-plugin-react-hooks": "4.6.0",
-    "gh-pages": "4.0.0",
     "husky": "8.0.1",
     "stylelint": "14.11.0",
     "stylelint-config-idiomatic-order": "8.1.0",
