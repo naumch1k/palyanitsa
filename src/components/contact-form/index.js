@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from './contact-form.module.scss';
 import { TextInput } from '../ui/text-input';
@@ -12,6 +12,7 @@ import {
 } from '../../utils/constants';
 
 export const ContactForm = () => {
+  const [submitButtonLabel, setSubmitButtonLabel] = useState('Send message');
   const form = useRef();
 
   const {
@@ -28,6 +29,7 @@ export const ContactForm = () => {
 
   const handleFormSubmit = evt => {
     evt.preventDefault();
+    setSubmitButtonLabel('Sending...');
 
     emailjs
       .sendForm(
@@ -41,6 +43,9 @@ export const ContactForm = () => {
       }, (error) => {
         // eslint-disable-next-line no-console
         console.log(error.text);
+      })
+      .finally(() => {
+        setSubmitButtonLabel('Send message');
       });
   };
 
@@ -89,7 +94,7 @@ export const ContactForm = () => {
         <p className={styles.submitGroupMessage}>{submitStatus}</p>
         <Button
           type={'submit'}
-          label={'Send message'}
+          label={submitButtonLabel}
           disabled={!isValid}
         />
       </div>
