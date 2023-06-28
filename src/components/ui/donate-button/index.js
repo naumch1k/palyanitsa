@@ -44,7 +44,7 @@ export const DonateButton = () => {
   const handleClick = () => {
     const element = document.querySelector('#donations-anchor');
 
-    if (element) element.scrollIntoViewIfNeeded({ behavior: 'smooth' });
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
   return (
