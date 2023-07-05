@@ -3,8 +3,8 @@
 .root {
   position: fixed;
   z-index: 3;
-  right: 20px;
-  bottom: 20px;
+  right: 40px;
+  bottom: 40px;
 
   @media (max-width: breakpoints.$desktop) {
     right: 15px;
