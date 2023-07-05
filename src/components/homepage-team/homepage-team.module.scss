@@ -49,7 +49,7 @@
 
   /* TODO: some fancy transition? */
 
-  @media (max-width: breakpoints.$desktop) {
+  @media (max-width: breakpoints.$mid-desktop) {
     width: 50%;
     padding-bottom: 50%;
   }
