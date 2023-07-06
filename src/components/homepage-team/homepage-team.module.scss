@@ -9,7 +9,7 @@
   align-items: flex-end;
   gap: 20px;
 
-  @media (max-width: 1440px) { gap: 15px; }
+  @media (max-width: breakpoints.$desktop) { gap: 15px; }
 
   @media (max-width: breakpoints.$tablet) { gap: .9em; }
 }
