@@ -11,7 +11,8 @@ export const TextLink = (props) => {
     ...restLinkProps
   } = props;
 
-  const classes = `${styles.link} ${styles[hoverStyle]}`;
+  // TODO: utilize useEffect to track resizing and re-render
+  const classes = `${styles.link} ${window.innerWidth >= 1000 ? styles[hoverStyle] : ''}`;
 
   return (
     !isOutsideLink ? (

@@ -1,3 +1,4 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
 @use "../../../shared/styles/mixins/text.scss" as text;
 @use "../../../shared/styles/mixins/link-underline.scss" as link;
 @use "../../../shared/styles/mixins/animations.scss" as animations;
@@ -11,6 +12,10 @@
   letter-spacing: 3px;
   outline: none;
   text-decoration: none;
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    font-weight: 300;
+  }
 }
 
 .underline {
