@@ -53,6 +53,10 @@
   background: url("../../../public/images/footer/hearts.png") no-repeat;
   background-position: 0 0;
   cursor: pointer;
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    display: none;
+  }
 }
 
 .heart:hover {
