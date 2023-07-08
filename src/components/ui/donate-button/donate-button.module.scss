@@ -3,7 +3,7 @@
 
 .root {
   @include text.text;
-  @include text.text-large;
+  @include text.text-button;
 
   display: flex;
   width: 110px;
@@ -16,8 +16,6 @@
   box-shadow: rgb(0 0 0 / 20%) 0 2px 8px;
   color: var(--color-light-primary);
   cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 1.2px;
   text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
   text-transform: uppercase;
 
@@ -31,8 +29,6 @@
   }
 
   @media (max-width: breakpoints.$tablet) {
-    @include text.text-medium;
-
     width: 85px;
     height: 85px;
   }
