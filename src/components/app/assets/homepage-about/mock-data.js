@@ -28,8 +28,22 @@ export const aboutData = {
       ]
     }
   ],
-  quote: {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    author: 'Author Name',
-  }
+  quotes: [
+    {
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      author: 'Author Name',
+    },
+    {
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris. Imperdiet nulla malesuada pellentesque elit eget. Iaculis at erat pellentesque adipiscing commodo elit.',
+      author: 'Author Name',
+    },
+    {
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ullamcorper eget nulla facilisi etiam dignissim diam. Malesuada fames ac turpis egestas. Sit amet nulla facilisi morbi tempus iaculis urna id volutpat.',
+      author: 'Author Name',
+    },
+    {
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      author: 'Author Name',
+    },
+  ]
 };
