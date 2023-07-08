@@ -1,3 +1,5 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+
 .root {
   position: absolute;
   top: 50%;
@@ -13,6 +15,8 @@
   &:hover {
     opacity: .7;
   }
+
+  @media (max-width: breakpoints.$mobile) { display: none; }
 }
 
 .icon {
