@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useKeenSlider } from 'keen-slider/react';
 import styles from './slider.module.scss';
 import { ArrowButton } from '../ui/arrow-button';
+import { SliderDots } from '../ui/slider-dots';
 
 export const Slider = ({
   arrowButtonsOffset,
@@ -24,6 +25,10 @@ export const Slider = ({
     },
   });
 
+  const handleLeftArrowClick = evt => evt.stopPropagation() || instanceRef.current?.prev();
+  const handleRightArrowClick = evt => evt.stopPropagation() || instanceRef.current?.next();
+  const handleSliderDotClick = i => instanceRef.current?.moveToIdx(i);
+
   return (
     <div className={styles.wrapper}>
       <div
@@ -37,14 +42,21 @@ export const Slider = ({
           <ArrowButton
             offset={arrowButtonsOffset}
             direction="left"
-            onClick={e => e.stopPropagation() || instanceRef.current?.prev()}
+            onClick={handleLeftArrowClick}
           />
           <ArrowButton
             offset={arrowButtonsOffset}
             direction="right"
-            onClick={e => e.stopPropagation() || instanceRef.current?.next()}
+            onClick={handleRightArrowClick}
           />
         </>
+      )}
+      {loaded && instanceRef.current && (
+        <SliderDots
+          count={children.length}
+          currentSlide={currentSlide}
+          onSliderDotClick={handleSliderDotClick}
+        />
       )}
     </div>
   );
