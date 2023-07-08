@@ -1,0 +1,20 @@
+.root {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  padding: 0;
+  border: 0;
+  background-color: unset;
+  color: var(--color-light-primary);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: opacity .3s ease;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.icon {
+  font-size: 26px;
+}
