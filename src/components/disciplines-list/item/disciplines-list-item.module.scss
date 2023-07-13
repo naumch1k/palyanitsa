@@ -1,7 +1,7 @@
 @use "../../../shared/breakpoints.scss" as breakpoints;
 
 .root {
-  width: 25%;
+  width: 33.33%;
   padding: 0 15px;
 
   @media (max-width: breakpoints.$mid-desktop) { width: 50%; }

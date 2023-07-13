@@ -16,11 +16,11 @@
   width: 90%;
   max-width: 1170px;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
   margin: 0 auto;
   list-style: none;
-
-  @media (max-width: breakpoints.$mid-desktop) { row-gap: 90px; }
+  row-gap: 90px;
 
   @media (max-width: breakpoints.$tablet) {
     max-width: 750px;

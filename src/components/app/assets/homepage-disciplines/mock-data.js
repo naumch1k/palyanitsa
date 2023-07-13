@@ -1,8 +1,9 @@
 import HeadlineImage from './headline-image.jpg';
-import GameDevIcon from './game-dev-icon.svg';
-import WebIcon from './web-icon.svg';
-import QAIcon from './qa-icon.svg';
+import ArtIcon from './art-icon.svg';
 import DesignIcon from './design-icon.svg';
+import DevIcon from './dev-icon.svg';
+import ProductIcon from './product-icon.svg';
+import QAIcon from './qa-icon.svg';
 
 export const disciplinesData = {
   tag: '02',
@@ -12,27 +13,33 @@ export const disciplinesData = {
   disciplines: [
     {
       id: '01',
-      heading: 'Game Development',
+      heading: 'Development',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
-      icon: GameDevIcon,
+      icon: DevIcon,
     },
     {
       id: '02',
-      heading: 'Web Development',
+      heading: 'Art',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
-      icon: WebIcon,
+      icon: ArtIcon,
     },
     {
       id: '03',
-      heading: 'Quality Assurance',
+      heading: 'Design',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
-      icon: QAIcon,
+      icon: DesignIcon,
     },
     {
       id: '04',
-      heading: 'Game Design / Art',
+      heading: 'Product / Project',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
-      icon: DesignIcon,
+      icon: ProductIcon,
+    },
+    {
+      id: '05',
+      heading: 'Quality Assurance',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
+      icon: QAIcon,
     },
   ]
 };
