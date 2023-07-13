@@ -5,4 +5,5 @@
   --color-dark-primary-55: rgb(1 1 9 / 55%);
   --color-dark-primary-33: rgb(1 1 9 / 33%);
   --color-accent: rgb(193 1 5);
+  --color-text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
 }

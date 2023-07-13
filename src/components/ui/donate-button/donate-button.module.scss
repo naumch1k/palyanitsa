@@ -16,7 +16,7 @@
   box-shadow: rgb(0 0 0 / 20%) 0 2px 8px;
   color: var(--color-light-primary);
   cursor: pointer;
-  text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
+  text-shadow: var(--color-text-shadow);
   text-transform: uppercase;
 
   & span {
