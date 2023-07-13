@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { SectionHeadline } from '../section-headline';
 import { ImageGallery } from '../image-gallery';
+import { TeamMemberCard } from '../team-member-card';
 import styles from './homepage-team.module.scss';
 
 const roleButtons = [
@@ -52,9 +53,13 @@ export const HomepageTeam = ({
       </SectionHeadline>
       <ImageGallery>
         {filteredTeam.map((teamMember, i) => (
-          <li key={i} className={styles.imageWrapper}>
-            <img className={styles.image} src={teamMember.image}/>
-          </li>
+          <TeamMemberCard
+            key={i}
+            image={teamMember.image}
+            name={teamMember.name}
+            linkedIn={teamMember.linkedIn}
+            roles={teamMember.roles}
+          />
         ))}
       </ImageGallery>
     </>
@@ -68,9 +73,10 @@ HomepageTeam.propTypes = {
   headline_image: PropTypes.string.isRequired,
   team: PropTypes.arrayOf(
     PropTypes.shape({
+      image: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       roles: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-      image: PropTypes.string.isRequired,
+      linkedIn: PropTypes.string,
     })
   ).isRequired,
 };
