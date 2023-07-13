@@ -40,7 +40,7 @@
 
 .paragraph {
   @include text.text;
-  @include text.text-large;
+  @include text.text-medium;
 
   display: block;
   color: var(--color-light-primary);

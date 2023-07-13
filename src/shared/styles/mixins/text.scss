@@ -8,15 +8,15 @@
 
 @mixin text-large() {
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: .02em;
   line-height: 1.3;
 
-  @media (max-width: breakpoints.$mid-desktop) { font-weight: 300; }
+  @media (max-width: breakpoints.$mid-desktop) { font-weight: 400; }
 }
 
 @mixin text-medium() {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 200;
   letter-spacing: .02em;
   line-height: 1.3;

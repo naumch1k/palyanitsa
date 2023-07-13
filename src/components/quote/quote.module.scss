@@ -8,7 +8,7 @@
 
 .text {
   @include text.text;
-  @include text.text-large;
+  @include text.text-medium;
 
   position: relative;
   padding: 40px 0;
@@ -16,7 +16,7 @@
 
 .author {
   @include text.text;
-  @include text.text-large;
+  @include text.text-medium;
 
   display: block;
   margin-top: 15px;
