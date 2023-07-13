@@ -6,9 +6,11 @@ import styles from './homepage-team.module.scss';
 
 const roleButtons = [
   { role: '', label: 'All' },
-  { role: 'game', label: 'Game Dev' },
-  { role: 'web', label: 'Web' },
+  { role: 'development', label: 'Development' },
+  { role: 'art', label: 'Art' },
   { role: 'design', label: 'Design' },
+  { role: 'project/product', label: 'Product / Project' },
+  { role: 'quality assurance', label: 'Quality assurance' },
   { role: 'mentor', label: 'Mentors' },
 ];
 
