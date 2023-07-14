@@ -56,7 +56,8 @@ export const HomepageTeam = ({
           <TeamMemberCard
             key={i}
             image={teamMember.image}
-            name={teamMember.name}
+            firstName={teamMember.firstName}
+            lastName={teamMember.lastName}
             linkedIn={teamMember.linkedIn}
             roles={teamMember.roles}
           />
@@ -74,7 +75,8 @@ HomepageTeam.propTypes = {
   team: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
+      firstName: PropTypes.string.isRequired,
+      lastName: PropTypes.string.isRequired,
       roles: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
       linkedIn: PropTypes.string,
     })

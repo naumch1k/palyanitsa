@@ -78,6 +78,10 @@
   @media (max-width: breakpoints.$desktop) { font-size: 22px; }
 }
 
+.nonBreakable {
+  white-space: nowrap;
+}
+
 .roles {
   @include text.text;
   @include text.text-large;
