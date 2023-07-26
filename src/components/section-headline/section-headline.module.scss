@@ -87,12 +87,26 @@
 }
 
 .contentColumn {
+  display: flex;
+  min-height: 585px;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 110px 90px;
   background: var(--color-light-default);
 
   @media (max-width: breakpoints.$desktop) { padding: 90px 60px; }
 
-  @media (max-width: breakpoints.$tablet) { padding: 30px 15px 60px; }
+  @media (max-width: breakpoints.$mid-desktop) {
+    min-height: 380px;
+    justify-content: flex-end;
+    padding: 60px;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    display: unset;
+    min-height: unset;
+    padding: 30px 15px 60px;
+  }
 }
 
 .title {
@@ -120,21 +134,20 @@
 
   max-width: 400px;
   margin: 70px 0 0;
-
-  /* TODO */
   color: var(--color-dark-primary-33);
 
   @media (max-width: breakpoints.$desktop) {
-    max-width: 250px;
     margin: 25px 0 0;
-    font-size: 30px;
-    line-height: 1.3;
+  }
+
+  @media (max-width: breakpoints.$mid-desktop) {
+    max-width: unset;
+    line-height: 1.2;
   }
 
   @media (max-width: breakpoints.$tablet) {
-    display: inline;
     max-width: unset;
-    margin: 0 0 0 10px;
-    font-size: 24px;
+    margin: 10px 0 0;
+    text-align: justify;
   }
 }
