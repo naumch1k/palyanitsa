@@ -11,7 +11,8 @@ const roleButtons = [
   { role: 'art', label: 'Art' },
   { role: 'design', label: 'Design' },
   { role: 'project/product', label: 'Product / Project' },
-  { role: 'quality assurance', label: 'Quality assurance' },
+  // TODO: make list of roles based on team data
+  // { role: 'quality assurance', label: 'Quality assurance' },
   { role: 'mentor', label: 'Mentors' },
 ];
 
