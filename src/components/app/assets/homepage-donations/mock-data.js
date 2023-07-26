@@ -4,7 +4,7 @@ import VenmoQRCode from './venmo-qr-code.png';
 export const donationsData = {
   tag: '04',
   title: 'Donate',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing dolor sit amet',
+  subtitle: 'Be a driving force of change, contributing to the development of this project',
   headline_image: HeadlineImage,
   donation_platforms: [
     {

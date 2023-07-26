@@ -3,35 +3,32 @@ import HeadlineImage from './headline-image.jpg';
 export const aboutData = {
   tag: '01',
   title: 'About',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing dolor sit amet',
+  subtitle: 'We support Ukrainian youth in IT education. Join us to empower and help',
   headline_image: HeadlineImage,
   principles: [
     {
-      heading: 'Creativity',
+      heading: 'Help',
       paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'Through our fundraising efforts, we aim to bridge the gap in access to educational resources and technology. Our financial contributions can make a significant impact, enabling students to excel in their studies and pursue their dreams. We raise funds and bring together supporters who share our vision. Together, we can empower the youth of Ukraine, shape a brighter future, and make a difference through help.',
       ]
     },
     {
-      heading: 'Innovation',
+      heading: 'Support',
       paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Tempus egestas sed sed risus.',
-        'Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry’s standard dummy. Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry’s standard dummy.',
+        'Moreover, we understand the harsh realities faced by families who are forced to evacuate their homes due to the war. In such challenging times, PGDS steps in to offer assistance. We help facilitate the evacuation process, provide temporary shelter, and offer guidance to those affected. By providing a supportive environment, we aim to minimize the disruption in the education of our students, ensuring that they can continue their studies and pursue their aspirations.',
       ]
     },
     {
-      heading: 'Point of view',
+      heading: 'Mentoring',
       paragraphs: [
-        'Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry’s standard dummy. Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry’s standard dummy.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Tempus egestas sed sed risus.',
+        'Our mentorship programs, training sessions, and workshops, connect talented young minds with experienced professionals from the IT industry. These mentors generously dedicate their time, expertise, and guidance to help shape the future generation of IT professionals in Ukraine. By sharing their knowledge and providing personalized mentorship, our mentors instill confidence and inspire students to unlock their full potential.',
       ]
     }
   ],
   quotes: [
     {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      author: 'Author Name',
+      text: 'I have a strong belief in the transformative power of education to create a better, safer, and happier world, particularly for those who are in desperate need of it.',
+      author: 'Dmytro Palii',
     },
     {
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris. Imperdiet nulla malesuada pellentesque elit eget. Iaculis at erat pellentesque adipiscing commodo elit.',

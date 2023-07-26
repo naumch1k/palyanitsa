@@ -8,38 +8,38 @@ import QAIcon from './qa-icon.svg';
 export const disciplinesData = {
   tag: '02',
   title: 'Tracks',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing dolor sit amet',
+  subtitle: 'Get to know the heart and soul of PGDS - our diverse departments',
   headline_image: HeadlineImage,
   disciplines: [
     {
       id: '01',
-      heading: 'Development',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
-      icon: DevIcon,
-    },
-    {
-      id: '02',
       heading: 'Art',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
+      description: 'There is the heart of our creative universe, where our team of talented artists brings breathtaking visuals to life, weaving magic into every pixel and stroke.',
       icon: ArtIcon,
     },
     {
-      id: '03',
+      id: '02',
       heading: 'Design',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
+      description: 'It\'s department, where boundless creativity merges with ingenious gameplay concepts, pushing the boundaries of imagination and bringing dreams to life.',
       icon: DesignIcon,
     },
     {
+      id: '03',
+      heading: 'Development',
+      description: 'A universe where ingenuity soars and our exceptional team of developers is open to new challenges and turning imaginative ideas into functional realities.',
+      icon: DevIcon,
+    },
+    {
       id: '04',
-      heading: 'Product / Project',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
-      icon: ProductIcon,
+      heading: 'Quality Assurance',
+      description: 'A space of constant growth, where every challenge is embraced as an opportunity to optimize and our QA testers are the guardians of excellence.',
+      icon: QAIcon,
     },
     {
       id: '05',
-      heading: 'Quality Assurance',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
-      icon: QAIcon,
+      heading: 'Product / Project',
+      description: 'A place where deadlines are met with determination and challenges with adaptability. Our PM team ensures smooth development, timely project completion, and effective communication - making it all happen!',
+      icon: ProductIcon,
     },
   ]
 };

@@ -32,7 +32,7 @@ import IrinaNaumchikImage from './irina-naumchik.jpg';
 export const teamData = {
   tag: '03',
   title: 'Team',
-  subtitle: 'Meet the faces of resilience and determination - our students, mentors, and professionals shaping a better tomorrow',
+  subtitle: 'Meet the faces of resilience and determination - our people shaping a better tomorrow',
   headline_image: HeadlineImage,
   team: [
     {

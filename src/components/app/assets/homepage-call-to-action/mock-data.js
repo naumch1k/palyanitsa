@@ -8,7 +8,7 @@ import HeadlineImage from './headline-image.jpg';
 export const callToActionData = {
   tag: '05',
   title: 'Get in touch',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing dolor sit amet',
+  subtitle: 'Connect with us directly: send letters and be updated on our progress',
   headline_image: HeadlineImage,
   general_info: [
     {
