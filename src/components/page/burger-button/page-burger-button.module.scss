@@ -1,0 +1,13 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  position: fixed;
+  z-index: 3;
+  top: 25px;
+  right: 25px;
+
+  @media (min-width: 768px) {
+    top: 30px;
+    right: 30px;
+  }
+}
