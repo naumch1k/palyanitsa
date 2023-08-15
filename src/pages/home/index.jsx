@@ -20,24 +20,24 @@ const Home = () => {
       <HomepageLayout.Headline>
         <HomepageHeadline/>
       </HomepageLayout.Headline>
-      <HomepageLayout.Section>
+      <HomepageLayout.Section
+        tag={aboutData.tag}
+        title={aboutData.title}
+        subtitle={aboutData.subtitle}
+        headline_image={aboutData.headline_image}
+      >
         <HomepageAbout
-          tag={aboutData.tag}
-          title={aboutData.title}
-          subtitle={aboutData.subtitle}
-          headline_image={aboutData.headline_image}
           principles={aboutData.principles}
           quotes={aboutData.quotes}
         />
       </HomepageLayout.Section>
-      <HomepageLayout.Section>
-        <HomepageDisciplines
-          tag={disciplinesData.tag}
-          title={disciplinesData.title}
-          subtitle={disciplinesData.subtitle}
-          headline_image={disciplinesData.headline_image}
-          disciplines={disciplinesData.disciplines}
-        />
+      <HomepageLayout.Section
+        tag={disciplinesData.tag}
+        title={disciplinesData.title}
+        subtitle={disciplinesData.subtitle}
+        headline_image={disciplinesData.headline_image}
+      >
+        <HomepageDisciplines disciplines={disciplinesData.disciplines}/>
       </HomepageLayout.Section>
       <HomepageLayout.Section>
         <HomepageTeam
@@ -48,28 +48,25 @@ const Home = () => {
           team={teamData.team}
         />
       </HomepageLayout.Section>
-      <HomepageLayout.Section>
-        <HomepageDonations
-          tag={donationsData.tag}
-          title={donationsData.title}
-          subtitle={donationsData.subtitle}
-          headline_image={donationsData.headline_image}
-          donation_platforms={donationsData.donation_platforms}
-        />
+      <HomepageLayout.Section
+        tag={donationsData.tag}
+        title={donationsData.title}
+        subtitle={donationsData.subtitle}
+        headline_image={donationsData.headline_image}
+      >
+        <HomepageDonations donation_platforms={donationsData.donation_platforms}/>
       </HomepageLayout.Section>
-      <HomepageLayout.Section>
+      <HomepageLayout.Section
+        tag={callToActionData.tag}
+        title={callToActionData.title}
+        subtitle={callToActionData.subtitle}
+        headline_image={callToActionData.headline_image}
+      >
         <HomepageCallToAction
-          tag={callToActionData.tag}
-          title={callToActionData.title}
-          subtitle={callToActionData.subtitle}
-          headline_image={callToActionData.headline_image}
-          general_info={callToActionData.general_info}
-        />
+          general_info={callToActionData.general_info}/>
       </HomepageLayout.Section>
       <HomepageLayout.Section>
-        <HomepagePartners
-          partners={partnersData}
-        />
+        <HomepagePartners partners={partnersData}/>
       </HomepageLayout.Section>
     </HomepageLayout>
   );
