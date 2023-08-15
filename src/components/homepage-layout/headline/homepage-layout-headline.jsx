@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import styles from './homepage-layout-donations.module.scss';
+import styles from './homepage-layout-headline.module.scss';
 
-export const HomepageLayoutDonations = ({ children }) => {
+export const HomepageLayoutHeadline = ({ children }) => {
   return (
     <section className={styles.root}>
       {children}
@@ -9,6 +9,6 @@ export const HomepageLayoutDonations = ({ children }) => {
   );
 };
 
-HomepageLayoutDonations.propTypes = {
+HomepageLayoutHeadline.propTypes = {
   children: PropTypes.object
 };

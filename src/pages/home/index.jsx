@@ -1,4 +1,4 @@
-import { HomepageLayout } from '../../components/homepage-layout';
+import HomepageLayout from '../../components/homepage-layout';
 import { HomepageHeadline } from '../../components/homepage-headline';
 import { HomepageAbout } from '../../components/homepage-about';
 import { HomepageDisciplines } from '../../components/homepage-disciplines';
@@ -20,7 +20,7 @@ const Home = () => {
       <HomepageLayout.Headline>
         <HomepageHeadline/>
       </HomepageLayout.Headline>
-      <HomepageLayout.About>
+      <HomepageLayout.Section>
         <HomepageAbout
           tag={aboutData.tag}
           title={aboutData.title}
@@ -29,8 +29,8 @@ const Home = () => {
           principles={aboutData.principles}
           quotes={aboutData.quotes}
         />
-      </HomepageLayout.About>
-      <HomepageLayout.Disciplines>
+      </HomepageLayout.Section>
+      <HomepageLayout.Section>
         <HomepageDisciplines
           tag={disciplinesData.tag}
           title={disciplinesData.title}
@@ -38,8 +38,8 @@ const Home = () => {
           headline_image={disciplinesData.headline_image}
           disciplines={disciplinesData.disciplines}
         />
-      </HomepageLayout.Disciplines>
-      <HomepageLayout.Team>
+      </HomepageLayout.Section>
+      <HomepageLayout.Section>
         <HomepageTeam
           tag={teamData.tag}
           title={teamData.title}
@@ -47,8 +47,8 @@ const Home = () => {
           headline_image={teamData.headline_image}
           team={teamData.team}
         />
-      </HomepageLayout.Team>
-      <HomepageLayout.Donations>
+      </HomepageLayout.Section>
+      <HomepageLayout.Section>
         <HomepageDonations
           tag={donationsData.tag}
           title={donationsData.title}
@@ -56,8 +56,8 @@ const Home = () => {
           headline_image={donationsData.headline_image}
           donation_platforms={donationsData.donation_platforms}
         />
-      </HomepageLayout.Donations>
-      <HomepageLayout.CallToAction>
+      </HomepageLayout.Section>
+      <HomepageLayout.Section>
         <HomepageCallToAction
           tag={callToActionData.tag}
           title={callToActionData.title}
@@ -65,12 +65,12 @@ const Home = () => {
           headline_image={callToActionData.headline_image}
           general_info={callToActionData.general_info}
         />
-      </HomepageLayout.CallToAction>
-      <HomepageLayout.Partners>
+      </HomepageLayout.Section>
+      <HomepageLayout.Section>
         <HomepagePartners
           partners={partnersData}
         />
-      </HomepageLayout.Partners>
+      </HomepageLayout.Section>
     </HomepageLayout>
   );
 };
