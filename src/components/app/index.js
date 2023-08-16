@@ -1,13 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
-import { AppLayout } from '../app-layout';
 import Home from '../../pages/home';
+import PageNotFound from '../../pages/404';
 
 const App = () => (
-  <AppLayout>
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-    </Routes>
-  </AppLayout>
+  <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="*" element={<PageNotFound/>}/>
+  </Routes>
 );
 
 export default App;

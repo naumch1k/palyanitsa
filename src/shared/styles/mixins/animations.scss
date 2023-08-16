@@ -20,3 +20,13 @@
     100% { transform: scaleX(1); }
   }
 }
+
+@mixin throbbing-text() {
+  animation: pulsate 3s ease-out infinite;
+
+  @keyframes pulsate {
+    0% { font-size: 220px; }
+    50% { font-size: 240px; }
+    100% { font-size: 220px; }
+  }
+}
