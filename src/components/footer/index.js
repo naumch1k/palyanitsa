@@ -1,6 +1,6 @@
 import { TextLink } from '../ui/text-link';
 import styles from './footer.module.scss';
-import footerSocialLinks from '../../utils/footer-social-links';
+import footerSocialLinks from '../../shared/constants/footer-social-links';
 
 export const Footer = () => {
   return (

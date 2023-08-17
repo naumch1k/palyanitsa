@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import mainNavigationItems from '../../shared/constants/main-navigation-items';
-import footerSocialLinks from '../../utils/footer-social-links';
+import footerSocialLinks from '../../shared/constants/footer-social-links';
 import styles from './navigation-menu.module.scss';
 
 export const NavigationMenu = () => {
