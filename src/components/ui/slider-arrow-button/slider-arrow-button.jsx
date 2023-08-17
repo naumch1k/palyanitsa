@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
-import styles from './arrow-button.module.scss';
+import styles from './slider-arrow-button.module.scss';
 
-export const ArrowButton = ({
+export const SliderArrowButton = ({
   offset = 0,
   direction,
   onClick,
@@ -24,7 +24,7 @@ export const ArrowButton = ({
   );
 };
 
-ArrowButton.propTypes = {
+SliderArrowButton.propTypes = {
   offset: PropTypes.number,
   direction: PropTypes.string,
   onClick: PropTypes.func,

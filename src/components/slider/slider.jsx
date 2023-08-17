@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useKeenSlider } from 'keen-slider/react';
 import styles from './slider.module.scss';
-import { ArrowButton } from '../ui/arrow-button';
+import { SliderArrowButton } from '../ui/slider-arrow-button';
 import { SliderDots } from '../ui/slider-dots';
 
 export const Slider = ({
@@ -39,12 +39,12 @@ export const Slider = ({
       </div>
       {loaded && instanceRef.current && (
         <>
-          <ArrowButton
+          <SliderArrowButton
             offset={arrowButtonsOffset}
             direction="left"
             onClick={handleLeftArrowClick}
           />
-          <ArrowButton
+          <SliderArrowButton
             offset={arrowButtonsOffset}
             direction="right"
             onClick={handleRightArrowClick}
