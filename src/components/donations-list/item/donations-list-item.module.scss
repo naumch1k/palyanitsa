@@ -9,7 +9,7 @@
   align-self: flex-end;
   color: var(--color-dark-primary);
   font-size: 22px;
-  transition: color .3s ease;
+  transition: var(--common-transition);
 
   &.isExpanded {
     color: var(--color-accent);
@@ -26,7 +26,7 @@
   color: var(--color-dark-primary);
   cursor: pointer;
   text-transform: uppercase;
-  transition: color .3s ease;
+  transition: var(--common-transition);
 
   &.isExpanded {
     color: var(--color-accent);

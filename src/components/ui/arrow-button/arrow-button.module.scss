@@ -10,7 +10,7 @@
   color: var(--color-light-primary);
   cursor: pointer;
   transform: translateY(-50%);
-  transition: opacity .3s ease;
+  transition: var(--common-transition);
 
   &:hover {
     opacity: .7;

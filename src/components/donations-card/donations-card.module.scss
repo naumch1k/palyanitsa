@@ -42,7 +42,7 @@
   line-height: 1.7 !important;
   outline: none;
   text-decoration: none;
-  transition: color .3s ease;
+  transition: var(--common-transition);
 
   &:hover,
   &:focus {

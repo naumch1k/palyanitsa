@@ -73,7 +73,7 @@
   line-height: 1;
   outline: none;
   text-transform: uppercase;
-  transition: all .3s ease;
+  transition: var(--common-transition);
 
   @media (min-width: 1280px) {
     cursor: pointer;

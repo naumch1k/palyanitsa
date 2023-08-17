@@ -23,11 +23,9 @@
   color: var(--color-accent);
   font-size: 30px;
   line-height: 1;
-  transition: opacity .3s ease;
+  transition: var(--common-transition);
 
-  &:hover {
-    opacity: .6;
-  }
+  &:hover { opacity: .7; }
 }
 
 .copyright {

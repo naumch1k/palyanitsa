@@ -16,7 +16,7 @@
 }
 
 .link {
-  transition: opacity .3s ease;
+  transition: var(--common-transition);
 
   &:hover {
     opacity: .7;

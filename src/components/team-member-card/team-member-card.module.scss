@@ -96,7 +96,7 @@
   margin-left: 15px;
   color: var(--color-light-primary);
   font-size: inherit;
-  transition: opacity .3s ease;
+  transition: var(--common-transition);
   vertical-align: text-bottom;
 
   @media (max-width: breakpoints.$desktop) { margin-left: 8px; }
