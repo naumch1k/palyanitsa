@@ -1,9 +1,11 @@
 {
   "name": "palianytsia",
   "version": "0.1.0",
+  "homepage": "https://naumch1k.github.io/palyanitsa/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "3.11.0",
+    "gh-pages": "^6.0.0",
     "keen-slider": "6.8.6",
     "react": "18.2.0",
     "react-collapsed": "4.0.2",
@@ -19,7 +21,9 @@
     "build": "react-scripts build",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"src/**/*.css\" --fix and stylelint \"src/**/*.scss\" --fix",
-    "precommit": "npm run lint:js && npm run lint:scss"
+    "precommit": "npm run lint:js && npm run lint:scss",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
