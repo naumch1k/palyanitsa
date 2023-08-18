@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { MdOutlineArrowRightAlt } from 'react-icons/md';
+import { ArrowLink } from '../ui/arrow-link';
 import styles from './donations-card.module.scss';
 
 export const DonationsCard = ({
@@ -15,17 +15,10 @@ export const DonationsCard = ({
         <p className={styles.text}>
           {text}
         </p>
-        <a className={styles.link} href={link} target="_blank" rel="noreferrer">
-          {linkText}
-          <div className={styles.arrows}>
-            <span className={styles.arrow}>
-              <MdOutlineArrowRightAlt/>
-            </span>
-            <span className={styles.arrow}>
-              <MdOutlineArrowRightAlt/>
-            </span>
-          </div>
-        </a>
+        <ArrowLink
+          href={link}
+          linkText={linkText}
+        />
       </div>
     </div>
   );
