@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { DonationsList } from '../donations-list';
+import DonationsList from '../donations-list';
 import { DonationsCard } from '../donations-card';
 
 export const HomepageDonations = ({ donation_platforms }) => {
