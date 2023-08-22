@@ -9,7 +9,7 @@ const mainNavigationItems = [
   },
   {
     text: 'The latest',
-    href: '/tbd',
+    href: '/news',
   },
   {
     text: 'Ways To Help',
