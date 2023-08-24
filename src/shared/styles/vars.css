@@ -1,5 +1,4 @@
 :root {
-  --max-content-width: 1280px;
   --min-content-width: 414px;
   --common-transition: all .3s ease;
 }
