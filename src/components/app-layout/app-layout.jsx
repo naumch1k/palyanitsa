@@ -15,7 +15,6 @@ export const AppLayout = ({ children }) => {
 
   return (
     <Page>
-      <Page.Header/>
       <Page.Content>
         {children}
       </Page.Content>
