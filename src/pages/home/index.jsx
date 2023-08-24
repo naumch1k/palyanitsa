@@ -2,9 +2,11 @@ import { AppLayout } from '../../components/app-layout';
 import HomepageLayout from '../../components/homepage-layout';
 import { HomepageHeadline } from '../../components/homepage-headline';
 import { HomepageAbout } from '../../components/homepage-about';
-import { HomepageDisciplines } from '../../components/homepage-disciplines';
+import DisciplinesList from '../../components/disciplines-list';
+import { DisciplinesCard } from '../../components/disciplines-card';
 import { HomepageTeam } from '../../components/homepage-team';
-import { HomepageDonations } from '../../components/homepage-donations';
+import DonationsList from '../../components/donations-list';
+import { DonationsCard } from '../../components/donations-card';
 import { HomepageCallToAction } from '../../components/homepage-call-to-action';
 import { HomepagePartners } from '../../components/homepage-partners';
 
@@ -39,7 +41,18 @@ const Home = () => {
           subtitle={disciplinesData.subtitle}
           headline_image={disciplinesData.headline_image}
         >
-          <HomepageDisciplines disciplines={disciplinesData.disciplines}/>
+          <DisciplinesList>
+            {disciplinesData.disciplines.map(discipline => (
+              <DisciplinesList.Item key={discipline.id}>
+                <DisciplinesCard
+                  id={discipline.id}
+                  heading={discipline.heading}
+                  description={discipline.description}
+                  icon={discipline.icon}
+                />
+              </DisciplinesList.Item>
+            ))}
+          </DisciplinesList>
         </HomepageLayout.Section>
         <HomepageLayout.Section>
           <HomepageTeam
@@ -56,7 +69,18 @@ const Home = () => {
           subtitle={donationsData.subtitle}
           headline_image={donationsData.headline_image}
         >
-          <HomepageDonations donation_platforms={donationsData.donation_platforms}/>
+          <DonationsList>
+            {donationsData.donation_platforms.map(platform => (
+              <DonationsList.Item key={platform.name} title={`Donate with ${platform.name}`}>
+                <DonationsCard
+                  text={platform.text}
+                  link={platform.link}
+                  linkText={platform.linkText}
+                  qrCode={platform.qrCode}
+                />
+              </DonationsList.Item>
+            ))}
+          </DonationsList>
         </HomepageLayout.Section>
         <HomepageLayout.Section
           tag={callToActionData.tag}
