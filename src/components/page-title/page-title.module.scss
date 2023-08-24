@@ -1,0 +1,7 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/headline.scss" as headline;
+
+.root {
+  @include headline.headline;
+  @include headline.headline-large;
+}
