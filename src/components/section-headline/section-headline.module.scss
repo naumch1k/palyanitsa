@@ -74,7 +74,7 @@
 
 .tag {
   @include headline.headline;
-  @include headline.headline-large;
+  @include headline.headline-xl;
 
   position: relative;
   right: -104px;

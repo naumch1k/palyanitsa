@@ -5,7 +5,7 @@
 
 .title {
   @include headline.headline;
-  @include headline.headline-large;
+  @include headline.headline-xl;
 
   max-width: min-content;
 

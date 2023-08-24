@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-@mixin headline-large() {
+@mixin headline-xl() {
   font-size: 15em;
   font-weight: 900;
   letter-spacing: -.02em;
@@ -17,6 +17,18 @@
   @media (max-width: breakpoints.$tablet) { font-size: 7em; }
 
   @media (max-width: breakpoints.$mobile) { font-size: 6em; }
+}
+
+@mixin headline-large() {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -.02em;
+  line-height: .9;
+  text-transform: uppercase;
+
+  @media (min-width: breakpoints.$tablet) { font-size: 48px; }
+
+  @media (min-width: 1280px) { font-size: 96px; }
 }
 
 @mixin headline-medium() {
