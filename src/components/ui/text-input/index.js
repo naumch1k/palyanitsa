@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './text-input.module.scss';
 
 export const TextInput = ({
+  type = 'text',
   error,
   errorMessage,
   ...restProps
@@ -11,7 +12,7 @@ export const TextInput = ({
     <div>
       <input
         className={styles.root}
-        type="text"
+        type={type}
         {...restProps}
       />
       <p className={styles.inputError}>
@@ -22,6 +23,7 @@ export const TextInput = ({
 };
 
 TextInput.propTypes = {
+  type: PropTypes.string,
   error: PropTypes.string,
   errorMessage: PropTypes.string,
 };

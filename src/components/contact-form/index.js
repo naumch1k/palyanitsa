@@ -7,7 +7,6 @@ import { Button } from '../ui/button';
 import useFormWithValidation from '../../hooks/useFormWithValidation';
 import {
   emailjsConfig,
-  patterns,
   contactFormMessages
 } from '../../utils/constants';
 
@@ -69,12 +68,12 @@ export const ContactForm = () => {
       />
       <TextInput
         name="email"
+        type="email"
         value={values.email}
         placeholder="Your email"
         error={errors.email}
         errorMessage={contactFormMessages.EMAIL_ERROR}
         onChange={handleChange}
-        pattern={patterns.EMAIL}
         required
       />
       <TextArea

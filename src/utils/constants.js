@@ -5,6 +5,7 @@ export const emailjsConfig = {
 };
 
 export const patterns = {
+  // TODO: either fix regex or remove and use native browser check
   EMAIL: '^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]{2,3}$',
 };
 
