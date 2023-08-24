@@ -3,10 +3,14 @@
 .root {
   position: fixed;
   z-index: 5;
-  top: 25px;
-  right: 25px;
+  top: 45px;
+  right: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: breakpoints.$tablet) {
+    right: 48px;
+  }
+
+  @media (min-width: 1280px) {
     top: 30px;
     right: 30px;
   }

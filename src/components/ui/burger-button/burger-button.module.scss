@@ -36,12 +36,8 @@
   transform: translateY(-50%);
   transition: all .4s ease;
 
-  @media (min-width: 768px) {
-    display: inline;
-    opacity: 1;
-  }
-
   @media (min-width: 1280px) {
+    display: inline;
     opacity: 0;
   }
 }
