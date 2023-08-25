@@ -6,8 +6,8 @@
   @include text.text-button;
 
   display: flex;
-  width: 110px;
-  height: 110px;
+  width: 95px;
+  height: 95px;
   align-items: center;
   justify-content: center;
   border: none;
@@ -17,19 +17,16 @@
   color: var(--color-light-primary);
   cursor: pointer;
   text-shadow: var(--color-text-shadow);
-  text-transform: uppercase;
 
-  & span {
-    display: inline-block;
-  }
+  & span { display: inline-block; }
 
   &:hover span {
     transform: rotateX(360deg);
     transition: .7s;
   }
 
-  @media (max-width: breakpoints.$tablet) {
-    width: 85px;
-    height: 85px;
+  @media (min-width: breakpoints.$tablet) {
+    width: 110px;
+    height: 110px;
   }
 }
