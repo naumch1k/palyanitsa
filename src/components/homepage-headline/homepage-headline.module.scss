@@ -12,7 +12,6 @@
   /* title-accent font-size + it's bottom margin */
   margin-bottom: calc(.2em + 20px);
   color: var(--color-dark-primary);
-  text-transform: uppercase;
 
   @media (max-width: breakpoints.$tablet) {
     margin-bottom: calc(.3em + 15px);

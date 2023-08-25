@@ -4,6 +4,7 @@
   margin: 0;
   font-family: poppins, Arial, sans-serif;
   font-style: normal;
+  text-transform: uppercase;
 }
 
 @mixin headline-xl() {
@@ -20,28 +21,28 @@
 }
 
 @mixin headline-large() {
-  font-size: 36px;
+  font-size: 44px;
   font-weight: 900;
-  letter-spacing: -.02em;
+  letter-spacing: 1.8;
   line-height: .9;
-  text-transform: uppercase;
 
-  @media (min-width: breakpoints.$tablet) { font-size: 48px; }
+  @media (min-width: breakpoints.$tablet) { font-size: 80px; }
 
-  @media (min-width: 1280px) { font-size: 96px; }
+  @media (min-width: breakpoints.$mid-desktop) { font-size: 7vw; }
+
+  @media (min-width: 2560px) { font-size: 6vw; }
 }
 
 @mixin headline-medium() {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
-  text-transform: uppercase;
 
-  @media (max-width: breakpoints.$desktop) { font-size: 36px; }
+  @media (min-width: breakpoints.$tablet) { font-size: 30px; }
 
-  @media (max-width: breakpoints.$mid-desktop) { font-size: 30px; }
+  @media (min-width: breakpoints.$mid-desktop) { font-size: 36px; }
 
-  @media (max-width: breakpoints.$tablet) { font-size: 24px; }
+  @media (min-width: 2560px) { font-size: 40px; }
 }
 
 @mixin headline-small() {
@@ -49,7 +50,6 @@
   font-weight: 700;
   letter-spacing: .04em;
   line-height: 1.5;
-  text-transform: uppercase;
 }
 
 @mixin headline-accent() {

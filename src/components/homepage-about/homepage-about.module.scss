@@ -59,8 +59,8 @@
 }
 
 .tab {
-  @include headline.headline;
-  @include headline.headline-small;
+  @include text.text;
+  @include text.text-button;
 
   color: var(--color-dark-primary-33);
   cursor: pointer;
