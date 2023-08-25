@@ -4,13 +4,9 @@
 
 .root {
   display: grid;
-  overflow: hidden;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content 1fr;
 
-  @media (max-width: breakpoints.$tablet) {
-    grid-template-columns: unset;
-    grid-template-rows: max-content 1fr;
-  }
+  @media (min-width: breakpoints.$tablet) { grid-template-columns: 1fr 1fr; }
 }
 
 .imageColumn {
@@ -115,17 +111,14 @@
 
   max-width: 400px;
   color: var(--color-dark-primary);
-
-  @media (max-width: breakpoints.$tablet) {
-    display: inline;
-  }
 }
 
 .titleAccent {
+  display: none;
   margin-right: 12px;
   color: var(--color-accent);
 
-  @media (max-width: breakpoints.$tablet) { display: none; }
+  @media (min-width: breakpoints.$tablet) { display: inline-block; }
 }
 
 .subtitle {

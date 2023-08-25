@@ -73,7 +73,7 @@
     & .line:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
     & .label {
-      @media (min-width: 768px) {
+      @media (min-width: breakpoints.$tablet) {
         display: inline;
         opacity: 1;
       }

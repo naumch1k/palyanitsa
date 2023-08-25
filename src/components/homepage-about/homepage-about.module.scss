@@ -4,60 +4,57 @@
 
 .content {
   display: flex;
+  flex-direction: column;
 
-  @media (max-width: breakpoints.$mid-desktop) {
-    flex-direction: column;
-  }
+  @media (min-width: breakpoints.$mid-desktop) { flex-direction: row; }
 }
 
 .primaryContent {
-  width: 50%;
-  min-height: 500px;
+  width: 100%;
 
-  @media (max-width: breakpoints.$mid-desktop) {
-    width: 100%;
-    min-height: unset;
+  @media (min-width: breakpoints.$mid-desktop) {
+    width: 50%;
+    min-height: 500px;
   }
 }
 
 .tabs {
   display: flex;
-  max-width: 585px;
   flex-direction: column;
-  padding: 110px 15px 100px;
-  margin-left: auto;
+  padding: 0 15px 40px;
+  margin: 0 auto;
 
-  @media (max-width: breakpoints.$desktop) {
-    padding: 110px 15px 100px 40px;
-  }
-
-  @media (max-width: breakpoints.$mid-desktop) {
+  @media (min-width: breakpoints.$tablet) {
     max-width: 750px;
     padding: 110px 15px 100px;
-    margin: 0 auto;
   }
 
-  @media (max-width: breakpoints.$tablet) {
-    padding: 0 15px 40px;
+  @media (min-width: breakpoints.$mid-desktop) {
+    max-width: 585px;
+    padding: 110px 15px 100px 40px;
+    margin: 0 0 0 auto;
   }
+
+  @media (min-width: 2560px) { padding: 110px 15px 100px; }
 }
 
 .tabList {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 0;
-  margin: 0 0 50px;
-  gap: 25px;
+  margin-bottom: 30px;
+  gap: 30px;
   list-style: none;
 
-  @media (max-width: breakpoints.$mid-desktop) {
+  @media (min-width: breakpoints.$mobile) {
+    flex-direction: row;
     margin-bottom: 40px;
   }
 
-  @media (max-width: breakpoints.$tablet) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 30px;
-    gap: 30px;
+  @media (min-width: breakpoints.$mid-desktop) {
+    margin-bottom: 50px;
+    gap: 25px;
   }
 }
 
@@ -80,33 +77,29 @@
   @include text.text;
   @include text.text-medium;
 
-  max-width: 388px;
   padding: 0;
-  margin: 0 0 18px;
+  margin: 0 0 10px;
   color: var(--color-dark-primary);
 
-  @media (max-width: breakpoints.$tablet) {
-    margin: 0 0 10px;
-  }
+  @media (min-width: breakpoints.$tablet) { margin: 0 0 18px; }
 
-  @media (max-width: breakpoints.$mid-desktop) {
-    max-width: unset;
-  }
+  @media (min-width: breakpoints.$mid-desktop) { max-width: 388px; }
 }
 
 .accentBox {
   display: flex;
-  width: 50%;
-  max-width: 585px;
+  width: 100%;
   align-items: center;
-  padding: 90px;
+  padding: 40px;
   background-color: var(--color-accent);
 
-  @media (max-width: breakpoints.$mid-desktop) {
-    width: 100%;
-    max-width: 100vw;
+  @media (min-width: breakpoints.$mobile) {
     padding: 90px 120px;
   }
 
-  @media (max-width: breakpoints.$mobile) { padding: 40px; }
+  @media (min-width: breakpoints.$mid-desktop) {
+    width: 50%;
+    max-width: 585px;
+    padding: 90px;
+  }
 }

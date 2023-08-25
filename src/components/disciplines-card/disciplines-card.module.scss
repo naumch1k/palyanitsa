@@ -47,7 +47,7 @@
 
   margin: auto 0;
   color: var(--color-dark-primary);
-  text-align: center;
+  text-align: justify;
 
-  @media (max-width: breakpoints.$mobile) { text-align: justify; }
+  @media (min-width: breakpoints.$tablet) { text-align: center; }
 }

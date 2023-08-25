@@ -2,10 +2,10 @@
 
 .root {
   display: flex;
-  width: 33.33%;
+  width: 100%;
   padding: 0 15px;
 
-  @media (max-width: breakpoints.$mid-desktop) { width: 50%; }
+  @media (min-width: breakpoints.$tablet) { width: 50%; }
 
-  @media (max-width: breakpoints.$mobile) { width: 100%; }
+  @media (min-width: breakpoints.$mid-desktop) { width: 33.33%; }
 }

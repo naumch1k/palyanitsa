@@ -3,7 +3,7 @@
 .root {
   position: absolute;
   top: 50%;
-  display: flex;
+  display: none;
   padding: 0;
   border: 0;
   background-color: unset;
@@ -12,13 +12,11 @@
   transform: translateY(-50%);
   transition: var(--common-transition);
 
-  &:hover {
-    opacity: .7;
+  @media (min-width: breakpoints.$mobile) { display: flex; }
+
+  @media (min-width: 1280px) {
+    &:hover { opacity: .7; }
   }
-
-  @media (max-width: breakpoints.$mobile) { display: none; }
 }
 
-.icon {
-  font-size: 26px;
-}
+.icon { font-size: 26px; }

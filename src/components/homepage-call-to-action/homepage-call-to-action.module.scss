@@ -2,29 +2,29 @@
 
 .content {
   display: flex;
+  flex-direction: column;
 
-  @media (max-width: breakpoints.$mid-desktop) { flex-direction: column; }
+  @media (min-width: breakpoints.$mid-desktop) { flex-direction: row; }
 }
 
 .formWrapper {
-  width: 50%;
+  width: 100%;
 
-  @media (max-width: breakpoints.$mid-desktop) { width: 100%; }
+  @media (min-width: breakpoints.$mid-desktop) { width: 50%; }
 }
 
 .generalInfoWrapper {
   display: flex;
-  width: 50%;
-  max-width: 585px;
+  width: 100%;
   align-items: center;
-  padding: 90px;
+  padding: 60px 40px;
   background-color: var(--color-accent);
 
-  @media (max-width: breakpoints.$mid-desktop) {
-    width: 100%;
-    max-width: unset;
-    padding: 100px 90px;
-  }
+  @media (min-width: breakpoints.$mobile) { padding: 100px 90px; }
 
-  @media (max-width: breakpoints.$mobile) { padding: 60px 40px; }
+  @media (min-width: breakpoints.$mid-desktop) {
+    width: 50%;
+    max-width: 585px;
+    padding: 90px;
+  }
 }

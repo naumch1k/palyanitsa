@@ -5,17 +5,17 @@
 .root {
   position: relative;
   overflow: hidden;
-  width: 25%;
-  padding-bottom: 25%;
+  width: 100%;
+  padding-bottom: 100%;
 
-  @media (max-width: breakpoints.$mid-desktop) {
+  @media (min-width: breakpoints.$mobile) {
     width: 50%;
     padding-bottom: 50%;
   }
 
-  @media (max-width: breakpoints.$mobile) {
-    width: 100%;
-    padding-bottom: 100%;
+  @media (min-width: breakpoints.$mid-desktop) {
+    width: 25%;
+    padding-bottom: 25%;
   }
 
   &::before {
@@ -31,8 +31,8 @@
     transition: opacity 1s ease;
   }
 
-  &:hover::before {
-    opacity: .28;
+  @media (min-width: 1280px) {
+    &:hover::before { opacity: .28; }
   }
 }
 
@@ -48,34 +48,38 @@
 .info {
   position: absolute;
   z-index: 2;
-  bottom: 40px;
+  bottom: 20px;
   left: 50%;
   display: flex;
   width: calc(100% - 40px);
   flex-direction: column;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   transform: translateX(-50%);
   transition: opacity 1s ease;
 
-  @media (max-width: breakpoints.$desktop) { bottom: 20px; }
+  @media (min-width: 1280px) { opacity: 0; }
 
-  @media (max-width: breakpoints.$mid-desktop) { opacity: 1; }
+  @media (min-width: 2560px) { bottom: 40px; }
 }
 
-.root:hover > .info {
-  opacity: 1;
+@media (min-width: 1280px) {
+  .root:hover > .info { opacity: 1; }
 }
 
 .name {
   @include headline.headline;
-  @include headline.headline-medium;
 
   color: var(--color-light-primary);
+  font-size: 22px;
+  line-height: 1.2;
   text-align: center;
   text-shadow: var(--color-text-shadow);
+  text-transform: uppercase;
 
-  @media (max-width: breakpoints.$desktop) { font-size: 22px; }
+  @media (min-width: 2560px) {
+    @include headline.headline-medium;
+  }
 }
 
 .nonBreakable {
@@ -93,13 +97,15 @@
 }
 
 .socialIcon {
-  margin-left: 15px;
+  margin-left: 8px;
   color: var(--color-light-primary);
   font-size: inherit;
   transition: var(--common-transition);
   vertical-align: text-bottom;
 
-  @media (max-width: breakpoints.$desktop) { margin-left: 8px; }
+  @media (min-width: 2560px) { margin-left: 15px; }
 
-  &:hover { opacity: .7; }
+  @media (min-width: 1280px) {
+    &:hover { opacity: .7; }
+  }
 }

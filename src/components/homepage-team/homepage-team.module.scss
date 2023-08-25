@@ -7,11 +7,11 @@
   width: 100%;
   flex-direction: column;
   align-items: flex-end;
-  gap: 20px;
+  gap: .9em;
 
-  @media (max-width: breakpoints.$desktop) { gap: 15px; }
+  @media (min-width: breakpoints.$tablet) { gap: 15px; }
 
-  @media (max-width: breakpoints.$tablet) { gap: .9em; }
+  @media (min-width: 2560px) { gap: 20px; }
 }
 
 .button {
