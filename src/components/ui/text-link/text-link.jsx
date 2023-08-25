@@ -4,19 +4,15 @@ import styles from './text-link.module.scss';
 export const TextLink = ({
   isOutsideLink = false,
   href = '/',
-  hoverStyle = 'underline',
   children,
   ...restLinkProps
 }) => {
-
-  // TODO: utilize useEffect to track resizing and re-render
-  const classes = `${styles.link} ${window.innerWidth >= 1000 ? styles[hoverStyle] : ''}`;
 
   return (
     !isOutsideLink ? (
       <a
         href={href}
-        className={classes}
+        className={styles.root}
         {...restLinkProps}
       >
         {children}
@@ -24,7 +20,7 @@ export const TextLink = ({
     ) : (
       <a
         href={href}
-        className={classes}
+        className={styles.root}
         {...restLinkProps}
         rel="noopener noreferrer"
         target="_blank"

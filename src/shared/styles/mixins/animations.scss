@@ -12,7 +12,7 @@
   }
 }
 
-@mixin link-underline {
+@mixin underline {
   animation: underline .5s;
 
   @keyframes underline {
