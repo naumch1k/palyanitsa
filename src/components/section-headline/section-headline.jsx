@@ -16,7 +16,6 @@ export const SectionHeadline = ({
           <img className={styles.image} src={image}/>
         </div>
         <div className={styles.imageColumnContent}>
-          <span className={styles.tag}>{tag}</span>
           {children}
         </div>
       </div>
