@@ -20,22 +20,6 @@
   }
 }
 
-.navList {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  gap: 15px;
-  list-style: none;
-
-  @media (min-width: breakpoints.$tablet-landscape) { gap: 0; }
-}
-
-.navListItem {
-  display: flex;
-  align-items: center;
-}
-
 .navLink {
   @include headline.headline;
   @include headline.headline-large;
@@ -87,14 +71,6 @@
 
   margin-bottom: 9px;
   color: var(--color-light-primary);
-}
-
-.footnoteLinks {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 .footnoteLink {

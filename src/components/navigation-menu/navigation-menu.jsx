@@ -1,15 +1,17 @@
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import { Menu } from '../ui/menu';
 import mainNavigationItems from '../../shared/constants/main-navigation-items';
 import footerSocialLinks from '../../shared/constants/footer-social-links';
 import styles from './navigation-menu.module.scss';
 
-export const NavigationMenu = () => {
+export const NavigationMenu = ({ isOpen }) => {
   return (
     <div className={styles.root}>
       <nav>
-        <ul className={styles.navList}>
+        <Menu type="overlay-navigation">
           {mainNavigationItems.map((item, i) => (
-            <li className={styles.navListItem} key={i}>
+            <Menu.Item key={i} enterAnimationEnabled={isOpen}>
               <NavLink
                 className={({ isActive }) => `${styles.navLink} ${isActive ? `${styles.isActive}` : ''}`}
                 data-text={item.text}
@@ -17,33 +19,38 @@ export const NavigationMenu = () => {
               >
                 {item.text}
               </NavLink>
-            </li>
+            </Menu.Item>
           ))}
-        </ul>
+        </Menu>
       </nav>
       <div className={styles.footnote}>
         <div>
           <h3 className={styles.footnoteHeading}>Follow Us</h3>
-          <ul className={styles.footnoteLinks}>
-            {footerSocialLinks.map(link => (
-              <li key={link.id}>
+          <Menu type="overlay-footnote-links">
+            {footerSocialLinks.map((link, i) => (
+              <Menu.Item key={i} enterAnimationEnabled={isOpen}>
                 <a className={styles.footnoteLink} href={link.href} target="_blank" rel="noreferrer">
                   {link.id}
                 </a>
-              </li>
+              </Menu.Item>
             ))}
-          </ul>
+          </Menu>
         </div>
         <div>
           <h3 className={styles.footnoteHeading}>Get in Touch</h3>
-          <a
-            className={styles.footnoteLink}
-            href="mailto:hello@pgds.xyz"
-          >
-            hello@pgds.xyz
-          </a>
+          <Menu type="overlay-footnote-links">
+            <Menu.Item enterAnimationEnabled={isOpen}>
+              <a className={styles.footnoteLink} href="mailto:hello@pgds.xyz">
+                hello@pgds.xyz
+              </a>
+            </Menu.Item>
+          </Menu>
         </div>
       </div>
     </div>
   );
+};
+
+NavigationMenu.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
 };

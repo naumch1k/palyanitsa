@@ -31,7 +31,7 @@ export const AppLayout = ({ children }) => {
         <DonateButton/>
       </Page.DonateButton>
       <Page.OverlayMenu isOpen={isOverlayMenuOpen}>
-        <NavigationMenu/>
+        <NavigationMenu isOpen={isOverlayMenuOpen}/>
       </Page.OverlayMenu>
     </Page>
   );
