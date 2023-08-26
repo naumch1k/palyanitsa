@@ -52,7 +52,7 @@
   background-position: 0 0;
   cursor: pointer;
 
-  @media (max-width: breakpoints.$mid-desktop) {
+  @media (max-width: breakpoints.$tablet-landscape) {
     display: none;
   }
 }

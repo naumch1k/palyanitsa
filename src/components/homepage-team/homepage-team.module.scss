@@ -10,9 +10,9 @@
   align-items: flex-end;
   gap: .9em;
 
-  @media (min-width: breakpoints.$tablet) { gap: 15px; }
+  @media (min-width: breakpoints.$tablet-portrait) { gap: 15px; }
 
-  @media (min-width: 2560px) { gap: 20px; }
+  @media (min-width: breakpoints.$large-desktop) { gap: 20px; }
 }
 
 .button {

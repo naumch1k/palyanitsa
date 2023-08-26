@@ -1,3 +1,4 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
 @use "../../../shared/styles/mixins/headline.scss" as headline;
 
 .link {
@@ -35,7 +36,7 @@
   &:nth-child(2) { transform: translate(-40px); }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: breakpoints.$desktop) {
   .link:hover,
   .link:focus { color: var(--color-accent); }
   .link:hover .arrow:first-child { transform: translate(40px); }

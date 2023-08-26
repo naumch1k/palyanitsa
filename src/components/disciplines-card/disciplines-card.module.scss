@@ -49,5 +49,5 @@
   color: var(--color-dark-primary);
   text-align: justify;
 
-  @media (min-width: breakpoints.$tablet) { text-align: center; }
+  @media (min-width: breakpoints.$tablet-portrait) { text-align: center; }
 }

@@ -6,12 +6,12 @@
   right: 10px;
   bottom: 10px;
 
-  @media (min-width: breakpoints.$tablet) {
+  @media (min-width: breakpoints.$tablet-portrait) {
     right: 15px;
     bottom: 15px;
   }
 
-  @media (min-width: 2560px) {
+  @media (min-width: breakpoints.$large-desktop) {
     right: 40px;
     bottom: 40px;
   }

@@ -6,11 +6,11 @@
   top: 45px;
   right: 20px;
 
-  @media (min-width: breakpoints.$tablet) {
+  @media (min-width: breakpoints.$tablet-portrait) {
     right: 48px;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: breakpoints.$desktop) {
     top: 30px;
     right: 30px;
   }

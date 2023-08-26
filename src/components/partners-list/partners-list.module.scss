@@ -10,5 +10,5 @@
   list-style: none;
   row-gap: 60px;
 
-  @media (min-width: breakpoints.$tablet) { row-gap: 90px; }
+  @media (min-width: breakpoints.$tablet-portrait) { row-gap: 90px; }
 }

@@ -4,13 +4,13 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: breakpoints.$mid-desktop) { flex-direction: row; }
+  @media (min-width: breakpoints.$tablet-landscape) { flex-direction: row; }
 }
 
 .formWrapper {
   width: 100%;
 
-  @media (min-width: breakpoints.$mid-desktop) { width: 50%; }
+  @media (min-width: breakpoints.$tablet-landscape) { width: 50%; }
 }
 
 .generalInfoWrapper {
@@ -22,7 +22,7 @@
 
   @media (min-width: breakpoints.$mobile) { padding: 100px 90px; }
 
-  @media (min-width: breakpoints.$mid-desktop) {
+  @media (min-width: breakpoints.$tablet-landscape) {
     width: 50%;
     max-width: 585px;
     padding: 90px;

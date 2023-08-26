@@ -5,10 +5,10 @@
   border-bottom: 2px solid var(--color-dark-primary);
   margin: 0 16px;
 
-  @media (min-width: breakpoints.$tablet) {
+  @media (min-width: breakpoints.$tablet-portrait) {
     padding: 100px 0 25px;
     margin: 0;
   }
 
-  @media (min-width: 1280px) { padding: 25vh 0 40px; }
+  @media (min-width: breakpoints.$desktop) { padding: 25vh 0 40px; }
 }

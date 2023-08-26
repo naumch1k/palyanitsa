@@ -15,7 +15,7 @@
   display: none;
   width: 200px;
 
-  @media (min-width: breakpoints.$tablet) { display: block; }
+  @media (min-width: breakpoints.$tablet-portrait) { display: block; }
 }
 
 .info {

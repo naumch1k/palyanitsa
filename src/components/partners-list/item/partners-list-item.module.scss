@@ -6,18 +6,18 @@
   max-height: 38px;
   padding: 0 25px;
 
-  @media (min-width: breakpoints.$tablet) {
+  @media (min-width: breakpoints.$tablet-portrait) {
     width: 50%;
     max-height: 50px;
   }
 
-  @media (min-width: breakpoints.$mid-desktop) { width: 25%; }
+  @media (min-width: breakpoints.$tablet-landscape) { width: 25%; }
 }
 
 .link {
   transition: var(--common-transition);
 
-  @media (min-width: 1280px) {
+  @media (min-width: breakpoints.$desktop) {
     &:hover { opacity: .7; }
   }
 }

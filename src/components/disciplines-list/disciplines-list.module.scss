@@ -6,9 +6,9 @@
 
   @media (min-width: breakpoints.$mobile) { padding: 70px 0; }
 
-  @media (min-width: breakpoints.$tablet) { padding: 90px 0; }
+  @media (min-width: breakpoints.$tablet-portrait) { padding: 90px 0; }
 
-  @media (min-width: breakpoints.$mid-desktop) { padding: 130px 0; }
+  @media (min-width: breakpoints.$tablet-landscape) { padding: 130px 0; }
 }
 
 .root {
@@ -22,7 +22,7 @@
   list-style: none;
   row-gap: 60px;
 
-  @media (min-width: breakpoints.$tablet) {
+  @media (min-width: breakpoints.$tablet-portrait) {
     max-width: 1170px;
     row-gap: 90px;
   }

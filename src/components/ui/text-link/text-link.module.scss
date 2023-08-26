@@ -12,9 +12,9 @@
   text-decoration: none;
   transition: var(--common-transition);
 
-  @media (max-width: breakpoints.$mid-desktop) { font-weight: 300; }
+  @media (max-width: breakpoints.$tablet-landscape) { font-weight: 300; }
 
-  @media (min-width: 1280px) {
+  @media (min-width: breakpoints.$desktop) {
     &:hover { opacity: .7; }
   }
 }

@@ -8,13 +8,13 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: breakpoints.$mid-desktop) { flex-direction: row; }
+  @media (min-width: breakpoints.$tablet-landscape) { flex-direction: row; }
 }
 
 .primaryContent {
   width: 100%;
 
-  @media (min-width: breakpoints.$mid-desktop) {
+  @media (min-width: breakpoints.$tablet-landscape) {
     width: 50%;
     min-height: 500px;
   }
@@ -26,18 +26,18 @@
   padding: 0 15px 40px;
   margin: 0 auto;
 
-  @media (min-width: breakpoints.$tablet) {
+  @media (min-width: breakpoints.$tablet-portrait) {
     max-width: 750px;
     padding: 110px 15px 100px;
   }
 
-  @media (min-width: breakpoints.$mid-desktop) {
+  @media (min-width: breakpoints.$tablet-landscape) {
     max-width: 585px;
     padding: 110px 15px 100px 40px;
     margin: 0 0 0 auto;
   }
 
-  @media (min-width: 2560px) { padding: 110px 15px 100px; }
+  @media (min-width: breakpoints.$large-desktop) { padding: 110px 15px 100px; }
 }
 
 .tabList {
@@ -45,16 +45,17 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   gap: 30px;
   list-style: none;
 
   @media (min-width: breakpoints.$mobile) {
     flex-direction: row;
-    margin-bottom: 40px;
+
+    // margin-bottom: 40px;
   }
 
-  @media (min-width: breakpoints.$mid-desktop) {
+  @media (min-width: breakpoints.$tablet-landscape) {
     margin-bottom: 50px;
     gap: 25px;
   }
@@ -70,7 +71,7 @@
   outline: none;
   transition: var(--common-transition);
 
-  @media (min-width: 1280px) {
+  @media (min-width: breakpoints.$desktop) {
     &:hover { color: var(--color-dark-primary); }
   }
 
@@ -92,9 +93,9 @@
   margin: 0 0 10px;
   color: var(--color-dark-primary);
 
-  @media (min-width: breakpoints.$tablet) { margin: 0 0 18px; }
+  @media (min-width: breakpoints.$tablet-portrait) { margin: 0 0 18px; }
 
-  @media (min-width: breakpoints.$mid-desktop) { max-width: 388px; }
+  @media (min-width: breakpoints.$tablet-landscape) { max-width: 388px; }
 }
 
 .accentBox {
@@ -108,7 +109,7 @@
     padding: 90px 120px;
   }
 
-  @media (min-width: breakpoints.$mid-desktop) {
+  @media (min-width: breakpoints.$tablet-landscape) {
     width: 50%;
     max-width: 585px;
     padding: 90px;

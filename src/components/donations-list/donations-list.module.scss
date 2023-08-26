@@ -5,9 +5,9 @@
 
   @media (min-width: breakpoints.$mobile) { padding: 70px 0; }
 
-  @media (min-width: breakpoints.$tablet) { padding: 90px 0; }
+  @media (min-width: breakpoints.$tablet-portrait) { padding: 90px 0; }
 
-  @media (min-width: breakpoints.$mid-desktop) { padding: 130px 0; }
+  @media (min-width: breakpoints.$tablet-landscape) { padding: 130px 0; }
 }
 
 .root {
@@ -16,7 +16,7 @@
   margin: 0 auto;
   list-style: none;
 
-  @media (min-width: breakpoints.$tablet) { max-width: calc(100% - 96px); }
+  @media (min-width: breakpoints.$tablet-portrait) { max-width: calc(100% - 96px); }
 
-  @media (min-width: breakpoints.$mid-desktop) { max-width: 800px; }
+  @media (min-width: breakpoints.$tablet-landscape) { max-width: 800px; }
 }

@@ -6,13 +6,13 @@
   background-color: var(--color-light-default);
   gap: 40px;
 
-  @media (min-width: breakpoints.$tablet) {
+  @media (min-width: breakpoints.$tablet-portrait) {
     max-width: calc(100% - 96px);
     margin: 0 auto;
     gap: 80px;
   }
 
-  @media (min-width: 1280px) { max-width: 1170px; }
+  @media (min-width: breakpoints.$desktop) { max-width: 1170px; }
 
-  @media (min-width: 2560px) { max-width: 1280px; }
+  @media (min-width: breakpoints.$large-desktop) { max-width: 1280px; }
 }

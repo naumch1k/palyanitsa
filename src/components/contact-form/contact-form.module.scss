@@ -10,16 +10,16 @@
   margin: 0 auto;
   gap: 5px;
 
-  @media (min-width: breakpoints.$tablet) {
+  @media (min-width: breakpoints.$tablet-portrait) {
     max-width: 750px;
     padding: 60px;
   }
 
-  @media (min-width: breakpoints.$mid-desktop) { margin: 0 0 0 auto; }
+  @media (min-width: breakpoints.$tablet-landscape) { margin: 0 0 0 auto; }
 
-  @media (min-width: 1280px) { max-width: 585px; }
+  @media (min-width: breakpoints.$desktop) { max-width: 585px; }
 
-  @media (min-width: 2560px) { padding: 90px; }
+  @media (min-width: breakpoints.$large-desktop) { padding: 90px; }
 }
 
 .submitGroup {

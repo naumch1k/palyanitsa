@@ -14,7 +14,7 @@
   &:nth-child(2) {
     width: 20px;
 
-    @media (min-width: 1280px) { width: 30px; }
+    @media (min-width: breakpoints.$desktop) { width: 30px; }
   }
 }
 
@@ -36,7 +36,7 @@
   transform: translateY(-50%);
   transition: all .4s ease;
 
-  @media (min-width: 1280px) {
+  @media (min-width: breakpoints.$desktop) {
     display: inline;
     opacity: 0;
   }
@@ -55,7 +55,7 @@
   row-gap: 6px;
 
   &:hover {
-    @media (min-width: 1280px) {
+    @media (min-width: breakpoints.$desktop) {
       & .line:nth-child(2) { width: 20px; }
 
       & .label {
@@ -73,7 +73,7 @@
     & .line:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
     & .label {
-      @media (min-width: breakpoints.$tablet) {
+      @media (min-width: breakpoints.$tablet-portrait) {
         display: inline;
         opacity: 1;
       }

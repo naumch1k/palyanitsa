@@ -5,7 +5,7 @@
   padding-bottom: 30px;
   background-color: var(--color-light-default);
 
-  @media (max-width: breakpoints.$tablet) {
+  @media (max-width: breakpoints.$tablet-portrait) {
     padding-bottom: 40px;
   }
 }

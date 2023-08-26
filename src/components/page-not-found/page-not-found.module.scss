@@ -29,9 +29,9 @@
   height: 160px;
   align-items: center;
 
-  @media (min-width: breakpoints.$tablet) { height: 200px; }
+  @media (min-width: breakpoints.$tablet-portrait) { height: 200px; }
 
-  @media (min-width: 1280px) { height: 280px; }
+  @media (min-width: breakpoints.$desktop) { height: 280px; }
 }
 
 .number {
@@ -44,9 +44,9 @@
   letter-spacing: -.09em;
   text-shadow: -4px 2px 1px var(--color-light-primary);
 
-  @media (min-width: breakpoints.$tablet) { font-size: 160px; }
+  @media (min-width: breakpoints.$tablet-portrait) { font-size: 160px; }
 
-  @media (min-width: 1280px) {
+  @media (min-width: breakpoints.$desktop) {
     @include animations.throbbing-text;
 
     left: -15px;
