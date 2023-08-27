@@ -8,16 +8,16 @@
 }
 
 @mixin headline-xl() {
-  font-size: 15em;
+  font-size: 56px;
   font-weight: 900;
   letter-spacing: -.02em;
   line-height: .8;
 
-  @media (max-width: 1440px) { font-size: 10em; }
+  @media (min-width: breakpoints.$tablet-portrait) { font-size: 100px; }
 
-  @media (max-width: breakpoints.$tablet-portrait) { font-size: 7em; }
+  @media (min-width: breakpoints.$tablet-landscape) { font-size: 12vw; }
 
-  @media (max-width: breakpoints.$mobile) { font-size: 6em; }
+  @media (min-width: breakpoints.$desktop) { font-size: 9vw; }
 }
 
 @mixin headline-large() {
@@ -53,8 +53,12 @@
 }
 
 @mixin headline-accent() {
-  font-size: .2em;
-  letter-spacing: -.04em;
+  font-size: 40.5px;
+  letter-spacing: -.02em;
 
-  @media (max-width: breakpoints.$tablet-portrait) { font-size: .3em; }
+  @media (min-width: breakpoints.$tablet-portrait) { font-size: 72.5px; }
+
+  @media (min-width: breakpoints.$tablet-landscape) { font-size: 8.7vw; }
+
+  @media (min-width: breakpoints.$desktop) { font-size: 6.5vw; }
 }
