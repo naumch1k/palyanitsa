@@ -9,7 +9,7 @@ This is all about these people! [Take a look](https://pgds.xyz/)
 <img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/dima-kazban.jpg" width="240px" height="240px">
 <img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/dmytro-shylobryd.jpg" width="240px" height="240px">
 <img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/ivan-tsyvinskiy.jpg" width="240px" height="240px">
-<img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/maria-klimenko.jpg" width="240px" height="240px">
+<img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/mariia-klimenko.jpg" width="240px" height="240px">
 <img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/mariia-ivanchenko.jpg" width="240px" height="240px">
 <img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/matvey-gavrilenko.jpg" width="240px" height="240px">
 <img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/miroslava-grinenko.jpg" width="240px" height="240px">
@@ -30,5 +30,5 @@ This is all about these people! [Take a look](https://pgds.xyz/)
 <img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/becca-grey.jpg" width="240px" height="240px">
 <img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/jean-romero.jpg" width="240px" height="240px">
 <img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/caleb-wheeler.jpg" width="240px" height="240px">
-<img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/dexter-chacko.jpg" width="240px" height="240px">  
+<img align="left" src="https://raw.githubusercontent.com/naumch1k/palyanitsa/content-updates/src/components/app/assets/homepage-team/dexter-chacko.jpg" width="240px" height="240px">
 

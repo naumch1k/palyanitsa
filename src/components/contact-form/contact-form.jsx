@@ -7,8 +7,6 @@ import { Button } from '../ui/button/button';
 import useFormWithValidation from '../../hooks/useFormWithValidation';
 import emailjsConfig from '../../shared/constants/emailjs-config';
 import CustomValidationMessages from '../../shared/constants/custom-validation-messages';
-import { validEmailRegexp } from '../../shared/constants/regexps';
-
 export const ContactForm = () => {
   const [submitButtonLabel, setSubmitButtonLabel] = useState('Send message');
   const form = useRef();
@@ -67,12 +65,12 @@ export const ContactForm = () => {
       />
       <TextInput
         name="email"
+        type="email"
         value={values.email}
         placeholder="Your email"
         error={errors.email}
         errorMessage={CustomValidationMessages.EMAIL_ERROR}
         onChange={handleChange}
-        pattern={validEmailRegexp}
         required
       />
       <TextArea
