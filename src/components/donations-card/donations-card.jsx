@@ -7,6 +7,7 @@ export const DonationsCard = ({
   link,
   linkText,
   qrCode,
+  credentials,
 }) => {
 
   return (
@@ -14,20 +15,23 @@ export const DonationsCard = ({
       {qrCode && <img  className={styles.qrCode} src={qrCode}/>}
       <div className={styles.info}>
         <p className={styles.text}>
-          {text}
+          {text}{' '}
+          {/* TODO: think on better solution */}
+          {credentials && <span className={styles.credentials}>{credentials}</span>}
         </p>
-        <ArrowLink
+        {link && <ArrowLink
           href={link}
           linkText={linkText}
-        />
+        />}
       </div>
     </div>
   );
 };
 
 DonationsCard.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   link: PropTypes.string,
   linkText: PropTypes.string,
   qrCode: PropTypes.string,
+  credentials: PropTypes.string,
 };

@@ -22,9 +22,8 @@ export const donationsData = {
     },
     {
       name: 'Zelle',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
-      link: '',
-      linkText: 'Donate via Zelle website',
+      text: 'Use your banking app to access Zelle and contribute to the Palianytsia Foundation by sending your donation to',
+      credentials: 'hello@pgds.xyz',
     }
   ]
 };
