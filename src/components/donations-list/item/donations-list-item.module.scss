@@ -9,7 +9,7 @@
   align-self: flex-end;
   color: var(--color-dark-primary);
   font-size: 22px;
-  transition: color .3s ease;
+  transition: var(--common-transition);
 
   &.isExpanded {
     color: var(--color-accent);
@@ -24,22 +24,26 @@
   align-items: center;
   justify-content: space-between;
   color: var(--color-dark-primary);
-  cursor: pointer;
   text-transform: uppercase;
-  transition: color .3s ease;
+  transition: var(--common-transition);
 
   &.isExpanded {
     color: var(--color-accent);
   }
 
-  &:hover,
-  &:hover > .arrowIcon {
-    color: var(--color-accent);
+  @media (min-width: breakpoints.$desktop) {
+    cursor: pointer;
+
+    &:hover,
+    &:hover > .arrowIcon {
+      color: var(--color-accent);
+    }
   }
 }
 
 .plusMinusIcon {
+  display: none;
   margin-right: 20px;
 
-  @media (max-width: breakpoints.$mobile) { display: none; }
+  @media (min-width: breakpoints.$mobile) { display: inline-block; }
 }

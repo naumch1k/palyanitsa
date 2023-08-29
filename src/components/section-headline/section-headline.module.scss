@@ -4,13 +4,9 @@
 
 .root {
   display: grid;
-  overflow: hidden;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content 1fr;
 
-  @media (max-width: breakpoints.$tablet) {
-    grid-template-columns: unset;
-    grid-template-rows: max-content 1fr;
-  }
+  @media (min-width: breakpoints.$tablet-portrait) { grid-template-columns: 1fr 1fr; }
 }
 
 .imageColumn {
@@ -25,7 +21,7 @@
   bottom: 0;
   left: 0;
 
-  @media (max-width: breakpoints.$tablet) {
+  @media (max-width: breakpoints.$tablet-portrait) {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -40,73 +36,48 @@
   height: 100%;
   object-fit: cover;
 
-  @media (max-width: breakpoints.$tablet) {
-    position: absolute;
-  }
+  @media (max-width: breakpoints.$tablet-portrait) { position: absolute; }
 }
 
 .imageColumnContent {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   height: 100%;
-  flex-direction: column;
   align-items: flex-end;
-  justify-content: space-between;
-  padding: 90px;
-  margin-left: auto;
+  padding: 20px;
   color: var(--color-light-default);
-  gap: 20px;
 
-  @media (max-width: 1440px) { gap: 15px; }
+  @media (min-width: breakpoints.$mobile) { padding: 60px; }
 
-  @media (max-width: breakpoints.$desktop) { padding: 60px; }
+  @media (min-width: breakpoints.$desktop) { padding: 90px; }
 
-  @media (max-width: breakpoints.$tablet) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    gap: 0;
-  }
-
-  @media (max-width: breakpoints.$mobile) { padding: 20px; }
-}
-
-.tag {
-  @include headline.headline;
-  @include headline.headline-large;
-
-  position: relative;
-  right: -104px;
-
-  @media (max-width: breakpoints.$desktop) { right: -74px; }
-
-  @media (max-width: breakpoints.$tablet) { right: -66px; }
-
-  @media (max-width: breakpoints.$mobile) { right: -24px; }
+  @media (min-width: breakpoints.$large-desktop) { padding: 110px 90px; }
 }
 
 .contentColumn {
   display: flex;
-  min-height: 585px;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 110px 90px;
+  padding: 30px 16px 60px;
   background: var(--color-light-default);
+  gap: 10px;
 
-  @media (max-width: breakpoints.$desktop) { padding: 90px 60px; }
-
-  @media (max-width: breakpoints.$mid-desktop) {
+  @media (min-width: breakpoints.$tablet-portrait) {
     min-height: 380px;
-    justify-content: flex-end;
-    padding: 60px;
+    justify-content: center;
+    padding: 60px 30px 60px 40px;
+    gap: 25px;
   }
 
-  @media (max-width: breakpoints.$tablet) {
-    display: unset;
-    min-height: unset;
-    padding: 30px 15px 60px;
+  @media (min-width: breakpoints.$tablet-landscape) {
+    min-height: 585px;
+    justify-content: flex-end;
+    padding: 90px 60px;
+    gap: 60px;
   }
+
+  @media (min-width: breakpoints.$large-desktop) { padding: 110px 90px; }
 }
 
 .title {
@@ -115,39 +86,21 @@
 
   max-width: 400px;
   color: var(--color-dark-primary);
-
-  @media (max-width: breakpoints.$tablet) {
-    display: inline;
-  }
 }
 
 .titleAccent {
+  display: none;
   margin-right: 12px;
   color: var(--color-accent);
 
-  @media (max-width: breakpoints.$tablet) { display: none; }
+  @media (min-width: breakpoints.$tablet-portrait) { display: inline-block; }
 }
 
 .subtitle {
   @include headline.headline;
   @include headline.headline-medium;
 
-  max-width: 400px;
-  margin: 70px 0 0;
   color: var(--color-dark-primary-33);
 
-  @media (max-width: breakpoints.$desktop) {
-    margin: 25px 0 0;
-  }
-
-  @media (max-width: breakpoints.$mid-desktop) {
-    max-width: unset;
-    line-height: 1.2;
-  }
-
-  @media (max-width: breakpoints.$tablet) {
-    max-width: unset;
-    margin: 10px 0 0;
-    text-align: justify;
-  }
+  @media (min-width: breakpoints.$tablet-portrait) { max-width: 400px; }
 }

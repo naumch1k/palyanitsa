@@ -1,3 +1,5 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+
 .root {
   display: flex;
   justify-content: center;
@@ -13,9 +15,9 @@
   background: transparent;
   border-radius: 50%;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: var(--common-transition);
 
-  @media (min-width: 1001px) {
+  @media (min-width: breakpoints.$desktop) {
     &:hover {
       background-color: var(--color-light-primary);
       transform: scale(1.35);

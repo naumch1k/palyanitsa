@@ -1,9 +1,7 @@
 @use "../../../shared/breakpoints.scss" as breakpoints;
 @use "../../../shared/styles/mixins/text.scss" as text;
-@use "../../../shared/styles/mixins/link-underline.scss" as link;
-@use "../../../shared/styles/mixins/animations.scss" as animations;
 
-.link {
+.root {
   @include text.text;
   @include text.text-medium;
 
@@ -12,19 +10,11 @@
   letter-spacing: 3px;
   outline: none;
   text-decoration: none;
+  transition: var(--common-transition);
 
-  @media (max-width: breakpoints.$mid-desktop) {
-    font-weight: 300;
-  }
-}
+  @media (max-width: breakpoints.$tablet-landscape) { font-weight: 300; }
 
-.underline {
-  &:hover::after,
-  &:focus-visible::after {
-    @include link.link-underline;
-    @include animations.link-underline;
-
-    background-color: var(--color-dark-primary-33);
-    transform-origin: 0;
+  @media (min-width: breakpoints.$desktop) {
+    &:hover { opacity: .7; }
   }
 }

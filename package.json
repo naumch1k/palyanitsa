@@ -1,14 +1,17 @@
 {
   "name": "palianytsia",
   "version": "0.1.0",
+  "homepage": "https://naumch1k.github.io/palyanitsa/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "3.11.0",
+    "gh-pages": "^6.0.0",
     "keen-slider": "6.8.6",
     "react": "18.2.0",
     "react-collapsed": "4.0.2",
     "react-dom": "18.2.0",
     "react-icons": "4.9.0",
+    "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-tabs": "6.0.1",
     "sass": "1.54.5"
@@ -18,7 +21,9 @@
     "build": "react-scripts build",
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"src/**/*.css\" --fix and stylelint \"src/**/*.scss\" --fix",
-    "precommit": "npm run lint:js && npm run lint:scss"
+    "precommit": "npm run lint:js && npm run lint:scss",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [

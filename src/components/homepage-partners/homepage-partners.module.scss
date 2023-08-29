@@ -2,19 +2,19 @@
 @use "../../shared/styles/mixins/headline.scss" as headline;
 
 .root {
-  padding: 130px 0;
+  padding: 90px 20px;
 
-  @media (max-width: breakpoints.$desktop) { padding: 110px 90px 100px; }
+  @media (min-width: breakpoints.$mobile) { padding: 90px; }
 
-  @media (max-width: breakpoints.$mid-desktop) { padding: 90px; }
+  @media (min-width: breakpoints.$tablet-landscape) { padding: 110px 90px 100px; }
 
-  @media (max-width: breakpoints.$mobile) { padding: 90px 20px; }
+  @media (min-width: breakpoints.$desktop) { padding: 130px 0; }
 }
 
 .title {
   @include headline.headline;
 
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   color: var(--color-dark-primary-33);
   font-size: 40px;
   font-weight: 700;
@@ -22,5 +22,5 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (max-width: breakpoints.$mobile) { margin-bottom: 60px; }
+  @media (min-width: breakpoints.$mobile) { margin-bottom: 80px; }
 }

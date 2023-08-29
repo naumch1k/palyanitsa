@@ -1,0 +1,82 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+@use "../../../shared/styles/mixins/text.scss" as text;
+@use "../../../shared/styles/mixins/headline.scss" as headline;
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-light-primary);
+  box-shadow:
+    rgb(1 1 9 / 40%) 0 1px 1px,
+    rgb(1 1 9 / 30%) 0 0 1px 1px;
+  transition: all .4s ease;
+
+  &:nth-child(2) {
+    width: 20px;
+
+    @media (min-width: breakpoints.$desktop) { width: 30px; }
+  }
+}
+
+.label {
+  @include headline.headline;
+  @include headline.headline-small;
+
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  display: none;
+  color: var(--color-light-primary);
+  font-size: 18px;
+  opacity: 0;
+  text-shadow:
+    rgb(1 1 9 / 40%) 1px 1px 1.5px,
+    rgb(1 1 9 / 40%) 0 1px 3px;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+  transition: all .4s ease;
+
+  @media (min-width: breakpoints.$desktop) {
+    display: inline;
+    opacity: 0;
+  }
+}
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0;
+  border: none;
+  margin-left: auto;
+  background-color: transparent;
+  cursor: pointer;
+  row-gap: 6px;
+
+  &:hover {
+    @media (min-width: breakpoints.$desktop) {
+      & .line:nth-child(2) { width: 20px; }
+
+      & .label {
+        right: 50px;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.isOpen {
+    & .line:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+
+    & .line:nth-child(2) { opacity: 0; }
+
+    & .line:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    & .label {
+      @media (min-width: breakpoints.$tablet-portrait) {
+        display: inline;
+        opacity: 1;
+      }
+    }
+  }
+}

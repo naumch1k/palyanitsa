@@ -1,10 +1,11 @@
 @use "../../../shared/breakpoints.scss" as breakpoints;
 
 .root {
-  padding-bottom: 130px;
+  flex-grow: 1;
+  padding-bottom: 90px;
   background-color: var(--color-light-default);
 
-  @media (max-width: breakpoints.$desktop) { padding-bottom: 110px; }
+  @media (min-width: breakpoints.$tablet-landscape) { padding-bottom: 110px; }
 
-  @media (max-width: breakpoints.$mid-desktop) { padding-bottom: 90px; }
+  @media (min-width: breakpoints.$large-desktop) { padding-bottom: 130px; }
 }

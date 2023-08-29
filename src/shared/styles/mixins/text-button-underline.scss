@@ -1,0 +1,10 @@
+@mixin text-button-underline() {
+  position: absolute;
+  bottom: -2px;
+  left: -1px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-accent);
+  content: "";
+  transform-origin: 0;
+}

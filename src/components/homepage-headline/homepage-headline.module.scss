@@ -5,31 +5,27 @@
 
 .title {
   @include headline.headline;
-  @include headline.headline-large;
+  @include headline.headline-xl;
 
-  max-width: min-content;
-
-  /* title-accent font-size + it's bottom margin */
-  margin-bottom: calc(.2em + 20px);
+  /* title-accent equals difference between main's and accent's font sizes */
+  margin-bottom: 15.5px;
   color: var(--color-dark-primary);
-  text-transform: uppercase;
+  text-shadow: var(--color-text-shadow);
 
-  @media (max-width: breakpoints.$tablet) {
-    margin-bottom: calc(.3em + 15px);
-  }
+  @media (min-width: breakpoints.$tablet-portrait) { margin-bottom: 27.5px; }
+
+  @media (min-width: breakpoints.$tablet-landscape) { margin-bottom: 3.3vw; }
+
+  @media (min-width: breakpoints.$tablet-landscape) { margin-bottom: 2.5vw; }
 }
 
 .titleAccent {
   @include headline.headline-accent;
 
   display: block;
-  margin: 0 0 15px 20px;
+  margin: 0 0 0 .03em;
   color: var(--color-accent);
-  text-transform: lowercase;
-
-  @media (max-width: breakpoints.$tablet) {
-    margin: 0 0 15px;
-  }
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 18%);
 }
 
 .dot {

@@ -1,0 +1,22 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  position: absolute;
+  top: 50%;
+  display: none;
+  padding: 0;
+  border: 0;
+  background-color: unset;
+  color: var(--color-light-primary);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: var(--common-transition);
+
+  @media (min-width: breakpoints.$mobile) { display: flex; }
+
+  @media (min-width: breakpoints.$desktop) {
+    &:hover { opacity: .7; }
+  }
+}
+
+.icon { font-size: 26px; }

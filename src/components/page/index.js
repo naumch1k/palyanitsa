@@ -1,24 +1,16 @@
-import PropTypes from 'prop-types';
-import { PageHeader } from './header';
+import { Page as Component } from './page';
 import { PageContent } from './content';
 import { PageFooter } from './footer';
+import { PageBurgerButton } from './burger-button';
+import { PageOverlayMenu } from './overlay-menu';
 import { PageDonateButton } from './donate-button';
 
-import styles from './page.module.scss';
+const Page = Object.assign(Component, {
+  Content: PageContent,
+  Footer: PageFooter,
+  BurgerButton: PageBurgerButton,
+  OverlayMenu: PageOverlayMenu,
+  DonateButton: PageDonateButton,
+});
 
-export const Page = ({ children }) => {
-  return (
-    <div className={styles.root}>
-      {children}
-    </div>
-  );
-};
-
-Page.Header = PageHeader;
-Page.Content = PageContent;
-Page.Footer = PageFooter;
-Page.DonateButton = PageDonateButton;
-
-Page.propTypes = {
-  children: PropTypes.array
-};
+export default Page;

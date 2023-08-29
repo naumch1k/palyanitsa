@@ -4,32 +4,45 @@
   margin: 0;
   font-family: poppins, Arial, sans-serif;
   font-style: normal;
+  text-transform: uppercase;
 }
 
-@mixin headline-large() {
-  font-size: 15em;
+@mixin headline-xl() {
+  font-size: 56px;
   font-weight: 900;
   letter-spacing: -.02em;
   line-height: .8;
 
-  @media (max-width: 1440px) { font-size: 10em; }
+  @media (min-width: breakpoints.$tablet-portrait) { font-size: 100px; }
 
-  @media (max-width: breakpoints.$tablet) { font-size: 7em; }
+  @media (min-width: breakpoints.$tablet-landscape) { font-size: 12vw; }
 
-  @media (max-width: breakpoints.$mobile) { font-size: 6em; }
+  @media (min-width: breakpoints.$desktop) { font-size: 9vw; }
+}
+
+@mixin headline-large() {
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 1.8;
+  line-height: .9;
+
+  @media (min-width: breakpoints.$tablet-portrait) { font-size: 80px; }
+
+  @media (min-width: breakpoints.$tablet-landscape) { font-size: 7vw; }
+
+  @media (min-width: breakpoints.$large-desktop) { font-size: 6vw; }
 }
 
 @mixin headline-medium() {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
-  text-transform: uppercase;
 
-  @media (max-width: breakpoints.$desktop) { font-size: 36px; }
+  @media (min-width: breakpoints.$tablet-portrait) { font-size: 30px; }
 
-  @media (max-width: breakpoints.$mid-desktop) { font-size: 30px; }
+  @media (min-width: breakpoints.$tablet-landscape) { font-size: 36px; }
 
-  @media (max-width: breakpoints.$tablet) { font-size: 24px; }
+  @media (min-width: breakpoints.$large-desktop) { font-size: 40px; }
 }
 
 @mixin headline-small() {
@@ -37,12 +50,15 @@
   font-weight: 700;
   letter-spacing: .04em;
   line-height: 1.5;
-  text-transform: uppercase;
 }
 
 @mixin headline-accent() {
-  font-size: .2em;
-  letter-spacing: -.04em;
+  font-size: 40.5px;
+  letter-spacing: -.02em;
 
-  @media (max-width: breakpoints.$tablet) { font-size: .3em; }
+  @media (min-width: breakpoints.$tablet-portrait) { font-size: 72.5px; }
+
+  @media (min-width: breakpoints.$tablet-landscape) { font-size: 8.7vw; }
+
+  @media (min-width: breakpoints.$desktop) { font-size: 6.5vw; }
 }

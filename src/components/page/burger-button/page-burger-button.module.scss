@@ -1,0 +1,17 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  position: fixed;
+  z-index: 5;
+  top: 45px;
+  right: 20px;
+
+  @media (min-width: breakpoints.$tablet-portrait) {
+    right: 48px;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    top: 30px;
+    right: 30px;
+  }
+}

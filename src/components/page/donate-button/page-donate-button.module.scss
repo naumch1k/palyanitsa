@@ -3,16 +3,16 @@
 .root {
   position: fixed;
   z-index: 3;
-  right: 40px;
-  bottom: 40px;
+  right: 10px;
+  bottom: 10px;
 
-  @media (max-width: breakpoints.$desktop) {
+  @media (min-width: breakpoints.$tablet-portrait) {
     right: 15px;
     bottom: 15px;
   }
 
-  @media (max-width: breakpoints.$tablet) {
-    right: 10px;
-    bottom: 10px;
+  @media (min-width: breakpoints.$large-desktop) {
+    right: 40px;
+    bottom: 40px;
   }
 }
