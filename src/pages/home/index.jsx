@@ -1,4 +1,5 @@
 import { AppLayout } from '../../components/app-layout';
+import SEO from '../../components/seo';
 import HomepageLayout from '../../components/homepage-layout';
 import { HomepageHeadline } from '../../components/homepage-headline';
 import { HomepageAbout } from '../../components/homepage-about';
@@ -20,6 +21,7 @@ import { partnersData } from './assets/homepage-partners/mock-data';
 const Home = () => {
   return (
     <AppLayout>
+      <SEO title="Home"/>
       <HomepageLayout>
         <HomepageLayout.Headline>
           <HomepageHeadline/>

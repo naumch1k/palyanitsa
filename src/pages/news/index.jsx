@@ -1,4 +1,5 @@
 import { AppLayout } from '../../components/app-layout';
+import SEO from '../../components/seo';
 import NewsLayout from '../../components/news-layout';
 import NewsList from '../../components/news-list';
 import { PageTitle } from '../../components/page-title';
@@ -9,6 +10,7 @@ import { mockData } from './assets/mock-data';
 const News = () => {
   return (
     <AppLayout>
+      <SEO title="The Latest"/>
       <NewsLayout>
         <NewsLayout.Title>
           <PageTitle text="The latest"/>
