@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useMenu } from '../menu.context';
 import { styles } from '../menu.styles';
@@ -13,11 +14,13 @@ export const MenuItem = ({
 
   return (
     <li className={`${styles[type].item} ${enterAnimationEnabled ? `${styles[type].onEnter}` : ''}`}>
-      <a
+      <Link
         className={`${styles[type].link} ${current ? `${styles[type].current}` : ''}`}
-        href={href}
+        to={href}
         {...restProps}
-      >{text}</a>
+      >
+        {text}
+      </Link>
     </li>
   );
 };
