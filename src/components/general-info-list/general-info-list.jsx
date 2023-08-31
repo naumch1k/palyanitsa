@@ -3,19 +3,19 @@ import styles from './general-info-list.module.scss';
 
 export const GeneralInfoList = ({ data }) => {
   return (
-    <ul className={styles.root}>
+    <dl className={styles.root}>
       {data.map((item, i) => (
-        <li className={styles.item} key={i}>
-          <item.icon className={styles.icon}/>
+        <div className={styles.item} key={i}>
+          <item.icon className={styles.icon} aria-hidden="true" focusable="false"/>
           <dt className={styles.heading}>{item.heading}</dt>
           <dd className={styles.paragraphs}>
             {item.paragraphs.map((paragraph, i) => (
               <span className={styles.paragraph} key={i}>{paragraph}</span>
             ))}
           </dd>
-        </li>
+        </div>
       ))}
-    </ul>
+    </dl>
   );
 };
 
