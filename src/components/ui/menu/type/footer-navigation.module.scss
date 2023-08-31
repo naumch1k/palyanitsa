@@ -1,0 +1,15 @@
+@use "../../../../shared/breakpoints.scss" as breakpoints;
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: breakpoints.$desktop) { flex-flow: row wrap; }
+}
+
+.item {
+  @media (min-width: breakpoints.$desktop) { width: 23%; }
+}

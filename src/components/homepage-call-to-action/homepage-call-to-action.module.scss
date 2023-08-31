@@ -27,4 +27,6 @@
     max-width: 585px;
     padding: 90px;
   }
+
+  @media (min-width: breakpoints.$large-desktop) { max-width: 640px; }
 }

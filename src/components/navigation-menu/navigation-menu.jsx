@@ -25,7 +25,7 @@ export const NavigationMenu = ({ isOpen }) => {
       </nav>
       <div className={styles.footnote}>
         <div>
-          <h3 className={styles.footnoteHeading}>Follow Us</h3>
+          <h3 className={styles.footnoteHeading}>Socials</h3>
           <Menu type="overlay-footnote-links">
             {footerSocialLinks.map((link, i) => (
               <Menu.Item key={i} enterAnimationEnabled={isOpen}>

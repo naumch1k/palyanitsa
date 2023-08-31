@@ -1,73 +1,132 @@
 @use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/headline.scss" as headline;
 @use "../../shared/styles/mixins/text.scss" as text;
 
-.root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.columns {
+  display: grid;
+  color: var(--color-light-primary);
+  gap: 46px;
+  grid-template:
+    // "navigation"
+    "socials   "
+    "contacts  ";
+
+  @media (min-width: breakpoints.$mobile) {
+    padding: 40px 0 0;
+    border-top: 1px solid var(--color-dark-primary);
+    color: var(--color-dark-primary);
+    grid-template:
+      "navigation  socials "
+      "navigation  contacts"
+      /1fr 1fr;
+  }
+
+  @media (min-width: breakpoints.$tablet-portrait) {
+    // column-gap: 120px;
+    column-gap: 0;
+    grid-template:
+      "logo socials "
+      "logo contacts"
+      /50%  1fr;
+
+    // "logo navigation  socials "
+    // "logo navigation  contacts"
+    // /1fr  max-content 2fr;
+  }
+
+  // @media (min-width: breakpoints.$tablet-landscape) {
+  //   grid-template-columns: 1fr .5fr .5fr;
+  // }
+
+  @media (min-width: breakpoints.$desktop) {
+    padding: 54px 0 0;
+
+    // column-gap: 0;
+    grid-template:
+      // "logo     navigation navigation"
+      "logo     socials    contacts  "
+      /50%      23%        1fr;
+    row-gap: 30px;
+  }
 }
 
-.socialLinks {
-  display: flex;
-  width: 90%;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  gap: 25px;
-  list-style: none;
+.logo {
+  display: none;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+
+  @media (min-width: breakpoints.$mobile) { display: block; }
 }
 
-.socialLink {
-  display: flex;
-  align-items: center;
-  color: var(--color-accent);
-  font-size: 30px;
-  line-height: 1;
-  transition: var(--common-transition);
+// .navigation { grid-area: navigation; }
 
-  &:hover { opacity: .7; }
-}
+.socials { grid-area: socials; }
 
-.copyright {
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-}
+.contacts { grid-area: contacts; }
 
-.text {
+.heading {
   @include text.text;
   @include text.text-medium;
 
-  margin: 0;
-  color: var(--color-dark-primary-55);
-  letter-spacing: 3px;
+  margin-bottom: 9px;
+  color: inherit;
+
+  @media (min-width: breakpoints.$desktop) { margin-bottom: 7px; }
 }
 
-.heart {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-  animation: fave-heart 1s steps(40);
-  background: url("../../../public/images/footer/hearts.png") no-repeat;
-  background-position: 0 0;
-  cursor: pointer;
+.link {
+  @include headline.headline;
+  @include headline.headline-small;
 
-  @media (max-width: breakpoints.$tablet-landscape) {
-    display: none;
+  display: inline-block;
+  padding: 7px 0;
+  color: inherit;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  transition: var(--common-transition);
+
+  @media (min-width: breakpoints.$desktop) { &:hover { opacity: .7; } }
+}
+
+.footnote {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  border-top: 1px solid var(--color-light-primary);
+  margin-top: 60px;
+  gap: 14px;
+  grid-area: footnote;
+
+  @media (min-width: breakpoints.$mobile) {
+    border-color: var(--color-dark-primary);
+    margin-top: 40px;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    padding-top: 40px;
+    margin-top: 54px;
+  }
+
+  @media (min-width: breakpoints.$large-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
-.heart:hover {
-  background-position: -1342px 0;
-  transition: background 2s steps(28);
+.textLink,
+.copyright {
+  @include text.text;
+  @include text.text-medium;
+
+  color: var(--color-light-primary);
+
+  @media (min-width: breakpoints.$mobile) {
+    color: var(--color-dark-primary);
+  }
 }
 
-@keyframes fave-heart {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: -1342px 0;
-  }
+.textLink {
+  text-decoration: none;
 }

@@ -1,11 +1,18 @@
 @use "../../../shared/breakpoints.scss" as breakpoints;
 
 .root {
-  width: 100%;
-  padding-bottom: 30px;
-  background-color: var(--color-light-default);
+  padding: 64px 20px;
+  background-color: var(--color-accent);
 
-  @media (max-width: breakpoints.$tablet-portrait) {
-    padding-bottom: 40px;
+  @media (min-width: breakpoints.$mobile) {
+    width: 100%;
+    max-width: calc(100% - 106px);
+    padding: 0 0 54px;
+    margin: 0 auto;
+    background-color: var(--color-light-default);
   }
+
+  @media (min-width: breakpoints.$desktop) { max-width: 1170px; }
+
+  @media (min-width: breakpoints.$large-desktop) { max-width: 1280px; }
 }
