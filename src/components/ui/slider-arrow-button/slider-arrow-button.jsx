@@ -15,6 +15,7 @@ export const SliderArrowButton = ({
       type="button"
       style={style}
       onClick={onClick}
+      aria-label={direction === 'right' ? 'Next Slide' : 'Previous Slide'}
     >
       {direction === 'right'
         ? <SlArrowRight className={styles.icon}/>

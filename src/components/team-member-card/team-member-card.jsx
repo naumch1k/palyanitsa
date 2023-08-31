@@ -22,6 +22,7 @@ export const TeamMemberCard = ({
             && <a
               href={linkedIn}
               className={styles.socialIcon}
+              aria-label={`Visit ${firstName}'s LinkedIn Profile`}
               rel="noopener noreferrer"
               target="_blank"
             >

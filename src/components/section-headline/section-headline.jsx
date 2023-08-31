@@ -4,7 +4,6 @@ import styles from './section-headline.module.scss';
 export const SectionHeadline = ({
   title,
   subtitle,
-  tag,
   image,
   children,
 }) => {
@@ -13,7 +12,7 @@ export const SectionHeadline = ({
     <div className={styles.root}>
       <div className={styles.imageColumn}>
         <div className={styles.imageWrapper}>
-          <img className={styles.image} src={image}/>
+          <img className={styles.image} src={image} alt="Group of teenagers gathered together"/>
         </div>
         <div className={styles.imageColumnContent}>
           {children}
@@ -30,7 +29,6 @@ export const SectionHeadline = ({
 SectionHeadline.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   children: PropTypes.node,
 };

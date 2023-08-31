@@ -15,6 +15,7 @@ export const SliderDots = ({
             key={i}
             onClick={() => onSliderDotClick(i)}
             className={`${styles.dot} ${currentSlide === i ? `${styles.active}` : ''}`}
+            aria-label={`Slide ${i + 1}`}
           />
         );
       })}
