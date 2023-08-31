@@ -1,4 +1,5 @@
 @use "../../../../shared/breakpoints.scss" as breakpoints;
+@use "../../../../shared/styles/mixins/headline.scss" as headline;
 
 .menu {
   display: flex;
@@ -12,4 +13,18 @@
 
 .item {
   @media (min-width: breakpoints.$desktop) { width: 23%; }
+}
+
+.link {
+  @include headline.headline;
+  @include headline.headline-small;
+
+  display: inline-block;
+  padding: 7px 0;
+  color: inherit;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  transition: var(--common-transition);
+
+  @media (min-width: breakpoints.$desktop) { &:hover { opacity: .7; } }
 }

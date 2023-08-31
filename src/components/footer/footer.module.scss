@@ -76,20 +76,6 @@
   @media (min-width: breakpoints.$desktop) { margin-bottom: 7px; }
 }
 
-.link {
-  @include headline.headline;
-  @include headline.headline-small;
-
-  display: inline-block;
-  padding: 7px 0;
-  color: inherit;
-  letter-spacing: 1.2px;
-  text-decoration: none;
-  transition: var(--common-transition);
-
-  @media (min-width: breakpoints.$desktop) { &:hover { opacity: .7; } }
-}
-
 .footnote {
   display: flex;
   flex-direction: column;

@@ -1,4 +1,5 @@
 @use "../../../../shared/breakpoints.scss" as breakpoints;
+@use "../../../../shared/styles/mixins/headline.scss" as headline;
 @use "../../../../shared/styles/mixins/animations/fade-slide-enter.scss" as animations;
 
 .menu {
@@ -17,4 +18,40 @@
   align-items: center;
 
   &.onEnter { @include animations.fade-slide-enter; }
+}
+
+.link {
+  @include headline.headline;
+  @include headline.headline-large;
+
+  position: relative;
+  color: var(--color-accent);
+  line-height: 1;
+  text-decoration: none;
+  text-shadow: var(--color-text-shadow);
+  -webkit-text-stroke: 1px var(--color-light-primary);
+
+  @media (min-width: breakpoints.$tablet-portrait) { -webkit-text-stroke: 1.5px var(--color-light-primary); }
+
+  @media (min-width: breakpoints.$tablet-landscape) { -webkit-text-stroke: 2px var(--color-light-primary); }
+
+  @media (min-width: breakpoints.$large-desktop) { -webkit-text-stroke: 2.5px var(--color-light-primary); }
+
+  &.current { color: var(--color-light-primary); }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    color: var(--color-light-primary);
+    content: attr(data-text);
+    transition: .8s;
+    white-space: nowrap;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    &:hover::before { width: 100%; }
+  }
 }

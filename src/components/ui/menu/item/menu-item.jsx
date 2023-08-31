@@ -4,18 +4,27 @@ import { styles } from '../menu.styles';
 
 export const MenuItem = ({
   enterAnimationEnabled,
-  children,
+  href,
+  text,
+  current,
+  ...restProps
 }) => {
   const { type } = useMenu();
 
   return (
     <li className={`${styles[type].item} ${enterAnimationEnabled ? `${styles[type].onEnter}` : ''}`}>
-      {children}
+      <a
+        className={`${styles[type].link} ${current ? `${styles[type].current}` : ''}`}
+        href={href}
+        {...restProps}
+      >{text}</a>
     </li>
   );
 };
 
 MenuItem.propTypes = {
   enterAnimationEnabled: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  href: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  current: PropTypes.bool,
 };
