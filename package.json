@@ -1,7 +1,6 @@
 {
   "name": "palianytsia",
   "version": "0.1.0",
-  "homepage": "https://naumch1k.github.io/palyanitsa/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "3.11.0",
