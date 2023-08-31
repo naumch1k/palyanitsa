@@ -13,23 +13,25 @@ export const callToActionData = {
   general_info: [
     {
       icon: TfiBriefcase,
-      heading: 'Our studio',
+      heading: 'Legal name',
       paragraphs: [
         'Palianytsia Foundation',
       ],
     },
     {
       icon: TfiEmail,
-      heading: 'General inquiries',
+      heading: 'Registered office',
       paragraphs: [
-        'hello@pgds.xyz',
+        '500 N Michigan Ave',
+        'Suite 536',
+        'Chicago, IL 60611',
       ],
     },
     {
       icon: TfiClipboard,
-      heading: 'Legal',
+      heading: 'Purpose',
       paragraphs: [
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
+        'We are a nonprofit focused on empowering Ukrainian youth affected by war through education, mentorship and evacuation assistance',
       ],
     },
   ],

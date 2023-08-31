@@ -2,27 +2,34 @@ import HeadlineImage from './headline-image.jpg';
 import AnnaAbramovaImage from './anna-abramova.jpg';
 import AnnaBarbonImage from './anna-barbon.jpg';
 import ArtemChukarinImage from './artem-chukarin.jpg';
+import ArtemGoroshkoImage from './artem-goroshko.jpg';
+import BeccaGrayImage from './becca-grey.jpg';
+import BenWuImage from './ben-wu.jpg';
+import CalebWheelerImage from './caleb-wheeler.jpg';
+import ChristopherChackoImage from './dexter-chacko.jpg';
 import DariaSaykoImage from './daria-sayko.jpg';
-import DelfinaDariiaPerepelytsiaImage from './delfina-dariia-perepelytsia.jpg';
+import DariaZhygyrImage from './daria-zhygyr.jpg';
 import DimaKazbanImage from './dima-kazban.jpg';
-import DmytroShylobrydImage from './dmytro-shylobryd.png';
+import DmytroShylobrydImage from './dmytro-shylobryd.jpg';
 import IvanTsyvinskiyImage from './ivan-tsyvinskiy.jpg';
+import JackFaderImage from './jack-fader.jpg';
 import JeanRomeroImage from './jean-romero.jpg';
-import MariaKlimenkoImage from './maria-klimenko.jpg';
+import MariiaKlimenkoImage from './mariia-klimenko.jpg';
 import MariiaIvanchenkoImage from './mariia-ivanchenko.jpg';
 import MatveyGavrilenkoImage from './matvey-gavrilenko.jpg';
 import MiroslavaGrinenkoImage from './miroslava-grinenko.jpg';
 import MykhailoTsyvinskiyImage from './mykhailo-tsyvinskiy.jpg';
-import NadiaKopestynskaImage from './nadiia-kopestynska.jpg';
+import NadiiaKopestynskaImage from './nadiia-kopestynska.jpg';
 import NazarBarchenkoImage from './nazar-barchenko.jpg';
 import NazarPaukImage from './nazar-pauk.jpg';
 import NazariiKozachenkoImage from './nazarii-kozachenko.jpg';
 import PlatonTodorashkoImage from './platon-todorashko.jpg';
 import SergeyShkilImage from './sergey-shkil.jpg';
 import SergijProskurninImage from './sergij-proskurnin.jpg';
+import SofiiaKryzhanovskaImage from './sofiia-kryzhanovska.jpg';
 import SofiaSurovaImage from './sofia-surova.jpg';
+import StefWuImage from './stef-wu.jpg';
 import VasylynaTsyvinskaImage from './vasylyna-tsyvinska.jpg';
-import VeronikaHolikovaImage from './veronika-holikova.jpg';
 import VladKamyshenkoImage from './vlad-kamyshenko.jpg';
 import VladyslavMelnykImage from './vladyslav-melnyk.jpg';
 import YaroslavZarutskyiImage from './yaroslav-zarutskyi.jpg';
@@ -31,7 +38,7 @@ import IrinaNaumchikImage from './irina-naumchik.jpg';
 
 export const teamData = {
   tag: '03',
-  title: 'Team',
+  title: 'People',
   subtitle: 'Meet the faces of resilience and determination - our people shaping a better tomorrow',
   headline_image: HeadlineImage,
   team: [
@@ -45,16 +52,23 @@ export const teamData = {
     {
       firstName: 'Anna',
       lastName: 'Barbon',
-      roles: ['development', 'project/product', 'lead'],
+      roles: ['lead', 'development'],
       image: AnnaBarbonImage,
       linkedIn: 'https://www.linkedin.com/in/anna-barbon-689804280/',
     },
     {
       firstName: 'Artem',
       lastName: 'Chukarin',
-      roles: ['art', 'project/product', 'lead'],
+      roles: ['lead', 'art', 'project/product'],
       image: ArtemChukarinImage,
       linkedIn: 'https://www.linkedin.com/in/artem-chukarin-10b66a245/',
+    },
+    {
+      firstName: 'Artem',
+      lastName: 'Goroshko',
+      roles: ['art'],
+      image: ArtemGoroshkoImage,
+      linkedIn: 'https://www.linkedin.com/in/artem-goroshko-663986287/',
     },
     {
       firstName: 'Daria',
@@ -64,11 +78,11 @@ export const teamData = {
       linkedIn: 'https://www.linkedin.com/in/daria-sayko-b75a20260/',
     },
     {
-      firstName: 'Delfina Dariia',
-      lastName: 'Perepelytsia',
-      roles: ['project/product'],
-      image: DelfinaDariiaPerepelytsiaImage,
-      linkedIn: 'https://www.linkedin.com/in/delfina-dariia-perepelytsia-515075280/',
+      firstName: 'Daria',
+      lastName: 'Zhygyr',
+      roles: ['lead', 'marketing'],
+      image: DariaZhygyrImage,
+      linkedIn: 'https://www.linkedin.com/in/daria-zhygyr-787000289/',
     },
     {
       firstName: 'Dima',
@@ -87,21 +101,21 @@ export const teamData = {
     {
       firstName: 'Ivan',
       lastName: 'Tsyvinskiy',
-      roles: ['art'],
+      roles: ['lead', 'art'],
       image: IvanTsyvinskiyImage,
       linkedIn: 'https://www.linkedin.com/in/ivan-tsyvinskiy-081624280/',
     },
     {
-      firstName: 'Maria',
+      firstName: 'Mariia',
       lastName: 'Klimenko',
       roles: ['art'],
-      image: MariaKlimenkoImage,
+      image: MariiaKlimenkoImage,
       linkedIn: 'https://www.linkedin.com/in/%D0%BC%D0%B0%D1%80%D1%96%D1%8F-%D0%BA%D0%BB%D0%B8%D0%BC%D0%B5%D0%BD%D0%BA%D0%BE-8a1188280/?originalSubdomain=ua',
     },
     {
       firstName: 'Mariia',
       lastName: 'Ivanchenko',
-      roles: ['project/product'],
+      roles: ['lead', 'project/product'],
       image: MariiaIvanchenkoImage,
       linkedIn: 'https://www.linkedin.com/in/mariia-ivanchenko-853795280/',
     },
@@ -127,10 +141,10 @@ export const teamData = {
       linkedIn: 'https://www.linkedin.com/in/misha-tsyvinski-5a152b280/',
     },
     {
-      firstName: 'Nadia',
+      firstName: 'Nadiia',
       lastName: 'Kopestynska',
       roles: ['art'],
-      image: NadiaKopestynskaImage,
+      image: NadiiaKopestynskaImage,
       linkedIn: 'https://www.linkedin.com/in/nadia-kopestynska-5109b6257/',
     },
     {
@@ -143,21 +157,21 @@ export const teamData = {
     {
       firstName: 'Nazar',
       lastName: 'Pauk',
-      roles: ['development', 'lead'],
+      roles: ['lead', 'development'],
       image: NazarPaukImage,
       linkedIn: 'http://www.linkedin.com/in/nazar-pauk/',
     },
     {
       firstName: 'Nazarii',
       lastName: 'Kozachenko',
-      roles: ['project/product'],
+      roles: ['lead','project/product'],
       image: NazariiKozachenkoImage,
       linkedIn: 'https://www.linkedin.com/in/nazarii-kozachenko-13b579280/',
     },
     {
       firstName: 'Platon',
       lastName: 'Todorashko',
-      roles: ['development', 'lead'],
+      roles: ['lead', 'development'],
       image: PlatonTodorashkoImage,
       linkedIn: 'http://www.linkedin.com/in/platon-todorashko-3815a3236',
     },
@@ -171,9 +185,16 @@ export const teamData = {
     {
       firstName: 'Sergij',
       lastName: 'Proskurnin',
-      roles: ['development', 'art', 'lead'],
+      roles: ['lead', 'development'],
       image: SergijProskurninImage,
       linkedIn: 'https://www.linkedin.com/in/sergij-proskurnin-233453280/',
+    },
+    {
+      firstName: 'Sofiia',
+      lastName: 'Kryzhanovska',
+      roles: ['marketing'],
+      image: SofiiaKryzhanovskaImage,
+      linkedIn: 'https://www.linkedin.com/in/sofiia-kryzhanovska-664085289/',
     },
     {
       firstName: 'Sofia',
@@ -185,21 +206,14 @@ export const teamData = {
     {
       firstName: 'Vasylyna',
       lastName: 'Tsyvinska',
-      roles: ['art', 'lead'],
+      roles: ['lead', 'art'],
       image: VasylynaTsyvinskaImage,
       linkedIn: 'https://www.linkedin.com/in/vasylyna-tsyvinska-585930269/',
     },
     {
-      firstName: 'Veronika',
-      lastName: 'Holikova',
-      roles: ['art'],
-      image: VeronikaHolikovaImage,
-      linkedIn: 'https://www.linkedin.com/in/veronika-holikova-980a3b283/',
-    },
-    {
       firstName: 'Vlad',
       lastName: 'Kamyshenko',
-      roles: ['design', 'lead'],
+      roles: ['lead', 'design'],
       image: VladKamyshenkoImage,
       linkedIn: 'http://www.linkedin.com/in/vlad-kamyshenko-59b280280',
     },
@@ -213,7 +227,7 @@ export const teamData = {
     {
       firstName: 'Yaroslav',
       lastName: 'Zarutskyi',
-      roles: ['design', 'lead'],
+      roles: ['lead', 'design'],
       image: YaroslavZarutskyiImage,
       linkedIn: 'https://www.linkedin.com/in/yaroslav-zarutskyi-8206a2280',
     },
@@ -225,11 +239,53 @@ export const teamData = {
       linkedIn: 'https://www.linkedin.com/in/dmitriy-palii-5480151aa/',
     },
     {
+      firstName: 'Ben',
+      lastName: 'Wu',
+      roles: ['mentor'],
+      image: BenWuImage,
+      linkedIn: 'https://www.linkedin.com/in/ben-c-wu/',
+    },
+    {
+      firstName: 'Becca',
+      lastName: 'Gray',
+      roles: ['mentor'],
+      image: BeccaGrayImage,
+      linkedIn: 'https://www.linkedin.com/in/beccagray/',
+    },
+    {
       firstName: 'Jean',
       lastName: 'Romero',
       roles: ['mentor'],
       image: JeanRomeroImage,
       linkedIn: 'https://www.linkedin.com/in/romerojean/',
+    },
+    {
+      firstName: 'Caleb',
+      lastName: 'Wheeler',
+      roles: ['mentor'],
+      image: CalebWheelerImage,
+      linkedIn: 'https://www.linkedin.com/in/caleb-wheeler-78648a98/',
+    },
+    {
+      firstName: 'Stef',
+      lastName: 'Wu',
+      roles: ['mentor'],
+      image: StefWuImage,
+      linkedIn: 'https://www.linkedin.com/in/naumch1k/',
+    },
+    {
+      firstName: 'Christopher',
+      lastName: 'Chacko',
+      roles: ['mentor'],
+      image: ChristopherChackoImage,
+      linkedIn: 'https://www.linkedin.com/in/chackochristopher/',
+    },
+    {
+      firstName: 'Jack',
+      lastName: 'Fader',
+      roles: ['mentor'],
+      image: JackFaderImage,
+      linkedIn: 'https://www.linkedin.com/in/jackfader/',
     },
     {
       firstName: 'Irina',
@@ -240,3 +296,4 @@ export const teamData = {
     },
   ],
 };
+
