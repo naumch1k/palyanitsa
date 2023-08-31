@@ -38,5 +38,5 @@ export const AppLayout = ({ children }) => {
 };
 
 AppLayout.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };

@@ -5,7 +5,7 @@ const mainNavigationItems = [
   },
   {
     text: 'Stories',
-    href: '/tbd',
+    href: '/stories',
   },
   {
     text: 'The latest',
@@ -13,7 +13,7 @@ const mainNavigationItems = [
   },
   {
     text: 'Ways To Help',
-    href: '/tbd',
+    href: '/help',
   },
 ];
 

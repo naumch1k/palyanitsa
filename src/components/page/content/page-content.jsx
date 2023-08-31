@@ -11,5 +11,5 @@ export const PageContent = ({ children }) => {
 };
 
 PageContent.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
