@@ -7,12 +7,18 @@ export const DonationsCard = ({
   link,
   linkText,
   qrCode,
+  qrCodeWebp,
   credentials,
 }) => {
 
   return (
     <div className={styles.root}>
-      {qrCode && <img  className={styles.qrCode} src={qrCode}/>}
+      {qrCode
+        && <picture>
+          <source type="image/webp" srcSet={qrCodeWebp}/>
+          <img  className={styles.qrCode} src={qrCode}/>
+        </picture>
+      }
       <div className={styles.info}>
         <p className={styles.text}>
           {text}{' '}
@@ -33,5 +39,6 @@ DonationsCard.propTypes = {
   link: PropTypes.string,
   linkText: PropTypes.string,
   qrCode: PropTypes.string,
+  qrCodeWebp: PropTypes.string,
   credentials: PropTypes.string,
 };

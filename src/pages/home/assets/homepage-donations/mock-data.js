@@ -1,6 +1,8 @@
 import HeadlineImage from './headline-image.jpg';
 import PaypalQRCode from './paypal-qr-code.png';
+import PaypalQRCodeWebp from './paypal-qr-code.webp';
 import VenmoQRCode from './venmo-qr-code.png';
+import VenmoQRCodeWebp from './venmo-qr-code.webp';
 
 export const donationsData = {
   tag: '04',
@@ -18,6 +20,8 @@ export const donationsData = {
       ],
       link: 'https://www.paypal.com/donate/?hosted_button_id=9C7PBTQHEGFGA',
       linkText: 'Continue to PayPal',
+      qrCode: PaypalQRCode,
+      qrCodeWebp: PaypalQRCodeWebp,
     },
     {
       name: 'Venmo',
@@ -30,6 +34,7 @@ export const donationsData = {
       link: 'https://www.venmo.com/u/pfoundation',
       linkText: 'Continue to Venmo',
       qrCode: VenmoQRCode,
+      qrCodeWebp: VenmoQRCodeWebp,
     },
     {
       name: 'Zelle',

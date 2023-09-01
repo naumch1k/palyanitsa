@@ -79,6 +79,7 @@ const Home = () => {
                   link={platform.link}
                   linkText={platform.linkText}
                   qrCode={platform.qrCode}
+                  qrCodeWebp={platform.qrCodeWebp}
                   credentials={platform.credentials}
                 />
               </DonationsList.Item>
