@@ -56,7 +56,7 @@ export const HomepageTeam = ({
         {filteredTeam.map((teamMember, i) => (
           <TeamMemberCard
             key={i}
-            image={teamMember.image}
+            images={teamMember.images}
             firstName={teamMember.firstName}
             lastName={teamMember.lastName}
             linkedIn={teamMember.linkedIn}
@@ -75,7 +75,7 @@ HomepageTeam.propTypes = {
   headline_image: PropTypes.string.isRequired,
   team: PropTypes.arrayOf(
     PropTypes.shape({
-      image: PropTypes.string.isRequired,
+      images: PropTypes.object.isRequired,
       firstName: PropTypes.string.isRequired,
       lastName: PropTypes.string.isRequired,
       roles: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,

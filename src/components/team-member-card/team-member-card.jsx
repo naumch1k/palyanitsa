@@ -3,7 +3,7 @@ import { FaLinkedin } from 'react-icons/fa';
 import styles from './team-member-card.module.scss';
 
 export const TeamMemberCard = ({
-  image,
+  images,
   firstName,
   lastName,
   linkedIn,
@@ -12,7 +12,13 @@ export const TeamMemberCard = ({
 
   return (
     <li className={styles.root}>
-      <img className={styles.image} src={image} alt={`${firstName} ${lastName}`}/>
+      <picture>
+        <source type="image/webp" media="(min-width: 428px)" srcSet={images.largeWebp}/>
+        <source type="image/webp" srcSet={images.mobileWebp}/>
+
+        <source media="(min-width: 428px)" srcSet={images.large}/>
+        <img className={styles.image} src={images.mobile} alt={`${firstName} ${lastName}`}/>
+      </picture>
       <div className={styles.info}>
         <h3 className={styles.name}>
           {firstName}{' '}
@@ -38,7 +44,7 @@ export const TeamMemberCard = ({
 };
 
 TeamMemberCard.propTypes = {
-  image: PropTypes.string.isRequired,
+  images: PropTypes.object.isRequired,
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
   roles: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
