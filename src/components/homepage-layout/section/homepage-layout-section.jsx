@@ -5,19 +5,17 @@ import styles from './homepage-layout-section.module.scss';
 export const HomepageLayoutSection = ({
   title,
   subtitle,
-  tag,
-  headline_image,
+  headlineImages,
   children,
 }) => {
 
   return (
     <section className={styles.root}>
-      {headline_image
+      {headlineImages
         && <SectionHeadline
-          tag={tag}
           title={title}
           subtitle={subtitle}
-          image={headline_image}
+          images={headlineImages}
         />
       }
       {children}
@@ -28,7 +26,6 @@ export const HomepageLayoutSection = ({
 HomepageLayoutSection.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  tag: PropTypes.string,
-  headline_image: PropTypes.string,
+  headlineImages: PropTypes.object,
   children: PropTypes.object.isRequired,
 };

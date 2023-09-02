@@ -1,4 +1,9 @@
-import HeadlineImage from './headline-image.jpg';
+import HeadlineDesktopImage from './disciplines-headline-desktop.jpg';
+import HeadlineDesktopImageWebp from './disciplines-headline-desktop.webp';
+import HeadlineTabletImage from './disciplines-headline-tablet.jpg';
+import HeadlineTabletImageWebp from './disciplines-headline-tablet.webp';
+import HeadlineMobileImage from './disciplines-headline-mobile.jpg';
+import HeadlineMobileImageWebp from './disciplines-headline-mobile.webp';
 import ArtIcon from './art-icon.svg';
 import DesignIcon from './design-icon.svg';
 import DevIcon from './dev-icon.svg';
@@ -6,10 +11,16 @@ import ProductIcon from './product-icon.svg';
 import QAIcon from './qa-icon.svg';
 
 export const disciplinesData = {
-  tag: '02',
   title: 'Tracks',
   subtitle: 'Get to know the heart and soul of PGDS - our diverse departments',
-  headline_image: HeadlineImage,
+  headline_images: {
+    desktop: HeadlineDesktopImage,
+    desktopWebp: HeadlineDesktopImageWebp,
+    tablet: HeadlineTabletImage,
+    tabletWebp: HeadlineTabletImageWebp,
+    mobile: HeadlineMobileImage,
+    mobileWebp: HeadlineMobileImageWebp,
+  },
   disciplines: [
     {
       id: '01',

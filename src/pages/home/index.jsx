@@ -27,10 +27,9 @@ const Home = () => {
           <HomepageHeadline/>
         </HomepageLayout.Headline>
         <HomepageLayout.Section
-          tag={aboutData.tag}
           title={aboutData.title}
           subtitle={aboutData.subtitle}
-          headline_image={aboutData.headline_image}
+          headlineImages={aboutData.headline_images}
         >
           <HomepageAbout
             principles={aboutData.principles}
@@ -38,10 +37,9 @@ const Home = () => {
           />
         </HomepageLayout.Section>
         <HomepageLayout.Section
-          tag={disciplinesData.tag}
           title={disciplinesData.title}
           subtitle={disciplinesData.subtitle}
-          headline_image={disciplinesData.headline_image}
+          headlineImages={disciplinesData.headline_images}
         >
           <DisciplinesList>
             {disciplinesData.disciplines.map(discipline => (
@@ -58,18 +56,16 @@ const Home = () => {
         </HomepageLayout.Section>
         <HomepageLayout.Section>
           <HomepageTeam
-            tag={teamData.tag}
             title={teamData.title}
             subtitle={teamData.subtitle}
-            headline_image={teamData.headline_image}
+            headlineImages={teamData.headline_images}
             team={teamData.team}
           />
         </HomepageLayout.Section>
         <HomepageLayout.Section
-          tag={donationsData.tag}
           title={donationsData.title}
           subtitle={donationsData.subtitle}
-          headline_image={donationsData.headline_image}
+          headlineImages={donationsData.headline_images}
         >
           <DonationsList>
             {donationsData.donation_platforms.map(platform => (
@@ -87,13 +83,11 @@ const Home = () => {
           </DonationsList>
         </HomepageLayout.Section>
         <HomepageLayout.Section
-          tag={callToActionData.tag}
           title={callToActionData.title}
           subtitle={callToActionData.subtitle}
-          headline_image={callToActionData.headline_image}
+          headlineImages={callToActionData.headline_images}
         >
-          <HomepageCallToAction
-            general_info={callToActionData.general_info}/>
+          <HomepageCallToAction general_info={callToActionData.general_info}/>
         </HomepageLayout.Section>
         <HomepageLayout.Section>
           <HomepagePartners partners={partnersData}/>

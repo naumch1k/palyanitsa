@@ -1,14 +1,25 @@
-import HeadlineImage from './headline-image.jpg';
+import HeadlineDesktopImage from './donations-headline-desktop.jpg';
+import HeadlineDesktopImageWebp from './donations-headline-desktop.webp';
+import HeadlineTabletImage from './donations-headline-tablet.jpg';
+import HeadlineTabletImageWebp from './donations-headline-tablet.webp';
+import HeadlineMobileImage from './donations-headline-mobile.jpg';
+import HeadlineMobileImageWebp from './donations-headline-mobile.webp';
 import PaypalQRCode from './paypal-qr-code.png';
 import PaypalQRCodeWebp from './paypal-qr-code.webp';
 import VenmoQRCode from './venmo-qr-code.png';
 import VenmoQRCodeWebp from './venmo-qr-code.webp';
 
 export const donationsData = {
-  tag: '04',
   title: 'Donate',
   subtitle: 'Be a driving force of change, contributing to the development of this project',
-  headline_image: HeadlineImage,
+  headline_images: {
+    desktop: HeadlineDesktopImage,
+    desktopWebp: HeadlineDesktopImageWebp,
+    mobile: HeadlineMobileImage,
+    tablet: HeadlineTabletImage,
+    tabletWebp: HeadlineTabletImageWebp,
+    mobileWebp: HeadlineMobileImageWebp,
+  },
   donation_platforms: [
     {
       name: 'Paypal',

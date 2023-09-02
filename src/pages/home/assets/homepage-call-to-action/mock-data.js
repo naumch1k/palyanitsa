@@ -3,13 +3,24 @@ import {
   TfiEmail,
   TfiClipboard,
 } from 'react-icons/tfi';
-import HeadlineImage from './headline-image.jpg';
+import HeadlineDesktopImage from './call-to-action-headline-desktop.jpg';
+import HeadlineDesktopImageWebp from './call-to-action-headline-desktop.webp';
+import HeadlineTabletImage from './call-to-action-headline-tablet.jpg';
+import HeadlineTabletImageWebp from './call-to-action-headline-tablet.webp';
+import HeadlineMobileImage from './call-to-action-headline-mobile.jpg';
+import HeadlineMobileImageWebp from './call-to-action-headline-mobile.webp';
 
 export const callToActionData = {
-  tag: '05',
   title: 'Get in touch',
   subtitle: 'Connect with us directly: send letters and be updated on our progress',
-  headline_image: HeadlineImage,
+  headline_images: {
+    desktop: HeadlineDesktopImage,
+    desktopWebp: HeadlineDesktopImageWebp,
+    tablet: HeadlineTabletImage,
+    tabletWebp: HeadlineTabletImageWebp,
+    mobile: HeadlineMobileImage,
+    mobileWebp: HeadlineMobileImageWebp,
+  },
   general_info: [
     {
       icon: TfiBriefcase,

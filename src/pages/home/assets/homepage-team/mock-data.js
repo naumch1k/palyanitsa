@@ -1,4 +1,9 @@
-import HeadlineImage from './headline-image.jpg';
+import HeadlineDesktopImage from './team-headline-desktop.jpg';
+import HeadlineDesktopImageWebp from './team-headline-desktop.webp';
+import HeadlineTabletImage from './team-headline-tablet.jpg';
+import HeadlineTabletImageWebp from './team-headline-tablet.webp';
+import HeadlineMobileImage from './team-headline-mobile.jpg';
+import HeadlineMobileImageWebp from './team-headline-mobile.webp';
 import AnnaAbramovaLargeImage from './anna-abramova-large.jpg';
 import AnnaAbramovaLargeImageWebp from './anna-abramova-large.webp';
 import AnnaAbramovaMobileImage from './anna-abramova-mobile.jpg';
@@ -145,10 +150,16 @@ import YaroslavZarutskyiMobileImage from './yaroslav-zarutskyi-mobile.jpg';
 import YaroslavZarutskyiMobileImageWebp from './yaroslav-zarutskyi-mobile.webp';
 
 export const teamData = {
-  tag: '03',
   title: 'People',
   subtitle: 'Meet the faces of resilience and determination - our people shaping a better tomorrow',
-  headline_image: HeadlineImage,
+  headline_images: {
+    desktop: HeadlineDesktopImage,
+    desktopWebp: HeadlineDesktopImageWebp,
+    tablet: HeadlineTabletImage,
+    tabletWebp: HeadlineTabletImageWebp,
+    mobile: HeadlineMobileImage,
+    mobileWebp: HeadlineMobileImageWebp,
+  },
   team: [
     {
       firstName: 'Anna',

@@ -17,10 +17,9 @@ const roleButtons = [
 ];
 
 export const HomepageTeam = ({
-  tag,
   title,
   subtitle,
-  headline_image,
+  headlineImages,
   team,
 }) => {
 
@@ -35,10 +34,9 @@ export const HomepageTeam = ({
   return (
     <>
       <SectionHeadline
-        tag={tag}
         title={title}
         subtitle={subtitle}
-        image={headline_image}
+        images={headlineImages}
       >
         <div className={styles.buttons}>
           {roleButtons.map(({ role, label }) => (
@@ -69,10 +67,9 @@ export const HomepageTeam = ({
 };
 
 HomepageTeam.propTypes = {
-  tag: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  headline_image: PropTypes.string.isRequired,
+  headlineImages: PropTypes.object.isRequired,
   team: PropTypes.arrayOf(
     PropTypes.shape({
       images: PropTypes.object.isRequired,

@@ -1,10 +1,21 @@
-import HeadlineImage from './headline-image.jpg';
+import HeadlineDesktopImage from './about-headline-desktop.jpg';
+import HeadlineDesktopImageWebp from './about-headline-desktop.webp';
+import HeadlineTabletImage from './about-headline-tablet.jpg';
+import HeadlineTabletImageWebp from './about-headline-tablet.webp';
+import HeadlineMobileImage from './about-headline-mobile.jpg';
+import HeadlineMobileImageWebp from './about-headline-mobile.webp';
 
 export const aboutData = {
-  tag: '01',
   title: 'About',
   subtitle: 'We support Ukrainian youth in IT education. Join us to empower and help',
-  headline_image: HeadlineImage,
+  headline_images: {
+    desktop: HeadlineDesktopImage,
+    desktopWebp: HeadlineDesktopImageWebp,
+    tablet: HeadlineTabletImage,
+    tabletWebp: HeadlineTabletImageWebp,
+    mobile: HeadlineMobileImage,
+    mobileWebp: HeadlineMobileImageWebp,
+  },
   principles: [
     {
       heading: 'Help',
