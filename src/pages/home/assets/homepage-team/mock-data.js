@@ -555,7 +555,7 @@ export const teamData = {
         mobile: StefWuMobileImage,
         mobileWebp: StefWuMobileImageWebp,
       },
-      linkedIn: 'https://www.linkedin.com/in/naumch1k/',
+      linkedIn: 'https://www.linkedin.com/in/stefcwu/',
     },
     {
       firstName: 'Christopher',
