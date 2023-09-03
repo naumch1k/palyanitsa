@@ -1,118 +1,95 @@
 @use "../../shared/breakpoints.scss" as breakpoints;
 @use "../../shared/styles/mixins/headline.scss" as headline;
 @use "../../shared/styles/mixins/text.scss" as text;
+@use "../../shared/styles/mixins/text-link-underline.scss" as text-link-underline;
 
-.columns {
+.root {
   display: grid;
-  color: var(--color-light-primary);
-  gap: 46px;
   grid-template:
-    // "navigation"
+    "navigation"
     "socials   "
-    "contacts  ";
+    "contacts  "
+    "footnote  ";
+  row-gap: 46px;
 
   @media (min-width: breakpoints.$mobile) {
-    padding: 40px 0 0;
-    border-top: 1px solid var(--color-dark-primary);
-    color: var(--color-dark-primary);
     grid-template:
-      "navigation  socials "
-      "navigation  contacts"
-      /1fr 1fr;
+      "logo       logo     logo    "
+      "navigation socials  contacts"
+      "footnote   footnote footnote"
+      /33%;
+    row-gap: 80px;
   }
 
-  @media (min-width: breakpoints.$tablet-portrait) {
-    // column-gap: 120px;
-    column-gap: 0;
+  @media (min-width: breakpoints.$tablet-landscape) {
     grid-template:
-      "logo socials "
-      "logo contacts"
-      /50%  1fr;
-
-    // "logo navigation  socials "
-    // "logo navigation  contacts"
-    // /1fr  max-content 2fr;
+      "logo     navigation socials  contacts"
+      "footnote footnote   footnote footnote";
+    grid-template-columns: 40% repeat(3, minmax(0, 1fr));
   }
 
-  // @media (min-width: breakpoints.$tablet-landscape) {
-  //   grid-template-columns: 1fr .5fr .5fr;
-  // }
-
-  @media (min-width: breakpoints.$desktop) {
-    padding: 54px 0 0;
-
-    // column-gap: 0;
-    grid-template:
-      // "logo     navigation navigation"
-      "logo     socials    contacts  "
-      /50%      23%        1fr;
-    row-gap: 30px;
-  }
+  @media (min-width: breakpoints.$large-desktop) { row-gap: 100px; }
 }
 
-.logo {
+.logotype {
   display: none;
-  width: 60px;
-  height: 60px;
-  background-color: var(--color-accent);
-  border-radius: 50%;
 
-  @media (min-width: breakpoints.$mobile) { display: block; }
+  @media (min-width: breakpoints.$mobile) { display: inline; }
 }
 
-// .navigation { grid-area: navigation; }
+.navigation { grid-area: navigation; }
 
 .socials { grid-area: socials; }
 
 .contacts { grid-area: contacts; }
 
 .heading {
-  @include text.text;
-  @include text.text-medium;
-
-  margin-bottom: 9px;
-  color: inherit;
-
-  @media (min-width: breakpoints.$desktop) { margin-bottom: 7px; }
+  @include headline.headline;
+  @include headline.headline-small;
 }
 
 .footnote {
+  @include text.text;
+  @include text.text-medium;
+
   display: flex;
   flex-direction: column;
   padding-top: 30px;
   border-top: 1px solid var(--color-light-primary);
-  margin-top: 60px;
+  margin-top: 30px;
   gap: 14px;
   grid-area: footnote;
 
   @media (min-width: breakpoints.$mobile) {
-    border-color: var(--color-dark-primary);
-    margin-top: 40px;
+    padding: 0;
+    border: none;
+    margin: 0;
   }
 
-  @media (min-width: breakpoints.$desktop) {
-    padding-top: 40px;
-    margin-top: 54px;
-  }
+  @media (min-width: breakpoints.$tablet-portrait) { flex-direction: row; }
+}
 
-  @media (min-width: breakpoints.$large-desktop) {
-    flex-direction: row;
-    justify-content: space-between;
+.credits {
+  @media (min-width: breakpoints.$tablet-portrait) {
+    position: relative;
+    padding-left: 22px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      content: "||";
+    }
   }
 }
 
-.textLink,
-.copyright {
-  @include text.text;
-  @include text.text-medium;
+.link {
+  @include text-link-underline.text-link-underline;
 
-  color: var(--color-light-primary);
+  color: inherit;
 
-  @media (min-width: breakpoints.$mobile) {
-    color: var(--color-dark-primary);
+  &::after { background-color: var(--color-light-primary-85); }
+
+  @media (min-width: breakpoints.$tablet-portrait) {
+    &::after { background-color: var(--color-dark-primary-55); }
   }
-}
-
-.textLink {
-  text-decoration: none;
 }

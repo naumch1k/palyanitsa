@@ -8,7 +8,7 @@ const mainNavigationItems = [
     href: '/stories',
   },
   {
-    text: 'The latest',
+    text: 'The Latest',
     href: '/news',
   },
   {
