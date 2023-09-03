@@ -1,0 +1,20 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+
+.link {
+  width: 250px;
+  height: 54px;
+
+  @media (min-width: breakpoints.$desktop) {
+    transition: var(--common-transition);
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
