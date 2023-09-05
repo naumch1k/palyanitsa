@@ -3,23 +3,27 @@ import styles from './quote.module.scss';
 import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im';
 
 export const Quote = ({
+  className,
+  darkTheme = false,
   text,
   author,
 }) => {
 
   return (
-    <blockquote className={styles.root}>
+    <blockquote className={`${styles.root} ${className} ${darkTheme ? `${styles.darkTheme}` : ''}`}>
       <div className={styles.text}>
-        <ImQuotesLeft className={styles.quotesLeft}/>
+        <ImQuotesLeft className={`${styles.quotesLeft} ${darkTheme ? `${styles.darkTheme}` : ''}`}/>
         {text}
-        <ImQuotesRight className={styles.quotesRight}/>
+        <ImQuotesRight className={`${styles.quotesRight} ${darkTheme ? `${styles.darkTheme}` : ''}`}/>
       </div>
-      <cite className={styles.author}>- {author}</cite>
+      {author && <cite className={styles.author}>- {author}</cite>}
     </blockquote>
   );
 };
 
 Quote.propTypes = {
-  text: PropTypes.string,
+  className: PropTypes.string,
+  darkTheme: PropTypes.bool,
+  text: PropTypes.string.isRequired,
   author: PropTypes.string,
 };

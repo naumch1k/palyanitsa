@@ -2,8 +2,10 @@
 
 .root {
   margin: 20px 0;
-  color: var(--color-light-primary);
+  color: var(--color-dark-primary);
   text-align: justify;
+
+  &.darkTheme { color: var(--color-light-primary); }
 }
 
 .text {
@@ -26,8 +28,10 @@
 .quotesLeft,
 .quotesRight {
   position: absolute;
-  color: var(--color-light-primary);
+  color: var(--color-dark-primary);
   font-size: 22px;
+
+  &.darkTheme { color: var(--color-light-primary); }
 }
 
 .quotesLeft {

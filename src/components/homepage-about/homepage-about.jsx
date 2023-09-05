@@ -39,6 +39,7 @@ export const HomepageAbout = ({ principles, quotes }) => {
           {quotes.map((quote, i) => (
             <Slider.Item key={i}>
               <Quote
+                darkTheme
                 text={quote.text}
                 author={quote.author}
               />
