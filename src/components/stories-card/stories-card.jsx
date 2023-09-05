@@ -10,14 +10,20 @@ export const StoriesCard = ({ data }) => {
     intro,
     quote,
     paragraphs,
-    image,
+    images,
     links = {},
   } = data;
 
   return (
     <div className={styles.root}>
       <h2 className={styles.heading}>{heading}</h2>
-      <img className={styles.image} src={image} alt={`${firstName}'s picture`}/>
+      <picture>
+        <source type="image/webp" media="(min-width: 428px)" srcSet={images.largeWebp}/>
+        <source type="image/webp" srcSet={images.mobileWebp}/>
+
+        <source media="(min-width: 428px)" srcSet={images.large}/>
+        <img className={styles.image} src={images.mobile} alt={`${firstName}'s picture`}/>
+      </picture>
       <div className={styles.content}>
         <div className={styles.intro}>
           {intro.map((paragraph, i) => (
@@ -51,7 +57,7 @@ StoriesCard.propTypes = {
     intro: PropTypes.arrayOf(PropTypes.string).isRequired,
     quote: PropTypes.string.isRequired,
     paragraphs: PropTypes.arrayOf(PropTypes.string).isRequired,
-    image: PropTypes.string.isRequired,
+    images: PropTypes.object.isRequired,
     links: PropTypes.shape({
       paypal: PropTypes.string,
       goFundMe: PropTypes.string,

@@ -1,5 +1,8 @@
 import placeholderImage from '../../../shared/images/placeholder.jpg';
-import AnnaBarbonImage from '../../home/assets/homepage-team/anna-barbon.jpg';
+import AnnaBarbonLargeImage from '../../home/assets/homepage-team/anna-barbon-large.jpg';
+import AnnaBarbonLargeImageWebp from '../../home/assets/homepage-team/anna-barbon-large.webp';
+import AnnaBarbonMobileImage from '../../home/assets/homepage-team/anna-barbon-mobile.jpg';
+import AnnaBarbonMobileImageWebp from '../../home/assets/homepage-team/anna-barbon-mobile.webp';
 
 export const mockData = {
   title: 'Stories',
@@ -15,7 +18,12 @@ export const mockData = {
       paragraphs: [
         'Anna\'s family consists of two sisters, a father, and a mother. The family\'s financial situation is challenging, with high aspirations but limited resources. Purchasing a new laptop is currently beyond their budget.',
       ],
-      image: AnnaBarbonImage,
+      images: {
+        large: AnnaBarbonLargeImage,
+        largeWebp: AnnaBarbonLargeImageWebp,
+        mobile: AnnaBarbonMobileImage,
+        mobileWebp: AnnaBarbonMobileImageWebp,
+      },
       links: {
         paypal: 'https://www.paypal.com/us/non-profit/fundraising/fundraising-online',
         goFundMe: 'https://www.gofundme.com/start',
@@ -32,7 +40,12 @@ export const mockData = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       ],
-      image: placeholderImage,
+      images: {
+        large: placeholderImage,
+        largeWebp: placeholderImage,
+        mobile: placeholderImage,
+        mobileWebp: placeholderImage,
+      },
     },
   ]
 };
