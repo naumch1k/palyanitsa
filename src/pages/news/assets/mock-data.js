@@ -1,4 +1,4 @@
-import placeholderImage from './placeholder.jpg';
+import placeholderImage from '../../../shared/images/placeholder.jpg';
 
 export const mockData = {
   title: 'Recent',
