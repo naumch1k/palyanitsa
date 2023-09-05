@@ -1,0 +1,71 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/headline.scss" as headline;
+@use "../../shared/styles/mixins/text.scss" as text;
+
+.root {
+  display: grid;
+  gap: 40px;
+  grid-template:
+    "heading"
+    "image  "
+    "content"
+    "links  "
+    /100%;
+
+  @media (min-width: breakpoints.$tablet-landscape) {
+    grid-template:
+      "heading heading"
+      "image   content"
+      "image   links  "
+      /400px   1fr;
+  }
+}
+
+.heading {
+  @include headline.headline;
+  @include headline.headline-medium;
+
+  margin: 0 16px;
+  grid-area: heading;
+
+  @media (min-width: breakpoints.$tablet-portrait) { margin: 0; }
+}
+
+.image {
+  width: 100%;
+  height: 400px;
+  grid-area: image;
+  object-fit: cover;
+
+  @media (min-width: breakpoints.$mobile) {
+    height: 640px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: breakpoints.$tablet-landscape) { height: 400px; }
+}
+
+.intro,
+.paragraphs { text-align: justify; }
+
+.quote { margin: 25px 30px; }
+
+.paragraph {
+  @include text.text;
+  @include text.text-medium;
+
+  margin: 0 16px 15px;
+
+  @media (min-width: breakpoints.$tablet-portrait) { margin: 0 0 15px; }
+
+  &:last-of-type { margin-bottom: 0; }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  gap: 15px;
+
+  @media (min-width: breakpoints.$tablet-portrait) { margin: 0; }
+}
