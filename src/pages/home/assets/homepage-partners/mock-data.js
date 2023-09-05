@@ -1,25 +1,35 @@
-import EndevsLogo from './endevs-logo.png';
+import SmartFutureLogo from './smart-future-logo.png';
+import SmartFutureLogoWebp from './smart-future-logo.webp';
 import MockLogo from './mock-logo.png';
 
 export const partnersData = [
   {
-    name: 'Endevs',
-    link: 'https://pgds.xyz/',
-    logo: EndevsLogo,
+    name: 'Charitable School "Smart Future"',
+    link: 'http://smartfuture.org.ua/eng',
+    logos: {
+      png: SmartFutureLogo,
+      webp: SmartFutureLogoWebp,
+    }
   },
   {
     name: 'Company 2',
     link: '',
-    logo: MockLogo,
+    logos: {
+      png: MockLogo,
+    }
   },
   {
     name: 'Company 3',
     link: '',
-    logo: MockLogo,
+    logos: {
+      png: MockLogo,
+    }
   },
   {
     name: 'Company 4',
     link: '',
-    logo: MockLogo,
+    logos: {
+      png: MockLogo,
+    }
   },
 ];
