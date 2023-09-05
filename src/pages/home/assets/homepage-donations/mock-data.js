@@ -11,7 +11,7 @@ import VenmoQRCodeWebp from './venmo-qr-code.webp';
 
 export const donationsData = {
   title: 'Donate',
-  subtitle: 'Be a driving force of change, contributing to the development of this project',
+  subtitle: 'Be a driving force of change by contributing to the development of this project',
   headline_images: {
     desktop: HeadlineDesktopImage,
     desktopWebp: HeadlineDesktopImageWebp,

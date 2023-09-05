@@ -25,8 +25,7 @@ export const mockData = {
         mobileWebp: AnnaBarbonMobileImageWebp,
       },
       links: {
-        paypal: 'https://www.paypal.com/us/non-profit/fundraising/fundraising-online',
-        goFundMe: 'https://www.gofundme.com/start',
+        paypal: 'https://www.paypal.com/donate?campaign_id=JMY75QDSHZY5L',
       },
     },
     {

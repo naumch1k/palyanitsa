@@ -12,7 +12,7 @@ import HeadlineMobileImageWebp from './call-to-action-headline-mobile.webp';
 
 export const callToActionData = {
   title: 'Get in touch',
-  subtitle: 'Connect with us directly: send letters and be updated on our progress',
+  subtitle: 'Reach out to us: we are excited to hear what you have to say',
   headline_images: {
     desktop: HeadlineDesktopImage,
     desktopWebp: HeadlineDesktopImageWebp,

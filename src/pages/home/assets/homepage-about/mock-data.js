@@ -7,7 +7,7 @@ import HeadlineMobileImageWebp from './about-headline-mobile.webp';
 
 export const aboutData = {
   title: 'About',
-  subtitle: 'We support Ukrainian youth in IT education. Join us to empower and help',
+  subtitle: 'We support Ukrainian youth in tech education. Join us to empower and help!',
   headline_images: {
     desktop: HeadlineDesktopImage,
     desktopWebp: HeadlineDesktopImageWebp,
@@ -20,19 +20,22 @@ export const aboutData = {
     {
       heading: 'Help',
       paragraphs: [
-        'Through our fundraising efforts, we aim to bridge the gap in access to educational resources and technology. Our financial contributions can make a significant impact, enabling students to excel in their studies and pursue their dreams. We raise funds and bring together supporters who share our vision. Together, we can empower the youth of Ukraine, shape a brighter future, and make a difference through help.',
+        'Through our fundraising efforts, we aim to bridge the gap in access to educational resources and technology. Our financial contributions make a significant impact, enabling students to excel in their studies and pursue their dreams. We\'re gathering donations to acquire the essential equipment, offer thorough training, and establish evacuation procedures.',
+        'Together, we can empower the youth of Ukraine, shape a brighter future, and make a difference through help.',
       ]
     },
     {
       heading: 'Support',
       paragraphs: [
-        'Moreover, we understand the harsh realities faced by families who are forced to evacuate their homes due to the war. In such challenging times, PGDS steps in to offer assistance. We help facilitate the evacuation process, provide temporary shelter, and offer guidance to those affected. By providing a supportive environment, we aim to minimize the disruption in the education of our students, ensuring that they can continue their studies and pursue their aspirations.',
+        'We understand the harsh realities faced by families who are forced to evacuate their homes due to the war in Ukraine. In such challenging times, we step in to offer assistance. We help facilitate the evacuation process, provide temporary shelter, and offer guidance to those affected.',
+        'By providing a supportive environment, we aim to minimize the disruption to the education of our students, ensuring that they can continue their studies and pursue their aspirations.',
       ]
     },
     {
       heading: 'Mentoring',
       paragraphs: [
-        'Our mentorship programs, training sessions, and workshops, connect talented young minds with experienced professionals from the IT industry. These mentors generously dedicate their time, expertise, and guidance to help shape the future generation of IT professionals in Ukraine. By sharing their knowledge and providing personalized mentorship, our mentors instill confidence and inspire students to unlock their full potential.',
+        'Our mentorship programs, training sessions, and workshops connect talented young minds with experienced professionals from the IT industry. These mentors generously dedicate their time, expertise, and guidance to help shape the future generation of IT professionals in Ukraine.',
+        'By sharing their knowledge and providing personalized mentorship, our mentors instill confidence and inspire students to unlock their full potential.',
       ]
     }
   ],

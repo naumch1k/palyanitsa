@@ -151,7 +151,7 @@ import YaroslavZarutskyiMobileImageWebp from './yaroslav-zarutskyi-mobile.webp';
 
 export const teamData = {
   title: 'People',
-  subtitle: 'Meet the faces of resilience and determination - our people shaping a better tomorrow',
+  subtitle: 'Meet the faces of resilience and determination: our people shaping a better tomorrow',
   headline_images: {
     desktop: HeadlineDesktopImage,
     desktopWebp: HeadlineDesktopImageWebp,

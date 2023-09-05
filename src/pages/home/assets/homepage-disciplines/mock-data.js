@@ -11,8 +11,8 @@ import ProductIcon from './product-icon.svg';
 import QAIcon from './qa-icon.svg';
 
 export const disciplinesData = {
-  title: 'Tracks',
-  subtitle: 'Get to know the heart and soul of PGDS - our diverse departments',
+  title: 'Departments',
+  subtitle: 'Get to know the heart and soul of the initiative - our diverse departments',
   headline_images: {
     desktop: HeadlineDesktopImage,
     desktopWebp: HeadlineDesktopImageWebp,
