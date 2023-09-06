@@ -2,13 +2,14 @@ import PropTypes from 'prop-types';
 import styles from './arrow-link.module.scss';
 
 export const ArrowLink = ({
+  className,
   isInternalLink = false,
   href,
   linkText,
   direction = 'right',
 }) => {
 
-  const classes = `${styles.link} ${direction === 'left' ? styles.left : ''}`;
+  const classes = `${styles.link} ${direction === 'left' ? styles.left : ''} ${className}`;
 
   return (
     isInternalLink ? (
@@ -32,6 +33,7 @@ export const ArrowLink = ({
 };
 
 ArrowLink.propTypes = {
+  className: PropTypes.string,
   isInternalLink: PropTypes.bool,
   href: PropTypes.string,
   linkText: PropTypes.string,

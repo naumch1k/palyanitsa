@@ -12,14 +12,13 @@ export const PageNotFound = () => {
         <span className={styles.number}>0</span>
         <span className={styles.number}>4</span>
       </div>
-      <div className={styles.link}>
-        <ArrowLink
-          isInternalLink
-          href="/"
-          linkText="Go to main page"
-          direction="left"
-        />
-      </div>
+      <ArrowLink
+        className={styles.link}
+        isInternalLink
+        href="/"
+        linkText="Go to main page"
+        direction="left"
+      />
     </div>
   );
 };
