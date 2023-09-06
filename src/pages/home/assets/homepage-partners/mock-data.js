@@ -1,5 +1,7 @@
 import SmartFutureLogo from './smart-future-logo.png';
 import SmartFutureLogoWebp from './smart-future-logo.webp';
+import OneFallLogo from './one-fall-logo.png';
+import OneFallLogoWebp from './one-fall-logo.webp';
 import MockLogo from './mock-logo.png';
 
 export const partnersData = [
@@ -12,10 +14,11 @@ export const partnersData = [
     }
   },
   {
-    name: 'Company 2',
-    link: '',
+    name: 'One Fall',
+    link: 'https://solo.to/onefallma',
     logos: {
-      png: MockLogo,
+      png: OneFallLogo,
+      webp: OneFallLogoWebp,
     }
   },
   {
