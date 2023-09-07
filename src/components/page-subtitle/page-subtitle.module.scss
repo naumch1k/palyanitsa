@@ -1,0 +1,6 @@
+@use "../../shared/styles/mixins/headline.scss" as headline;
+
+.root {
+  @include headline.headline;
+  @include headline.headline-medium;
+}
