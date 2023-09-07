@@ -13,7 +13,7 @@ const mainNavigationItems = [
   },
   {
     text: 'Ways To Help',
-    href: '/help',
+    href: '/donate',
   },
 ];
 
