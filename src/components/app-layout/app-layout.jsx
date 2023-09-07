@@ -6,7 +6,10 @@ import { BurgerButton } from '../ui/burger-button';
 import { DonateButton } from '../ui/donate-button';
 import { NavigationMenu } from '../navigation-menu';
 
-export const AppLayout = ({ children }) => {
+export const AppLayout = ({
+  children,
+  donateButton,
+}) => {
   const [isOverlayMenuOpen, setIsOverlayMenuOpen] = useState(false);
 
   const toggleOverlayMenu = useCallback(() => {
@@ -27,9 +30,11 @@ export const AppLayout = ({ children }) => {
           onClick={toggleOverlayMenu}
         />
       </Page.BurgerButton>
-      <Page.DonateButton>
-        <DonateButton/>
-      </Page.DonateButton>
+      {donateButton && (
+        <Page.DonateButton>
+          <DonateButton/>
+        </Page.DonateButton>
+      )}
       <Page.OverlayMenu isOpen={isOverlayMenuOpen}>
         <NavigationMenu isOpen={isOverlayMenuOpen}/>
       </Page.OverlayMenu>
@@ -38,5 +43,6 @@ export const AppLayout = ({ children }) => {
 };
 
 AppLayout.propTypes = {
+  donateButton: PropTypes.bool,
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };

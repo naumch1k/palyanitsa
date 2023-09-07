@@ -9,7 +9,7 @@ import { mockData } from './assets/mock-data';
 
 const Stories = () => {
   return (
-    <AppLayout>
+    <AppLayout donateButton>
       <SEO title="Stories"/>
       {/* TODO: rename NewsLayout, NewsList as it shared between several pages*/}
       <NewsLayout>

@@ -1,15 +1,14 @@
+import { Link } from 'react-router-dom';
 import styles from './donate-button.module.scss';
 
 export const DonateButton = () => {
-  const handleClick = () => {
-    const element = document.querySelector('#donations-anchor');
-
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  };
-
   return (
-    <button className={styles.root} onClick={handleClick}>
+    <Link
+      className={styles.root}
+      to="/donate"
+      aria-label="Go to donate page"
+    >
       <span>Donate</span>
-    </button>
+    </Link>
   );
 };

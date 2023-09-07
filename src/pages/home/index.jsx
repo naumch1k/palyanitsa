@@ -20,7 +20,7 @@ import { partnersData } from './assets/homepage-partners/mock-data';
 
 const Home = () => {
   return (
-    <AppLayout>
+    <AppLayout donateButton>
       <SEO title="Home"/>
       <HomepageLayout>
         <HomepageLayout.Headline>

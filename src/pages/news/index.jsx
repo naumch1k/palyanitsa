@@ -9,7 +9,7 @@ import { mockData } from './assets/mock-data';
 
 const News = () => {
   return (
-    <AppLayout>
+    <AppLayout donateButton>
       <SEO title="The Latest"/>
       <NewsLayout>
         <NewsLayout.Title>

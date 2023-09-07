@@ -3,7 +3,7 @@ import styles from './donations-list.module.scss';
 
 export const DonationsList = ({ children }) => {
   return (
-    <div id="donations-anchor" className={styles.container}>
+    <div className={styles.container}>
       <ul className={styles.root}>
         {children}
       </ul>

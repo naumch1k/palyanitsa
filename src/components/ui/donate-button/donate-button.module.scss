@@ -10,12 +10,11 @@
   height: 95px;
   align-items: center;
   justify-content: center;
-  border: none;
   background-color: var(--color-accent);
   border-radius: 50%;
   box-shadow: rgb(0 0 0 / 20%) 0 2px 8px;
   color: var(--color-light-primary);
-  cursor: pointer;
+  text-decoration: none;
   text-shadow: var(--color-text-shadow);
 
   & span { display: inline-block; }
