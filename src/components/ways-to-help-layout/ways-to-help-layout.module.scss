@@ -1,0 +1,15 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  max-width: calc(100% - 32px);
+  margin: 0 auto;
+  background-color: var(--color-light-default);
+
+  @media (min-width: breakpoints.$mobile) { max-width: calc(100% - 106px); }
+
+  @media (min-width: breakpoints.$tablet-portrait) { max-width: calc(100% - 96px); }
+
+  @media (min-width: breakpoints.$desktop) { max-width: 1170px; }
+
+  @media (min-width: breakpoints.$large-desktop) { max-width: 1280px; }
+}

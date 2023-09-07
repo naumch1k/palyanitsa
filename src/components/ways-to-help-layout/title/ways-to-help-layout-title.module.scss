@@ -1,0 +1,13 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  padding: 40px 0 25px;
+  border-bottom: 2px solid var(--color-dark-primary);
+
+  @media (min-width: breakpoints.$tablet-portrait) {
+    padding: 100px 0 25px;
+    margin: 0;
+  }
+
+  @media (min-width: breakpoints.$desktop) { padding: 25vh 0 40px; }
+}
