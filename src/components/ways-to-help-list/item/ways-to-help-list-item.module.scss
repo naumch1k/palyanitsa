@@ -1,0 +1,64 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+@use "../../../shared/styles/mixins/text.scss" as text;
+@use "../../../shared/styles/mixins/headline.scss" as headline;
+
+.root {
+  padding: 20px 0;
+  border-top: 1px solid var(--color-dark-primary);
+  border-bottom: 1px solid transparent;
+  transition: var(--common-transition);
+
+  &:last-of-type {
+    border-bottom: 1px solid var(--color-dark-primary);
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    padding: 20px;
+
+    &:hover:not(.isActive) {
+      background-color: rgb(212 241 244 / 45%);
+
+      & .heading,
+      .arrowIcon {
+        color: var(--color-accent);
+      }
+    }
+  }
+}
+
+.note {
+  @include text.text;
+  @include text.text-small;
+
+  color: var(--color-dark-primary);
+}
+
+.heading {
+  @include headline.headline;
+  @include headline.headline-small;
+
+  color: var(--color-dark-primary);
+  text-transform: uppercase;
+  transition: var(--common-transition);
+}
+
+.arrowIcon {
+  color: var(--color-dark-primary);
+  font-size: 26px;
+  transition: var(--common-transition);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: breakpoints.$desktop) {
+    cursor: pointer;
+
+    &:hover .heading,
+    &:hover > .arrowIcon {
+      color: var(--color-accent);
+    }
+  }
+}

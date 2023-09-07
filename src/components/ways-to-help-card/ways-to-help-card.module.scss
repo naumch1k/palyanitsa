@@ -1,0 +1,18 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/text.scss" as text;
+
+.root {
+  padding-top: 25px;
+}
+
+.paragraph {
+  @include text.text;
+  @include text.text-medium;
+
+  max-width: 700px;
+  margin-bottom: 15px;
+
+  &:last-of-type { margin-bottom: 0; }
+}
+
+.link { margin-top: 25px; }
