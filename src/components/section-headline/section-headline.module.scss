@@ -81,19 +81,20 @@
 }
 
 .title {
-  @include headline.headline;
-  @include headline.headline-medium;
-
   max-width: 400px;
   color: var(--color-dark-primary);
-}
 
-.titleAccent {
-  display: none;
-  margin-right: 12px;
-  color: var(--color-accent);
+  @media (min-width: breakpoints.$tablet-portrait) {
+    position: relative;
+    margin-left: 25px;
 
-  @media (min-width: breakpoints.$tablet-portrait) { display: inline-block; }
+    &::before {
+      position: absolute;
+      left: -25px;
+      color: var(--color-accent);
+      content: "|";
+    }
+  }
 }
 
 .subtitle {

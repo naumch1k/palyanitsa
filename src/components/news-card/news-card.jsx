@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { PageSubtitle } from '../page-subtitle';
 import styles from './news-card.module.scss';
 
 export const NewsCard = ({
@@ -10,7 +11,7 @@ export const NewsCard = ({
 
   return (
     <div className={styles.root}>
-      <h2 className={styles.heading}>{heading}</h2>
+      <PageSubtitle className={styles.heading} text={heading}/>
       <p className={styles.date}>{date}</p>
       <img className={styles.image} src={image} alt={''}/>
       <div className={styles.paragraphs}>

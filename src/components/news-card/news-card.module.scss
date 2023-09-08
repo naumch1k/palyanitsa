@@ -34,9 +34,6 @@
 }
 
 .heading {
-  @include headline.headline;
-  @include headline.headline-medium;
-
   margin: 0 16px;
   grid-area: heading;
 

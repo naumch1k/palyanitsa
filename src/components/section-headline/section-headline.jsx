@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { PageSubtitle } from '../page-subtitle';
 import styles from './section-headline.module.scss';
 
 export const SectionHeadline = ({
@@ -27,7 +28,7 @@ export const SectionHeadline = ({
         </div>
       </div>
       <div className={styles.contentColumn}>
-        <h2 className={styles.title}><span className={styles.titleAccent}>|</span> {title}</h2>
+        <PageSubtitle className={styles.title} text={title}/>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { PageSubtitle } from '../page-subtitle';
 import { Quote } from '../quote';
 import { ArrowLink } from '../ui/arrow-link';
 import styles from './stories-card.module.scss';
@@ -16,7 +17,7 @@ export const StoriesCard = ({ data }) => {
 
   return (
     <div className={styles.root}>
-      <h2 className={styles.heading}>{heading}</h2>
+      <PageSubtitle className={styles.heading} text={heading}/>
       <picture>
         <source type="image/webp" media="(min-width: 428px)" srcSet={images.largeWebp}/>
         <source type="image/webp" srcSet={images.mobileWebp}/>
