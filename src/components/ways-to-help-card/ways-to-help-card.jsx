@@ -4,6 +4,7 @@ import styles from './ways-to-help-card.module.scss';
 
 export const WaysToHelpCard = ({ data }) => {
   const {
+    description,
     full_description,
     link,
     linkText,
@@ -11,9 +12,15 @@ export const WaysToHelpCard = ({ data }) => {
 
   return (
     <div className={styles.root}>
-      {full_description.map((paragraph, i) => (
-        <p key={i} className={styles.paragraph}>{paragraph}</p>
-      ))}
+      {full_description.length ? (
+        full_description.map((paragraph, i) => (
+          <p key={i} className={styles.paragraph}>{paragraph}</p>
+        ))
+      ) : (
+        description.map((paragraph, i) => (
+          <p key={i} className={styles.paragraph}>{paragraph}</p>
+        ))
+      )}
       {link && <ArrowLink
         className={styles.link}
         href={link}
@@ -26,7 +33,8 @@ export const WaysToHelpCard = ({ data }) => {
 
 WaysToHelpCard.propTypes = {
   data: PropTypes.shape({
-    full_description: PropTypes.arrayOf(PropTypes.string).isRequired,
+    description: PropTypes.arrayOf(PropTypes.string),
+    full_description: PropTypes.arrayOf(PropTypes.string),
     link: PropTypes.string,
     linkText: PropTypes.string,
   }).isRequired,

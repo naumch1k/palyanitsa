@@ -3,7 +3,7 @@ import { ArrowLink } from '../ui/arrow-link';
 import styles from './donations-card.module.scss';
 
 export const DonationsCard = ({
-  text,
+  description,
   link,
   linkText,
   qrCode,
@@ -21,7 +21,7 @@ export const DonationsCard = ({
       }
       <div className={styles.info}>
         <p className={styles.text}>
-          {text}{' '}
+          {description}{' '}
           {/* TODO: think on better solution */}
           {credentials && <span className={styles.credentials}>{credentials}</span>}
         </p>
@@ -35,7 +35,7 @@ export const DonationsCard = ({
 };
 
 DonationsCard.propTypes = {
-  text: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   link: PropTypes.string,
   linkText: PropTypes.string,
   qrCode: PropTypes.string,

@@ -13,5 +13,5 @@ export const WaysToHelpLayoutSection = ({ children, title }) => {
 
 WaysToHelpLayoutSection.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  children: PropTypes.node.isRequired,
 };

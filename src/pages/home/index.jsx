@@ -71,7 +71,7 @@ const Home = () => {
             {donationsData.donation_platforms.map(platform => (
               <DonationsList.Item key={platform.name} title={`Donate with ${platform.name}`}>
                 <DonationsCard
-                  text={platform.text}
+                  description={platform.description}
                   link={platform.link}
                   linkText={platform.linkText}
                   qrCode={platform.qrCode}
