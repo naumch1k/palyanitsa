@@ -8,6 +8,7 @@ export const WaysToHelpCard = ({ data }) => {
     full_description,
     link,
     linkText,
+    credentials,
   } = data;
 
   return (
@@ -21,11 +22,18 @@ export const WaysToHelpCard = ({ data }) => {
           <p key={i} className={styles.paragraph}>{paragraph}</p>
         ))
       )}
-      {link && <ArrowLink
-        className={styles.link}
-        href={link}
-        linkText={linkText}
-      />}
+      {credentials?.length && (
+        credentials.map((paragraph, i) => (
+          <p key={i} className={styles.credentials}>{paragraph}</p>
+        ))
+      )}
+      {link && (
+        <ArrowLink
+          className={styles.link}
+          href={link}
+          linkText={linkText}
+        />
+      )}
     </div>
   );
 
@@ -37,5 +45,6 @@ WaysToHelpCard.propTypes = {
     full_description: PropTypes.arrayOf(PropTypes.string),
     link: PropTypes.string,
     linkText: PropTypes.string,
+    credentials: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };

@@ -4,17 +4,19 @@ import {
   MdOutlineKeyboardArrowRight,
   MdOutlineKeyboardArrowDown,
 } from 'react-icons/md';
-import styles from './ways-to-help-list-item.module.scss';
+import { useAccordionList } from '../accordion-list.context';
+import { styles } from '../accordion-list.styles';
 
-export const WaysToHelpListItem = ({
+export const AccordionListItem = ({
   isActive,
   onSelect,
-  defaultExpanded = false,
+  defaultExpanded,
   collapsedHeight,
-  heading,
   note,
+  heading,
   children,
 }) => {
+  const { type } = useAccordionList();
 
   const config = {
     defaultExpanded: defaultExpanded || false,
@@ -25,20 +27,20 @@ export const WaysToHelpListItem = ({
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse(config);
 
   return (
-    <li className={`${styles.root} ${isActive ? `${styles.isActive}` : ''}`}>
+    <li className={`${styles[type].item} ${isActive ? `${styles[type].isActive}` : ''}`}>
       <header
-        className={styles.header}
+        className={styles[type].header}
         {...getToggleProps({
           onClick: onSelect,
         })}
       >
         <div>
-          <p className={styles.note}>{note}</p>
-          <h3 className={styles.heading}>{heading}</h3>
+          {note && <p className={styles[type].note}>{note}</p>}
+          <h3 className={styles[type].heading}>{heading}</h3>
         </div>
         {isExpanded
-          ? <MdOutlineKeyboardArrowDown className={styles.arrowIcon}/>
-          : <MdOutlineKeyboardArrowRight className={styles.arrowIcon}/>
+          ? <MdOutlineKeyboardArrowDown className={styles[type].arrowIcon}/>
+          : <MdOutlineKeyboardArrowRight className={styles[type].arrowIcon}/>
         }
       </header>
       <div {...getCollapseProps()}>
@@ -50,12 +52,12 @@ export const WaysToHelpListItem = ({
   );
 };
 
-WaysToHelpListItem.propTypes = {
+AccordionListItem.propTypes = {
   isActive: PropTypes.bool,
   onSelect: PropTypes.func,
   defaultExpanded: PropTypes.bool,
   collapsedHeight: PropTypes.number,
-  heading: PropTypes.string.isRequired,
   note: PropTypes.string,
-  children: PropTypes.node,
+  heading: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };

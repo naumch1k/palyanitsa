@@ -6,7 +6,7 @@ import { HomepageAbout } from '../../components/homepage-about';
 import DisciplinesList from '../../components/disciplines-list';
 import { DisciplinesCard } from '../../components/disciplines-card';
 import { HomepageTeam } from '../../components/homepage-team';
-import DonationsList from '../../components/donations-list';
+import AccordionList from '../../components/accordion-list';
 import { DonationsCard } from '../../components/donations-card';
 import { HomepageCallToAction } from '../../components/homepage-call-to-action';
 import { HomepagePartners } from '../../components/homepage-partners';
@@ -67,20 +67,13 @@ const Home = () => {
           subtitle={donationsData.subtitle}
           headlineImages={donationsData.headline_images}
         >
-          <DonationsList>
+          <AccordionList type="donate">
             {donationsData.donation_platforms.map(platform => (
-              <DonationsList.Item key={platform.name} title={`Donate with ${platform.name}`}>
-                <DonationsCard
-                  description={platform.description}
-                  link={platform.link}
-                  linkText={platform.linkText}
-                  qrCode={platform.qrCode}
-                  qrCodeWebp={platform.qrCodeWebp}
-                  credentials={platform.credentials}
-                />
-              </DonationsList.Item>
+              <AccordionList.Item key={platform.name} heading={`Donate with ${platform.name}`}>
+                <DonationsCard data={platform}/>
+              </AccordionList.Item>
             ))}
-          </DonationsList>
+          </AccordionList>
         </HomepageLayout.Section>
         <HomepageLayout.Section
           title={callToActionData.title}

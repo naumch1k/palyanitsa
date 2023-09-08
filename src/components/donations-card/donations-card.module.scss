@@ -2,18 +2,20 @@
 @use "../../shared/styles/mixins/text.scss" as text;
 
 .root {
-  position: relative;
-  display: flex;
-  align-items: center;
   padding: 30px 0;
-  gap: 40px;
 
   @media (min-width: breakpoints.$mobile) { padding: 40px 30px; }
+
+  @media (min-width: breakpoints.$tablet-portrait) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .qrCode {
   display: none;
   width: 200px;
+  margin-right: 40px;
 
   @media (min-width: breakpoints.$tablet-portrait) { display: block; }
 }
@@ -33,5 +35,8 @@
 }
 
 .credentials {
-  font-weight: 400;
+  @include text.text;
+  @include text.text-medium;
+
+  font-weight: 300 !important;
 }

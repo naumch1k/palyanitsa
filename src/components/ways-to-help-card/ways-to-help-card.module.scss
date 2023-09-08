@@ -15,4 +15,11 @@
   &:last-of-type { margin-bottom: 0; }
 }
 
+.credentials {
+  @include text.text;
+  @include text.text-medium;
+
+  font-weight: 300 !important;
+}
+
 .link { margin-top: 25px; }

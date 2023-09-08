@@ -20,6 +20,7 @@ export const donationsData = {
     tabletWebp: HeadlineTabletImageWebp,
     mobileWebp: HeadlineMobileImageWebp,
   },
+  // TODO: move donation platform somewhere to shared
   donation_platforms: [
     {
       name: 'Paypal',
@@ -50,10 +51,11 @@ export const donationsData = {
       note: 'No processing fees',
       description: [
         'When you use Zelle, you can be sure that 100% of your contribution goes to helping us reach our goals. With no processing fees, your generosity will have a more significant impact on our mission. Use your banking app to access Zelle and contribute to the Palianytsia Foundation by donating to ',
-        'hello@pgds.xyz',
       ],
       full_description: [],
-      // credentials: 'hello@pgds.xyz',
+      credentials: [
+        'hello@pgds.xyz',
+      ],
     },
     {
       name: 'Buy Me a Coffee',

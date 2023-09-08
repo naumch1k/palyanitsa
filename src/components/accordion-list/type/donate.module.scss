@@ -1,0 +1,82 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+@use "../../../shared/styles/mixins/headline.scss" as headline;
+
+// TODO: refactor to move list paddings out of list itself (to layout)
+.list {
+  max-width: calc(100% - 32px);
+  padding: 0 0 70px;
+  margin: 0 auto;
+  list-style: none;
+
+  @media (min-width: breakpoints.$mobile) { padding: 70px 0; }
+
+  @media (min-width: breakpoints.$tablet-portrait) {
+    max-width: calc(100% - 96px);
+    padding: 90px 0;
+  }
+
+  @media (min-width: breakpoints.$tablet-landscape) {
+    max-width: 800px;
+    padding: 130px 0;
+  }
+}
+
+.heading {
+  @include headline.headline;
+  @include headline.headline-small;
+
+  color: var(--color-dark-primary);
+  transition: var(--common-transition);
+
+  @media (min-width: breakpoints.$tablet-portrait) {
+    position: relative;
+    margin-left: 30px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      content: "+";
+      font-size: 17px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.arrowIcon {
+  color: var(--color-dark-primary);
+  font-size: 22px;
+  transition: var(--common-transition);
+}
+
+.item {
+  padding: 15px;
+
+  &.isActive {
+    & .heading,
+    .arrowIcon {
+      color: var(--color-accent);
+    }
+
+    @media (min-width: breakpoints.$tablet-portrait) {
+      & .heading::before {
+        content: "-";
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: breakpoints.$desktop) {
+    cursor: pointer;
+
+    &:hover .heading,
+    &:hover > .arrowIcon {
+      color: var(--color-accent);
+    }
+  }
+}
