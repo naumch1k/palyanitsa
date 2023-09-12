@@ -5,7 +5,7 @@ import NewsList from '../../components/news-list';
 import { PageTitle } from '../../components/page-title';
 import { StoriesCard } from '../../components/stories-card';
 
-import { mockData } from './assets/mock-data';
+import data from './data.json';
 
 const Stories = () => {
   return (
@@ -17,7 +17,7 @@ const Stories = () => {
           <PageTitle text="Stories"/>
         </NewsLayout.Title>
         <NewsList>
-          {mockData.stories.map((item, i) => (
+          {data.map((item, i) => (
             <NewsList.Item key={i}>
               <StoriesCard data={item}/>
             </NewsList.Item>

@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: content-updates
+  commit_messages:
+    create: created {{collection}} “{{slug}}”
+    update: updated {{collection}} “{{slug}}”
+    delete: deleted {{collection}} “{{slug}}”
+    uploadMedia: uploaded “{{path}}”
+    deleteMedia: deleted “{{path}}”
+    openAuthoring: '{{message}}'
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    extension: json
+    create: true
+    slug: "{{heading}}"
+    fields:
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Heading", name: "heading", widget: "string"}
+      - {label: "Paragraphs", name: "paragraphs", widget: "text"}
+      - {label: "Image 768x768", name: "image_large", widget: "image"}
+      - {label: "Image 768x768 WebP", name: "image_large_webp", widget: "image", required: false}
+      - {label: "Image 428x428", name: "image_mobile", widget: "image"}
+      - {label: "Image 428x428 WebP", name: "image_mobile_webp", widget: "image", required: false}
+  - name: "stories"
+    label: "Stories"
+    folder: "content/stories"
+    extension: json
+    create: true
+    slug: "{{heading}}"
+    fields:
+      - {label: "First Name", name: "first_name", widget: "string"}
+      - {label: "Heading", name: "heading", widget: "string"}
+      - {label: "Intro", name: "intro", widget: "text"}
+      - {label: "Quote", name: "quote", widget: "text"}
+      - {label: "Paragraphs", name: "paragraphs", widget: "text"}
+      - {label: "Image 768x768", name: "image_large", widget: "image"}
+      - {label: "Image 768x768 WebP", name: "image_large_webp", widget: "image", required: false}
+      - {label: "Image 428x428", name: "image_mobile", widget: "image"}
+      - {label: "Image 428x428 WebP", name: "image_mobile_webp", widget: "image", required: false}
+      - {label: "PayPal Link", name: "paypal_link", widget: "string", required: false}
+      - {label: "Go Fund Me Link", name: "gofundme_link", widget: "string", required: false}
+

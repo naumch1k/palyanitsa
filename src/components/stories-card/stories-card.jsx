@@ -6,24 +6,28 @@ import styles from './stories-card.module.scss';
 
 export const StoriesCard = ({ data }) => {
   const {
-    firstName,
+    first_name,
     heading,
     intro,
     quote,
     paragraphs,
-    images,
-    links = {},
+    image_large,
+    image_large_webp,
+    image_mobile,
+    image_mobile_webp,
+    paypal_link,
+    gofundme_link,
   } = data;
 
   return (
     <div className={styles.root}>
       <PageSubtitle className={styles.heading} text={heading}/>
       <picture>
-        <source type="image/webp" media="(min-width: 428px)" srcSet={images.largeWebp}/>
-        <source type="image/webp" srcSet={images.mobileWebp}/>
+        <source type="image/webp" media="(min-width: 428px)" srcSet={image_large_webp}/>
+        <source type="image/webp" srcSet={image_mobile_webp}/>
 
-        <source media="(min-width: 428px)" srcSet={images.large}/>
-        <img className={styles.image} src={images.mobile} alt={`${firstName}'s picture`}/>
+        <source media="(min-width: 428px)" srcSet={image_large}/>
+        <img className={styles.image} src={image_mobile} alt={`${first_name}'s picture`}/>
       </picture>
       <div className={styles.content}>
         <div className={styles.intro}>
@@ -41,10 +45,10 @@ export const StoriesCard = ({ data }) => {
           ))}
         </div>
       </div>
-      {links
+      {(paypal_link || gofundme_link)
         && <div className={styles.links}>
-          {links.paypal && <ArrowLink href={links.paypal} linkText={`Join ${firstName}'s PayPal Campaign`}/>}
-          {links.goFundMe && <ArrowLink href={links.goFundMe} linkText={`Help ${firstName} on GoFundMe`}/>}
+          {paypal_link && <ArrowLink href={paypal_link} linkText={`Join ${first_name}'s PayPal Campaign`}/>}
+          {gofundme_link && <ArrowLink href={gofundme_link} linkText={`Help ${first_name} on GoFundMe`}/>}
         </div>
       }
     </div>
@@ -53,15 +57,16 @@ export const StoriesCard = ({ data }) => {
 
 StoriesCard.propTypes = {
   data: PropTypes.shape({
-    firstName: PropTypes.string.isRequired,
+    first_name: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
     intro: PropTypes.arrayOf(PropTypes.string).isRequired,
     quote: PropTypes.string.isRequired,
     paragraphs: PropTypes.arrayOf(PropTypes.string).isRequired,
-    images: PropTypes.object.isRequired,
-    links: PropTypes.shape({
-      paypal: PropTypes.string,
-      goFundMe: PropTypes.string,
-    }),
+    image_large: PropTypes.string.isRequired,
+    image_large_webp: PropTypes.string,
+    image_mobile: PropTypes.string,
+    image_mobile_webp: PropTypes.string,
+    paypal_link: PropTypes.string,
+    gofundme_link: PropTypes.string,
   }).isRequired,
 };

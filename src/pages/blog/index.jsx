@@ -5,9 +5,9 @@ import NewsList from '../../components/news-list';
 import { PageTitle } from '../../components/page-title';
 import { NewsCard } from '../../components/news-card/news-card';
 
-import { mockData } from './assets/mock-data';
+import data from './data.json';
 
-const News = () => {
+const Blog = () => {
   return (
     <AppLayout donateButton>
       <SEO title="The Latest"/>
@@ -16,14 +16,9 @@ const News = () => {
           <PageTitle text="The latest"/>
         </NewsLayout.Title>
         <NewsList>
-          {mockData.news.map((item, i) => (
+          {data.map((item, i) => (
             <NewsList.Item key={i}>
-              <NewsCard
-                date={item.date}
-                heading={item.heading}
-                text={item.text}
-                image={item.image}
-              />
+              <NewsCard data={item}/>
             </NewsList.Item>
           ))}
         </NewsList>
@@ -32,4 +27,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Blog;
