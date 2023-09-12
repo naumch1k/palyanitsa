@@ -72,6 +72,10 @@ import JeanRomeroLargeImage from './jean-romero-large.jpg';
 import JeanRomeroLargeImageWebp from './jean-romero-large.webp';
 import JeanRomeroMobileImage from './jean-romero-mobile.jpg';
 import JeanRomeroMobileImageWebp from './jean-romero-mobile.webp';
+import MarcBoutinLargeImage from './marc-boutin-large.jpg';
+import MarcBoutinLargeImageWebp from './marc-boutin-large.webp';
+import MarcBoutinMobileImage from './marc-boutin-mobile.jpg';
+import MarcBoutinMobileImageWebp from './marc-boutin-mobile.webp';
 import MariiaIvanchenkoLargeImage from './mariia-ivanchenko-large.jpg';
 import MariiaIvanchenkoLargeImageWebp from './mariia-ivanchenko-large.webp';
 import MariiaIvanchenkoMobileImage from './mariia-ivanchenko-mobile.jpg';
@@ -132,6 +136,10 @@ import StefWuLargeImage from './stef-wu-large.jpg';
 import StefWuLargeImageWebp from './stef-wu-large.webp';
 import StefWuMobileImage from './stef-wu-mobile.jpg';
 import StefWuMobileImageWebp from './stef-wu-mobile.webp';
+import TrystanMcCourtLargeImage from './trystan-mccourt-large.jpg';
+import TrystanMcCourtLargeImageWebp from './trystan-mccourt-large.webp';
+import TrystanMcCourtMobileImage from './trystan-mccourt-mobile.jpg';
+import TrystanMcCourtMobileImageWebp from './trystan-mccourt-mobile.webp';
 import VasylynaTsyvinskaLargeImage from './vasylyna-tsyvinska-large.jpg';
 import VasylynaTsyvinskaLargeImageWebp from './vasylyna-tsyvinska-large.webp';
 import VasylynaTsyvinskaMobileImage from './vasylyna-tsyvinska-mobile.jpg';
@@ -510,6 +518,18 @@ export const teamData = {
       linkedIn: 'https://www.linkedin.com/in/ben-c-wu/',
     },
     {
+      firstName: 'Trystan',
+      lastName: 'McCourt',
+      roles: ['mentor'],
+      images: {
+        large: TrystanMcCourtLargeImage,
+        largeWebp: TrystanMcCourtLargeImageWebp,
+        mobile: TrystanMcCourtMobileImage,
+        mobileWebp: TrystanMcCourtMobileImageWebp,
+      },
+      linkedIn: 'https://www.linkedin.com/in/trystanrileymccourt/',
+    },
+    {
       firstName: 'Becca',
       lastName: 'Gray',
       roles: ['mentor'],
@@ -568,6 +588,18 @@ export const teamData = {
         mobileWebp: ChristopherChackoMobileImageWebp,
       },
       linkedIn: 'https://www.linkedin.com/in/chackochristopher/',
+    },
+    {
+      firstName: 'Marc',
+      lastName: 'Boutin',
+      roles: ['mentor'],
+      images: {
+        large: MarcBoutinLargeImage,
+        largeWebp: MarcBoutinLargeImageWebp,
+        mobile: MarcBoutinMobileImage,
+        mobileWebp: MarcBoutinMobileImageWebp,
+      },
+      linkedIn: 'https://www.linkedin.com/in/marcjboutin/',
     },
     {
       firstName: 'Jack',
