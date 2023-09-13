@@ -2,33 +2,37 @@ import PropTypes from 'prop-types';
 import { FaLinkedin } from 'react-icons/fa';
 import styles from './team-member-card.module.scss';
 
-export const TeamMemberCard = ({
-  images,
-  firstName,
-  lastName,
-  linkedIn,
-  roles,
-}) => {
+export const TeamMemberCard = ({ data }) => {
+  const {
+    first_name,
+    last_name,
+    roles,
+    image_large,
+    image_large_webp,
+    image_mobile,
+    image_mobile_webp,
+    linkedin_link,
+  } = data;
 
   return (
     <li className={styles.root}>
       <picture>
-        <source type="image/webp" media="(min-width: 428px)" srcSet={images.largeWebp}/>
-        <source type="image/webp" srcSet={images.mobileWebp}/>
+        <source type="image/webp" media="(min-width: 428px)" srcSet={image_large_webp}/>
+        <source type="image/webp" srcSet={image_mobile_webp}/>
 
-        <source media="(min-width: 428px)" srcSet={images.large}/>
-        <img className={styles.image} src={images.mobile} alt={`${firstName} ${lastName}`}/>
+        <source media="(min-width: 428px)" srcSet={image_large}/>
+        <img className={styles.image} src={image_mobile} alt={`${first_name} ${last_name}`}/>
       </picture>
       <div className={styles.info}>
         <h3 className={styles.name}>
-          {firstName}{' '}
+          {first_name}{' '}
           <span className={styles.nonBreakable}>
-            {lastName}
-            {linkedIn
+            {last_name}
+            {linkedin_link
             && <a
-              href={linkedIn}
+              href={linkedin_link}
               className={styles.socialIcon}
-              aria-label={`Visit ${firstName}'s LinkedIn Profile`}
+              aria-label={`Visit ${first_name}'s LinkedIn Profile`}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -44,9 +48,14 @@ export const TeamMemberCard = ({
 };
 
 TeamMemberCard.propTypes = {
-  images: PropTypes.object.isRequired,
-  firstName: PropTypes.string.isRequired,
-  lastName: PropTypes.string.isRequired,
-  roles: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  linkedIn: PropTypes.string,
+  data: PropTypes.shape({
+    first_name: PropTypes.string.isRequired,
+    last_name: PropTypes.string.isRequired,
+    roles: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    image_large: PropTypes.string.isRequired,
+    image_large_webp: PropTypes.string,
+    image_mobile: PropTypes.string,
+    image_mobile_webp: PropTypes.string,
+    linkedin_link: PropTypes.string,
+  })
 };

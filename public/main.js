@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const path = require('path');
 const fs = require('fs');
 
@@ -45,8 +44,9 @@ const processDirectory = (directoryPath, outputFilePath) => {
       fs.readFile(`${directoryPath}/${file}`, 'utf8', (_, contents) => {
         try {
           jsonData = JSON.parse(contents);
-        } catch (jsonError) {
-          console.error('Error parsing JSON:', jsonError);
+        } catch (error) {
+          // eslint-disable-next-line no-console
+          console.error('Error parsing JSON:', error);
         }
 
         for (const key in jsonData) {
@@ -65,8 +65,6 @@ const processDirectory = (directoryPath, outputFilePath) => {
           }
         }
 
-        console.log('ITEM', item);
-
         itemList.push(item);
 
         if (itemList.length === files.length) {
@@ -82,6 +80,8 @@ const processDirectory = (directoryPath, outputFilePath) => {
 
 const blogDirPath = path.join(__dirname, '../content/blog');
 const storiesDirPath = path.join(__dirname, '../content/stories');
+const teamDirPath = path.join(__dirname, '../content/team');
 
 processDirectory(blogDirPath, 'src/pages/blog/data.json');
 processDirectory(storiesDirPath, 'src/pages/stories/data.json');
+processDirectory(teamDirPath, 'src/pages/home/assets/team.json');

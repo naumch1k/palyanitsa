@@ -18,6 +18,8 @@ import { donationsData } from './assets/homepage-donations/mock-data.js';
 import { callToActionData } from './assets/homepage-call-to-action/mock-data';
 import { partnersData } from './assets/homepage-partners/mock-data';
 
+import team from './assets/team.json';
+
 const Home = () => {
   return (
     <AppLayout donateButton>
@@ -59,7 +61,7 @@ const Home = () => {
             title={teamData.title}
             subtitle={teamData.subtitle}
             headlineImages={teamData.headline_images}
-            team={teamData.team}
+            team={team}
           />
         </HomepageLayout.Section>
         <HomepageLayout.Section

@@ -52,14 +52,7 @@ export const HomepageTeam = ({
       </SectionHeadline>
       <ImageGallery>
         {filteredTeam.map((teamMember, i) => (
-          <TeamMemberCard
-            key={i}
-            images={teamMember.images}
-            firstName={teamMember.firstName}
-            lastName={teamMember.lastName}
-            linkedIn={teamMember.linkedIn}
-            roles={teamMember.roles}
-          />
+          <TeamMemberCard key={i} data={teamMember}/>
         ))}
       </ImageGallery>
     </>
@@ -72,11 +65,14 @@ HomepageTeam.propTypes = {
   headlineImages: PropTypes.object.isRequired,
   team: PropTypes.arrayOf(
     PropTypes.shape({
-      images: PropTypes.object.isRequired,
-      firstName: PropTypes.string.isRequired,
-      lastName: PropTypes.string.isRequired,
+      first_name: PropTypes.string.isRequired,
+      last_name: PropTypes.string.isRequired,
       roles: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-      linkedIn: PropTypes.string,
+      image_large: PropTypes.string.isRequired,
+      image_large_webp: PropTypes.string,
+      image_mobile: PropTypes.string,
+      image_mobile_webp: PropTypes.string,
+      linkedin_link: PropTypes.string,
     })
   ).isRequired,
 };
