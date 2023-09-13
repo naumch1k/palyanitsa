@@ -1,12 +1,13 @@
 {
-  "title": "nadiia-kopestynska",
-  "first_name": "Nadiia",
-  "last_name": "Kopestynska",
-  "roles": [
-    "art"
-  ],
-  "image_large": "/images/nadiia-kopestynska-large.jpg",
   "image_large_webp": "/images/nadiia-kopestynska-large.webp",
   "image_mobile": "/images/nadiia-kopestynska-mobile.jpg",
-  "image_mobile_webp": "/images/nadiia-kopestynska-mobile.webp"
+  "last_name": "Kopestynska",
+  "image_mobile_webp": "/images/nadiia-kopestynska-mobile.webp",
+  "image_large": "/images/nadiia-kopestynska-large.jpg",
+  "title": "nadiia-kopestynska",
+  "first_name": "Nadiia",
+  "linkedin_link": "https://www.linkedin.com/in/nadiia-kopestynska-5109b6257/",
+  "roles": [
+    "art"
+  ]
 }
