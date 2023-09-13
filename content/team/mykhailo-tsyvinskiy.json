@@ -1,12 +1,13 @@
 {
-  "title": "mykhailo-tsyvinskiy",
-  "first_name": "Mykhailo",
-  "last_name": "Tsyvinskiy",
-  "roles": [
-    "art"
-  ],
-  "image_large": "/images/mykhailo-tsyvinskiy-large.jpg",
   "image_large_webp": "/images/mykhailo-tsyvinskiy-large.webp",
   "image_mobile": "/images/mykhailo-tsyvinskiy-mobile.jpg",
-  "image_mobile_webp": "/images/mykhailo-tsyvinskiy-mobile.webp"
+  "last_name": "Tsyvinskiy",
+  "image_mobile_webp": "/images/mykhailo-tsyvinskiy-mobile.webp",
+  "image_large": "/images/mykhailo-tsyvinskiy-large.jpg",
+  "title": "mykhailo-tsyvinskiy",
+  "first_name": "Mykhailo",
+  "linkedin_link": "https://www.linkedin.com/in/misha-tsyvinskiy-5a152b280/",
+  "roles": [
+    "art"
+  ]
 }
