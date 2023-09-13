@@ -1,12 +1,13 @@
 {
-  "title": "mariia-klimenko",
-  "first_name": "Mariia",
-  "last_name": "Klimenko",
-  "roles": [
-    "art"
-  ],
-  "image_large": "/images/mariia-klimenko-large.jpg",
   "image_large_webp": "/images/mariia-klimenko-large.webp",
   "image_mobile": "/images/mariia-klimenko-mobile.jpg",
-  "image_mobile_webp": "/images/mariia-klimenko-mobile.webp"
+  "last_name": "Klimenko",
+  "image_mobile_webp": "/images/mariia-klimenko-mobile.webp",
+  "image_large": "/images/mariia-klimenko-large.jpg",
+  "title": "mariia-klimenko",
+  "first_name": "Mariia",
+  "linkedin_link": "https://www.linkedin.com/in/mariia-klimenko-8a1188280/",
+  "roles": [
+    "art"
+  ]
 }
