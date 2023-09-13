@@ -59,7 +59,7 @@ collections:
         name: "roles"
         widget: "select"
         multiple: true
-        options: ["design", "lead", "development", "art", "project/product", "marketing", "QA", "mentor"]
+        options: ["design", "lead", "development", "art", "project/product", "marketing", "QA", "mentor", "founder", "co-founder"]
       - {label: "Image 640x640", name: "image_large", widget: "image", hint: "File name format: firstName-lastName-large.jpg"}
       - {label: "Image 640x640 WebP", name: "image_large_webp", widget: "image", required: false, hint: "File name format: firstName-lastName-large.webp"}
       - {label: "Image 428x428", name: "image_mobile", widget: "image", hint: "File name format: firstName-lastName-mobile.jpg"}
