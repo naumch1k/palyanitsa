@@ -1,12 +1,13 @@
 {
-  "first_name": "Dmytro",
-  "title": "dmytro-shylobryd",
-  "last_name": "Shylobryd",
-  "roles": [
-    "art"
-  ],
-  "image_large": "/images/dmytro-shylobryd-large.jpg",
   "image_large_webp": "/images/dmytro-shylobryd-large.webp",
   "image_mobile": "/images/dmytro-shylobryd-mobile.jpg",
-  "image_mobile_webp": "/images/dmytro-shylobryd-mobile.webp"
+  "last_name": "Shylobryd",
+  "image_mobile_webp": "/images/dmytro-shylobryd-mobile.webp",
+  "image_large": "/images/dmytro-shylobryd-large.jpg",
+  "title": "dmytro-shylobryd",
+  "first_name": "Dmytro",
+  "linkedin_link": "https://www.linkedin.com/in/dima-shylobryd-779414280/",
+  "roles": [
+    "art"
+  ]
 }
