@@ -1,12 +1,13 @@
 {
-  "title": "sergey-shkil",
-  "first_name": "Sergey",
-  "last_name": "Shkil",
-  "roles": [
-    "design"
-  ],
-  "image_large": "/images/sergey-shkil-large.jpg",
   "image_large_webp": "/images/sergey-shkil-large.webp",
   "image_mobile": "/images/sergey-shkil-mobile.jpg",
-  "image_mobile_webp": "/images/sergey-shkil-mobile.webp"
+  "last_name": "Shkil",
+  "image_mobile_webp": "/images/sergey-shkil-mobile.webp",
+  "image_large": "/images/sergey-shkil-large.jpg",
+  "title": "sergey-shkil",
+  "first_name": "Sergey",
+  "linkedin_link": "https://www.linkedin.com/in/sergey-shkil-a258aa280/",
+  "roles": [
+    "design"
+  ]
 }
