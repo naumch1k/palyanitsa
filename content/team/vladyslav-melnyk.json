@@ -1,12 +1,13 @@
 {
-  "title": "vladyslav-melnyk",
-  "first_name": "Vladyslav",
-  "last_name": "Melnyk",
-  "roles": [
-    "design"
-  ],
-  "image_large": "/images/vladyslav-melnyk-large.jpg",
   "image_large_webp": "/images/vladyslav-melnyk-large.webp",
   "image_mobile": "/images/vladyslav-melnyk-mobile.jpg",
-  "image_mobile_webp": "/images/vladyslav-melnyk-mobile.webp"
+  "last_name": "Melnyk",
+  "image_mobile_webp": "/images/vladyslav-melnyk-mobile.webp",
+  "image_large": "/images/vladyslav-melnyk-large.jpg",
+  "title": "vladyslav-melnyk",
+  "first_name": "Vladyslav",
+  "linkedin_link": "https://www.linkedin.com/in/vladyslav-melnyk-19bab528b/",
+  "roles": [
+    "design"
+  ]
 }
