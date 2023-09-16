@@ -1,6 +1,10 @@
 const path = require('path');
 const fs = require('fs');
 
+const blogDirPath = path.join(__dirname, '../content/blog');
+const storiesDirPath = path.join(__dirname, '../content/stories');
+const teamDirPath = path.join(__dirname, '../content/team');
+
 const months = {
   0: 'January',
   1: 'February',
@@ -30,14 +34,12 @@ const parseParagraphs = paragraphs =>  paragraphs.split('\n');
 
 const processDirectory = (directoryPath, outputFilePath) => {
   fs.readdir(directoryPath, (err, files) => {
-    if (err) {
-      // eslint-disable-next-line no-console
-      return console.log(`Failed to list contents of directory: ${err}`);
-    }
+    // eslint-disable-next-line no-console
+    if (err) console.log(`Failed to list contents of directory: ${err}`);
 
     let itemList = [];
 
-    files.forEach((file, i) => {
+    files.forEach((file) => {
       let jsonData;
       let item = {};
 
@@ -78,10 +80,73 @@ const processDirectory = (directoryPath, outputFilePath) => {
   return;
 };
 
-const blogDirPath = path.join(__dirname, '../content/blog');
-const storiesDirPath = path.join(__dirname, '../content/stories');
-const teamDirPath = path.join(__dirname, '../content/team');
+const processBlogDirectory = () => {
+  fs.readdir(blogDirPath, (err, files) => {
+    // eslint-disable-next-line no-console
+    if (err) return console.log(`Failed to list contents of directory: ${err}`);
 
-processDirectory(blogDirPath, 'src/pages/blog/data.json');
+    let blog = [];
+
+    files.forEach(file => {
+      let obj = {};
+      let item;
+
+      fs.readFile(`${blogDirPath}/${file}`, 'utf8', (_, contents) => {
+        const getMetadataIndices = (acc, elem, i) => {
+          if (/^---/.test(elem)) acc.push(i);
+
+          return acc;
+        };
+
+        const parseMetadata = ({ lines, metadataIndices }) => {
+          if (metadataIndices.length > 0) {
+            let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1]);
+
+            metadata.forEach(line => {
+              obj[line.split(': ')[0]] = line.split(': ')[1];
+            });
+
+            return obj;
+          }
+        };
+
+        const parseContent = ({ lines, metadataIndices }) => {
+          if (metadataIndices.length > 0) {
+            lines = lines.slice(metadataIndices[1] + 1, lines.length);
+          }
+
+          return lines.join('\n');
+        };
+
+        const lines = contents.split('\n');
+        const metadataIndices = lines.reduce(getMetadataIndices, []);
+        const metadata = parseMetadata({ lines, metadataIndices });
+        const content = parseContent({ lines, metadataIndices });
+        const publishedDate = formatDate(metadata.date);
+
+        item = {
+          heading: metadata.heading,
+          date: publishedDate,
+          image_large: metadata.image_large,
+          image_large_webp: metadata.image_large_webp,
+          image_mobile: metadata.image_mobile,
+          image_mobile_webp: metadata.image_mobile_webp,
+          content,
+        };
+
+        blog.push(item);
+
+        if (blog.length === files.length) {
+          let data = JSON.stringify(blog);
+          fs.writeFileSync('src/pages/blog/data.json', data);
+        };
+      });
+    });
+  });
+
+  return;
+};
+
+processBlogDirectory();
 processDirectory(storiesDirPath, 'src/pages/stories/data.json');
 processDirectory(teamDirPath, 'src/pages/home/assets/team.json');

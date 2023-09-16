@@ -9,7 +9,7 @@
     "heading   "
     "date      "
     "image     "
-    "paragraphs"
+    "content"
     /100%;
 
   @media (min-width: breakpoints.$tablet-portrait) {
@@ -17,7 +17,7 @@
     grid-template:
       "heading heading   "
       "date    date      "
-      "image   paragraphs"
+      "image   content"
       /320px   1fr;
   }
 
@@ -28,7 +28,7 @@
     grid-template:
       "image date"
       "image heading"
-      "image paragraphs"
+      "image content"
       /320px 1fr;
   }
 }
@@ -67,17 +67,20 @@
   @media (min-width: breakpoints.$tablet-portrait) { margin: 0; }
 }
 
-.paragraphs { grid-area: paragraphs; }
+.content { grid-area: content; }
 
-.paragraph {
+.content p {
   @include text.text;
   @include text.text-medium;
 
-  margin: 0 16px 25px;
+  margin: 0 16px 15px;
 
-  @media (min-width: breakpoints.$tablet-portrait) { margin: 0 0 25px; }
-
-  @media (min-width: breakpoints.$desktop) { margin: 0 0 10px; }
+  @media (min-width: breakpoints.$tablet-portrait) { margin: 0 0 15px; }
 
   &:last-child { margin-bottom: 0; }
+}
+
+.content strong {
+  @include headline.headline;
+  @include headline.headline-small;
 }
