@@ -5,7 +5,7 @@ import NewsList from '../../components/news-list';
 import { PageTitle } from '../../components/page-title';
 import { StoriesCard } from '../../components/stories-card';
 
-import data from './data.json';
+import data from './mock-data.json';
 
 const Stories = () => {
   return (

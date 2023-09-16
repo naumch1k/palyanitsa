@@ -138,7 +138,7 @@ const processBlogDirectory = () => {
 
         if (blog.length === files.length) {
           let data = JSON.stringify(blog);
-          fs.writeFileSync('src/pages/blog/data.json', data);
+          fs.writeFileSync('src/pages/blog/mock-data.json', data);
         };
       });
     });
@@ -148,5 +148,5 @@ const processBlogDirectory = () => {
 };
 
 processBlogDirectory();
-processDirectory(storiesDirPath, 'src/pages/stories/data.json');
-processDirectory(teamDirPath, 'src/pages/home/assets/team.json');
+processDirectory(storiesDirPath, 'src/pages/stories/mock-data.json');
+processDirectory(teamDirPath, 'src/pages/home/assets/homepage-team/mock-data.json');

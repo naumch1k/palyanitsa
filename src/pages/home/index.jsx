@@ -18,7 +18,7 @@ import { donationsData } from './assets/homepage-donations/mock-data.js';
 import { callToActionData } from './assets/homepage-call-to-action/mock-data';
 import { partnersData } from './assets/homepage-partners/mock-data';
 
-import team from './assets/team.json';
+import team from './assets/homepage-team/mock-data.json';
 
 const Home = () => {
   return (

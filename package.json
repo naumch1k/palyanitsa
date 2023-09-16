@@ -18,7 +18,7 @@
     "sass": "1.54.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node public/main.js && react-scripts start",
     "build": "node public/main.js && react-scripts build",
     "lint:js": "npx eslint src/**/*.js src/**/*.jsx --fix",
     "lint:scss": "stylelint \"src/**/*.css\" --fix and stylelint \"src/**/*.scss\" --fix",
