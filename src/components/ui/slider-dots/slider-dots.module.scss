@@ -10,22 +10,30 @@
   width: 6px;
   height: 6px;
   padding: 0;
-  border: 1px solid var(--color-light-primary);
+  border: 1px solid var(--color-dark-primary);
   margin: 0 8px;
   background: transparent;
   border-radius: 50%;
   cursor: pointer;
   transition: var(--common-transition);
 
+  &.darkTheme { border: 1px solid var(--color-light-primary); }
+
+  &.active {
+    background-color: var(--color-dark-primary);
+    transform: scale(1.35);
+  }
+
+  &.active.darkTheme { background-color: var(--color-light-primary); }
+
   @media (min-width: breakpoints.$desktop) {
     &:hover {
-      background-color: var(--color-light-primary);
+      background-color: var(--color-dark-primary);
       transform: scale(1.35);
     }
-  }
-}
 
-.dot.active {
-  background-color: var(--color-light-primary);
-  transform: scale(1.35);
+    &.darkTheme:hover {
+      background-color: var(--color-light-primary);
+    }
+  }
 }

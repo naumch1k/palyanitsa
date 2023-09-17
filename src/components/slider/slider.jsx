@@ -53,6 +53,7 @@ export const Slider = ({
       )}
       {loaded && instanceRef.current && (
         <SliderDots
+          darkTheme
           count={children.length}
           currentSlide={currentSlide}
           onSliderDotClick={handleSliderDotClick}
