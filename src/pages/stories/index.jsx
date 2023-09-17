@@ -1,6 +1,6 @@
 import { AppLayout } from '../../components/app-layout';
 import SEO from '../../components/seo';
-import NewsLayout from '../../components/news-layout';
+import StoriesLayout from '../../components/stories-layout';
 import NewsList from '../../components/news-list';
 import { PageTitle } from '../../components/page-title';
 import { StoriesCard } from '../../components/stories-card';
@@ -11,11 +11,10 @@ const Stories = () => {
   return (
     <AppLayout donateButton>
       <SEO title="Stories"/>
-      {/* TODO: rename NewsLayout, NewsList as it shared between several pages*/}
-      <NewsLayout>
-        <NewsLayout.Title>
+      <StoriesLayout>
+        <StoriesLayout.Title>
           <PageTitle text="Stories"/>
-        </NewsLayout.Title>
+        </StoriesLayout.Title>
         <NewsList>
           {data.map((item, i) => (
             <NewsList.Item key={i}>
@@ -23,7 +22,7 @@ const Stories = () => {
             </NewsList.Item>
           ))}
         </NewsList>
-      </NewsLayout>
+      </StoriesLayout>
     </AppLayout>
   );
 };

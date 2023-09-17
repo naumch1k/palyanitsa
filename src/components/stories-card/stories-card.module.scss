@@ -4,7 +4,7 @@
 
 .root {
   display: grid;
-  gap: 40px;
+  gap: 30px;
   grid-template:
     "heading"
     "image  "
@@ -13,6 +13,7 @@
     /100%;
 
   @media (min-width: breakpoints.$tablet-landscape) {
+    gap: 40px;
     grid-template:
       "heading heading"
       "image   content"
@@ -24,6 +25,8 @@
 .heading {
   margin: 0 16px;
   grid-area: heading;
+
+  @media (min-width: breakpoints.$mobile) { margin: 0 48px; }
 
   @media (min-width: breakpoints.$tablet-portrait) { margin: 0; }
 }
@@ -45,13 +48,19 @@
 .intro,
 .paragraphs { text-align: justify; }
 
-.quote { margin: 25px 30px; }
+.quote {
+  margin: 25px 30px;
+
+  @media (min-width: breakpoints.$mobile) { margin: 25px 48px; }
+}
 
 .paragraph {
   @include text.text;
   @include text.text-medium;
 
   margin: 0 16px 15px;
+
+  @media (min-width: breakpoints.$mobile) { margin: 15px 48px 0; }
 
   @media (min-width: breakpoints.$tablet-portrait) { margin: 0 0 15px; }
 
@@ -64,6 +73,8 @@
   margin-left: 16px;
   gap: 15px;
   grid-area: links;
+
+  @media (min-width: breakpoints.$mobile) { margin-left: 48px; }
 
   @media (min-width: breakpoints.$tablet-portrait) { margin: 0; }
 }

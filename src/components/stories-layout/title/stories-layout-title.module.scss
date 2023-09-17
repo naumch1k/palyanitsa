@@ -3,12 +3,19 @@
 .root {
   padding: 40px 0 25px;
   border-bottom: 2px solid var(--color-dark-primary);
-  margin: 0 16px;
+  margin: 0 16px 50px;
+
+  @media (min-width: breakpoints.$mobile) {
+    margin: 0 48px 50px;
+  }
 
   @media (min-width: breakpoints.$tablet-portrait) {
     padding: 100px 0 25px;
-    margin: 0;
+    margin: 0 0 80px;
   }
 
-  @media (min-width: breakpoints.$desktop) { padding: 25vh 0 40px; }
+  @media (min-width: breakpoints.$desktop) {
+    padding: 17vh 0 40px;
+    margin: 0 0 100px;
+  }
 }

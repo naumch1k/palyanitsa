@@ -2,13 +2,13 @@
 @use "../../shared/styles/mixins/headline.scss" as headline;
 
 .root {
-  padding: 90px 20px 0;
+  padding: 90px 20px 110px;
 
-  @media (min-width: breakpoints.$mobile) { padding: 90px 90px 0; }
+  @media (min-width: breakpoints.$mobile) { padding: 90px 90px 110px; }
 
-  @media (min-width: breakpoints.$tablet-landscape) { padding: 110px 90px 0; }
+  @media (min-width: breakpoints.$tablet-landscape) { padding: 110px 90px 130px; }
 
-  @media (min-width: breakpoints.$desktop) { padding: 130px 0 0; }
+  @media (min-width: breakpoints.$desktop) { padding: 130px 0 150px; }
 }
 
 .title {
