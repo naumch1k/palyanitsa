@@ -6,7 +6,7 @@ import { SliderArrowButton } from '../ui/slider-arrow-button';
 import { SliderDots } from '../ui/slider-dots';
 
 export const Slider = ({
-  arrowButtonsOffset,
+  darkTheme = false,
   children,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -39,21 +39,25 @@ export const Slider = ({
       </div>
       {loaded && instanceRef.current && (
         <>
-          <SliderArrowButton
-            offset={arrowButtonsOffset}
-            direction="left"
-            onClick={handleLeftArrowClick}
-          />
-          <SliderArrowButton
-            offset={arrowButtonsOffset}
-            direction="right"
-            onClick={handleRightArrowClick}
-          />
+          <div className={`${styles.arrow} ${styles.arrowLeft}`}>
+            <SliderArrowButton
+              darkTheme={darkTheme}
+              direction="left"
+              onClick={handleLeftArrowClick}
+            />
+          </div>
+          <div className={`${styles.arrow} ${styles.arrowRight}`}>
+            <SliderArrowButton
+              darkTheme={darkTheme}
+              direction="right"
+              onClick={handleRightArrowClick}
+            />
+          </div>
         </>
       )}
       {loaded && instanceRef.current && (
         <SliderDots
-          darkTheme
+          darkTheme={darkTheme}
           count={children.length}
           currentSlide={currentSlide}
           onSliderDotClick={handleSliderDotClick}
@@ -64,6 +68,6 @@ export const Slider = ({
 };
 
 Slider.propTypes = {
-  arrowButtonsOffset: PropTypes.number,
-  children: PropTypes.node,
+  darkTheme: PropTypes.bool,
+  children: PropTypes.node.isRequired,
 };

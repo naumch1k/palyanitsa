@@ -33,9 +33,7 @@ export const HomepageAbout = ({ principles, quotes }) => {
         </Tabs>
       </div>
       <div className={styles.accentBox}>
-        <Slider
-          arrowButtonsOffset={55}
-        >
+        <Slider darkTheme>
           {quotes.map((quote, i) => (
             <Slider.Item key={i}>
               <Quote
