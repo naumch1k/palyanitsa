@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import ReactMarkdown from 'react-markdown';
-import { PageSubtitle } from '../page-subtitle';
-import styles from './news-card.module.scss';
+// import ReactMarkdown from 'react-markdown';
+import styles from './blog-entry-card.module.scss';
 
-export const NewsCard = ({ data }) => {
+export const BlogEntryCard = ({ data }) => {
   const {
     date,
     heading,
@@ -15,9 +14,7 @@ export const NewsCard = ({ data }) => {
   } = data;
 
   return (
-    <div className={styles.root}>
-      <PageSubtitle className={styles.heading} text={heading}/>
-      <p className={styles.date}>{date}</p>
+    <div className={styles.link} href="/" aria-label={`Read: ${heading}`}>
       <picture className={styles.imageWrapper}>
         <source type="image/webp" media="(min-width: 428px)" srcSet={image_large_webp}/>
         <source type="image/webp" srcSet={image_mobile_webp}/>
@@ -25,14 +22,16 @@ export const NewsCard = ({ data }) => {
         <source media="(min-width: 428px)" srcSet={image_large}/>
         <img className={styles.image} src={image_mobile} alt={''}/>
       </picture>
-      <div className={styles.content}>
+      <p className={styles.date}>{date}</p>
+      <h2 className={styles.heading}>{heading}</h2>
+      {/* <div className={styles.content}>
         <ReactMarkdown>{content}</ReactMarkdown>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-NewsCard.propTypes = {
+BlogEntryCard.propTypes = {
   data: PropTypes.shape({
     date: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,

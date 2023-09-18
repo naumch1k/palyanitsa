@@ -4,7 +4,7 @@ import { PageTitle } from '../../components/page-title';
 import BlogLayout from '../../components/blog-layout';
 import { BlogMessage } from '../../components/blog-message';
 import BlogCarousel from '../../components/blog-carousel';
-import { NewsCard } from '../../components/news-card/news-card';
+import { BlogEntryCard } from '../../components/blog-entry-card';
 
 import data from './mock-data.json';
 
@@ -21,7 +21,7 @@ const Blog = () => {
         <BlogCarousel>
           {data.map((item, i) => (
             <BlogCarousel.Item key={i}>
-              <NewsCard key={i} data={item}/>
+              <BlogEntryCard key={i} data={item}/>
             </BlogCarousel.Item>
           ))}
         </BlogCarousel>
