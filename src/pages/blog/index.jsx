@@ -1,28 +1,31 @@
 import { AppLayout } from '../../components/app-layout';
 import SEO from '../../components/seo';
-import NewsLayout from '../../components/news-layout';
-import NewsList from '../../components/news-list';
 import { PageTitle } from '../../components/page-title';
+import BlogLayout from '../../components/blog-layout';
+import { BlogMessage } from '../../components/blog-message';
+import BlogCarousel from '../../components/blog-carousel';
 import { NewsCard } from '../../components/news-card/news-card';
 
 import data from './mock-data.json';
 
 const Blog = () => {
   return (
-    <AppLayout donateButton>
+    // TODO: return donateButton after DonateButton restyled
+    <AppLayout>
       <SEO title="The Latest"/>
-      <NewsLayout>
-        <NewsLayout.Title>
+      <BlogLayout>
+        <BlogLayout.Title>
           <PageTitle text="The latest"/>
-        </NewsLayout.Title>
-        <NewsList>
+        </BlogLayout.Title>
+        <BlogMessage/>
+        <BlogCarousel>
           {data.map((item, i) => (
-            <NewsList.Item key={i}>
-              <NewsCard data={item}/>
-            </NewsList.Item>
+            <BlogCarousel.Item key={i}>
+              <NewsCard key={i} data={item}/>
+            </BlogCarousel.Item>
           ))}
-        </NewsList>
-      </NewsLayout>
+        </BlogCarousel>
+      </BlogLayout>
     </AppLayout>
   );
 };

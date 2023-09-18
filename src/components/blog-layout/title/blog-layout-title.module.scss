@@ -1,0 +1,31 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  padding: 40px 16px 0;
+  margin: 0 0 40px;
+
+  @media (min-width: breakpoints.$mobile) {
+    width: 100%;
+    padding: 40px 0 25px;
+  }
+
+  @media (min-width: breakpoints.$tablet-portrait) {
+    padding: 100px 0 25px;
+    border-bottom: 1.5px solid var(--color-dark-primary);
+    margin: 0 0 80px;
+  }
+
+  @media (min-width: breakpoints.$tablet-landscape) {
+    max-width: calc(100% - 96px);
+    margin: 0 auto 80px;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    max-width: 1170px;
+    padding: 17vh 0 40px;
+  }
+
+  @media (min-width: breakpoints.$large-desktop) {
+    max-width: 1280px;
+  }
+}
