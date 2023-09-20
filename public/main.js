@@ -123,8 +123,10 @@ const processBlogDirectory = () => {
         const metadata = parseMetadata({ lines, metadataIndices });
         const content = parseContent({ lines, metadataIndices });
         const publishedDate = formatDate(metadata.date);
+        const id = metadata.heading.replace(/ /g, '-').replace(/[^a-zA-Z0-9-]+/g, '').toLowerCase();
 
         item = {
+          id,
           heading: metadata.heading,
           date: publishedDate,
           image_large: metadata.image_large,

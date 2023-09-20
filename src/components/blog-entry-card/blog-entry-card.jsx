@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-// import ReactMarkdown from 'react-markdown';
+import { Link } from 'react-router-dom';
 import styles from './blog-entry-card.module.scss';
 
 export const BlogEntryCard = ({ data }) => {
   const {
+    id,
     date,
     heading,
-    content,
     image_large,
     image_large_webp,
     image_mobile,
@@ -14,7 +14,7 @@ export const BlogEntryCard = ({ data }) => {
   } = data;
 
   return (
-    <div className={styles.link} href="/" aria-label={`Read: ${heading}`}>
+    <Link className={styles.link} to={`${id}`} aria-label={`Read: ${heading}`}>
       <picture className={styles.imageWrapper}>
         <source type="image/webp" media="(min-width: 428px)" srcSet={image_large_webp}/>
         <source type="image/webp" srcSet={image_mobile_webp}/>
@@ -24,18 +24,15 @@ export const BlogEntryCard = ({ data }) => {
       </picture>
       <p className={styles.date}>{date}</p>
       <h2 className={styles.heading}>{heading}</h2>
-      {/* <div className={styles.content}>
-        <ReactMarkdown>{content}</ReactMarkdown>
-      </div> */}
-    </div>
+    </Link>
   );
 };
 
 BlogEntryCard.propTypes = {
   data: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
     image_large: PropTypes.string.isRequired,
     image_large_webp: PropTypes.string,
     image_mobile: PropTypes.string,
