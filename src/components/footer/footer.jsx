@@ -44,7 +44,7 @@ export const Footer = () => {
         </Menu>
       </div>
       <div className={styles.footnote}>
-        <p>@{new Date().getFullYear()} Palianytsia Foundation</p>
+        <p className={styles.copyright}>@{new Date().getFullYear()} Palianytsia Foundation</p>
         <p className={styles.credits}>Site by{' '}
           <a className={styles.link} href="https://naumchik.me/" target="_blank" rel="noreferrer">
             Irina Naumchik

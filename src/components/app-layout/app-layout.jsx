@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Page from '../page';
 import { Footer } from '../footer';
 import { BurgerButton } from '../ui/burger-button';
-import { DonateButton } from '../ui/donate-button';
+import { Button } from '../ui/button/button';
 import { NavigationMenu } from '../navigation-menu';
 
 export const AppLayout = ({
@@ -32,7 +32,12 @@ export const AppLayout = ({
       </Page.BurgerButton>
       {donateButton && (
         <Page.DonateButton>
-          <DonateButton/>
+          <Button
+            isLink
+            href="/donate"
+            label="Donate"
+            aria-label="Go to donate page"
+          />
         </Page.DonateButton>
       )}
       <Page.OverlayMenu isOpen={isOverlayMenuOpen}>
