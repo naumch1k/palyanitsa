@@ -7,8 +7,8 @@ export const BlogEntryCard = ({ data }) => {
     id,
     date,
     heading,
-    image_large,
-    image_large_webp,
+    image_tablet,
+    image_tablet_webp,
     image_mobile,
     image_mobile_webp,
   } = data;
@@ -16,10 +16,10 @@ export const BlogEntryCard = ({ data }) => {
   return (
     <Link className={styles.link} to={`${id}`} aria-label={`Read: ${heading}`}>
       <picture className={styles.imageWrapper}>
-        <source type="image/webp" media="(min-width: 428px)" srcSet={image_large_webp}/>
+        <source type="image/webp" media="(min-width: 428px)" srcSet={image_tablet_webp}/>
         <source type="image/webp" srcSet={image_mobile_webp}/>
 
-        <source media="(min-width: 428px)" srcSet={image_large}/>
+        <source media="(min-width: 428px)" srcSet={image_tablet}/>
         <img className={styles.image} src={image_mobile} alt={''}/>
       </picture>
       <p className={styles.date}>{date}</p>
@@ -33,8 +33,8 @@ BlogEntryCard.propTypes = {
     id: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
-    image_large: PropTypes.string.isRequired,
-    image_large_webp: PropTypes.string,
+    image_tablet: PropTypes.string.isRequired,
+    image_tablet_webp: PropTypes.string,
     image_mobile: PropTypes.string,
     image_mobile_webp: PropTypes.string,
   }).isRequired,
