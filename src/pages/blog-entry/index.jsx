@@ -17,7 +17,10 @@ const BlogEntry = () => {
 
   return (
     <AppLayout donateButton>
-      <SEO title={`The Latest: ${blogEntry.heading}`}/>
+      <SEO
+        title={`The Latest: ${blogEntry.heading}`}
+        image={blogEntry.og_image}
+      />
       <BlogEntryLayout>
         <BlogEntryLayout.Headline>
           <picture>
