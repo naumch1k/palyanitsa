@@ -2,11 +2,11 @@
 
 .root {
   display: grid;
-  padding-top: 70px;
+  padding: 70px 0;
   gap: 70px;
 
   @media (min-width: breakpoints.$desktop) {
-    padding-top: 100px;
+    padding: 100px 0;
     margin-left: 15vw;
     gap: 100px;
   }

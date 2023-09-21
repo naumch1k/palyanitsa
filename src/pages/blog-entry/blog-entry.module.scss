@@ -1,0 +1,48 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/headline.scss" as headline;
+@use "../../shared/styles/mixins/text.scss" as text;
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heading {
+  @include headline.headline;
+  @include headline.headline-medium;
+
+  grid-area: heading;
+}
+
+.body {
+  grid-area: body;
+
+  @media (min-width: breakpoints.$tablet-landscape) { padding-right: 80px; }
+
+  & p {
+    @include text.text;
+    @include text.text-medium;
+
+    margin: 0 0 15px;
+
+    @media (min-width: breakpoints.$tablet-landscape) { margin: 0 0 18px; }
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  & strong {
+    @include headline.headline;
+    @include headline.headline-small;
+  }
+}
+
+.date {
+  @include text.text;
+  @include text.text-medium;
+
+  grid-area: date;
+}

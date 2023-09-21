@@ -7,3 +7,12 @@
   display: flex;
   align-items: center;
 }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrowLeft { left: -55px; }
+.arrowRight { right: -55px; }

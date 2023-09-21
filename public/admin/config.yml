@@ -21,6 +21,14 @@ collections:
     fields:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Heading", name: "heading", widget: "string"}
+      - label: "Image Large"
+        name: "image_desktop"
+        widget: "image"
+        hint: "File name format: fYYYY-MM-DD-desktop.jpg"
+      - label: "Image Large WebP"
+        name: "image_desktop_webp"
+        widget: "image"
+        hint: "File name format: YYYY-MM-DD-desktop.webp"
       - label: "Image 768x768"
         name: "image_large"
         widget: "image"
@@ -37,6 +45,10 @@ collections:
         name: "image_mobile_webp"
         widget: "image"
         hint: "File name format: YYYY-MM-DD-mobile.webp"
+      - label: "Image 640x360"
+        name: "og_image"
+        widget: "image"
+        hint: "File name format: YYYY-MM-DD-og-image.jpg"
       - {label: "Content", name: "body", widget: "markdown"}
   - name: "stories"
     label: "stories"
@@ -71,8 +83,8 @@ collections:
         widget: "select"
         multiple: true
         options: ["design", "lead", "development", "art", "project/product", "marketing", "QA", "mentor", "founder", "co-founder"]
-      - {label: "Image 640x640", name: "image_large", widget: "image", hint: "File name format: firstName-lastName-large.jpg"}
-      - {label: "Image 640x640 WebP", name: "image_large_webp", widget: "image", required: false, hint: "File name format: firstName-lastName-large.webp"}
+      - {label: "Image 748x748", name: "image_large", widget: "image", hint: "File name format: firstName-lastName-large.jpg"}
+      - {label: "Image 748x748 WebP", name: "image_large_webp", widget: "image", required: false, hint: "File name format: firstName-lastName-large.webp"}
       - {label: "Image 428x428", name: "image_mobile", widget: "image", hint: "File name format: firstName-lastName-mobile.jpg"}
       - {label: "Image 428x428 WebP", name: "image_mobile_webp", widget: "image", required: false, hint: "File name format: firstName-lastName-mobile.webp"}
       - {label: "LinkedIn Link", name: "linkedin_link", widget: "string", required: false}

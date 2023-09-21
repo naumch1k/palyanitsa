@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import styles from './news-layout.module.scss';
+import styles from './blog-layout.module.scss';
 
-export const NewsLayout = ({ children }) => {
+export const BlogLayout = ({ children }) => {
   return (
     <div className={styles.root}>
       {children}
@@ -9,6 +9,6 @@ export const NewsLayout = ({ children }) => {
   );
 };
 
-NewsLayout.propTypes = {
+BlogLayout.propTypes = {
   children: PropTypes.node,
 };

@@ -1,0 +1,29 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  display: grid;
+  width: 100%;
+  max-width: calc(100% - 32px);
+  margin: 0 auto;
+  gap: 40px;
+  grid-template:
+    "heading"
+    "body   "
+    "date   "
+    /100%;
+
+  @media (min-width: breakpoints.$mobile) { max-width: calc(100% - 96px); }
+
+  @media (min-width: breakpoints.$tablet-landscape) {
+    grid-template:
+      "heading heading"
+      "date   body   "
+      ".      body   "
+      /280px  1fr;
+    grid-template-rows: min-content min-content 1fr;
+  }
+
+  @media (min-width: breakpoints.$desktop) { max-width: 1170px; }
+
+  @media (min-width: breakpoints.$large-desktop) { max-width: 1280px; }
+}

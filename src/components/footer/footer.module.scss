@@ -49,27 +49,33 @@
 }
 
 .footnote {
-  @include text.text;
-  @include text.text-medium;
-
   display: flex;
   flex-direction: column;
   padding-top: 30px;
   border-top: 1px solid var(--color-light-primary);
   margin-top: 30px;
-  gap: 14px;
+  gap: 40px;
   grid-area: footnote;
 
   @media (min-width: breakpoints.$mobile) {
     padding: 0;
     border: none;
     margin: 0;
+    gap: 14px;
   }
 
   @media (min-width: breakpoints.$tablet-portrait) { flex-direction: row; }
 }
 
+.copyright {
+  @include text.text;
+  @include text.text-medium;
+}
+
 .credits {
+  @include text.text;
+  @include text.text-medium;
+
   @media (min-width: breakpoints.$tablet-portrait) {
     position: relative;
     padding-left: 22px;

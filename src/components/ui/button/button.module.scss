@@ -1,9 +1,11 @@
+@use "../../../shared/breakpoints.scss" as breakpoints;
 @use "../../../shared/styles/mixins/text.scss" as text;
 
 .root {
   @include text.text;
   @include text.text-button;
 
+  display: block;
   width: 100%;
   padding: 12px 20px;
   border: none;
@@ -11,15 +13,22 @@
   border-radius: 3px;
   color: var(--color-light-default);
   cursor: pointer;
-  outline: none;
   text-transform: uppercase;
+  transition: var(--common-transition);
+
+  &:disabled {
+    background-color: var(--color-dark-primary-33);
+    cursor: not-allowed;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    & span { display: inline-block; }
+
+    &:hover:not(:disabled) span {
+      transform: rotateX(360deg);
+      transition: .7s;
+    }
+  }
 }
 
-.root:disabled {
-  background-color: var(--color-dark-primary-33);
-  cursor: not-allowed;
-}
-
-.link {
-  text-decoration: none;
-}
+.link { text-decoration: none; }

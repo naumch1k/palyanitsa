@@ -1,0 +1,33 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sliderControls {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 40px;
+
+  @media (min-width: breakpoints.$tablet-portrait) {
+    justify-content: end;
+    gap: 40px;
+  }
+
+  @media (min-width: breakpoints.$tablet-landscape) {
+    padding-right: 48px;
+    gap: 20px;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    padding-right: calc((100% - 1170px) / 2);
+  }
+
+  @media (min-width: breakpoints.$large-desktop) {
+    padding-right: calc((100% - 1280px) / 2);
+    margin-top: 60px;
+  }
+}

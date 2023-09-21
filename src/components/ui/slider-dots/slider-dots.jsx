@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './slider-dots.module.scss';
 
 export const SliderDots = ({
+  darkTheme,
   count,
   currentSlide,
   onSliderDotClick,
@@ -14,7 +15,11 @@ export const SliderDots = ({
           <button
             key={i}
             onClick={() => onSliderDotClick(i)}
-            className={`${styles.dot} ${currentSlide === i ? `${styles.active}` : ''}`}
+            className={`
+              ${styles.dot}
+              ${currentSlide === i ? `${styles.active}` : ''}
+              ${darkTheme ? `${styles.darkTheme}` : ''}
+            `}
             aria-label={`Slide ${i + 1}`}
           />
         );
@@ -24,7 +29,8 @@ export const SliderDots = ({
 };
 
 SliderDots.propTypes = {
-  count: PropTypes.number,
-  currentSlide: PropTypes.number,
-  onSliderDotClick: PropTypes.func,
+  darkTheme: PropTypes.bool,
+  count: PropTypes.number.isRequired,
+  currentSlide: PropTypes.number.isRequired,
+  onSliderDotClick: PropTypes.func.isRequired,
 };
