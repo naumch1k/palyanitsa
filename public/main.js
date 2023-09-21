@@ -129,6 +129,7 @@ const processBlogDirectory = () => {
           id,
           heading: metadata.heading,
           date: publishedDate,
+          og_image: metadata.og_image,
           image_desktop: metadata.image_desktop,
           image_desktop_webp: metadata.image_desktop_webp,
           image_tablet: metadata.image_tablet,

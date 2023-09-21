@@ -45,6 +45,10 @@ collections:
         name: "image_mobile_webp"
         widget: "image"
         hint: "File name format: YYYY-MM-DD-mobile.webp"
+      - label: "Image 640x360"
+        name: "og_image"
+        widget: "image"
+        hint: "File name format: YYYY-MM-DD-og-image.jpg"
       - {label: "Content", name: "body", widget: "markdown"}
   - name: "stories"
     label: "stories"
