@@ -1,0 +1,19 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+
+.root {
+  display: grid;
+  padding-bottom: 80px;
+  gap: 30px;
+
+  @media (min-width: breakpoints.$mobile) { gap: 50px; }
+
+  @media (min-width: breakpoints.$desktop) {
+    padding-bottom: 100px;
+    gap: 60px;
+  }
+
+  @media (min-width: breakpoints.$large-desktop) {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
