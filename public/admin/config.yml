@@ -45,7 +45,7 @@ collections:
         name: "image_mobile_webp"
         widget: "image"
         hint: "File name format: YYYY-MM-DD-mobile.webp"
-      - label: "OG Image 640x360"
+      - label: "OG Image (640x360)"
         name: "og_image"
         widget: "image"
         hint: "File name format: YYYY-MM-DD-og-image.jpg"
@@ -57,15 +57,31 @@ collections:
     create: true
     slug: "{{heading}}"
     fields:
+      - label: "id"
+        name: "id"
+        widget: "string"
+        hint: "Format as: firstName-lastName. Example: irina-naumchik"
       - {label: "First Name", name: "first_name", widget: "string"}
       - {label: "Heading", name: "heading", widget: "string"}
       - {label: "Intro", name: "intro", widget: "text"}
       - {label: "Quote", name: "quote", widget: "text"}
       - {label: "Paragraphs", name: "paragraphs", widget: "text"}
-      - {label: "Image 768x768", name: "image_large", widget: "image"}
-      - {label: "Image 768x768 WebP", name: "image_large_webp", widget: "image", required: false}
-      - {label: "Image 428x428", name: "image_mobile", widget: "image"}
-      - {label: "Image 428x428 WebP", name: "image_mobile_webp", widget: "image", required: false}
+      - label: "Image Large (768x768)"
+        name: "image_tablet"
+        widget: "image"
+        hint: "File name format: firstName-lastName-large.jpg"
+      - label: "Image Large WebP (768x768)"
+        name: "image_tablet_webp"
+        widget: "image"
+        hint: "File name format: firstName-lastName-large.webp"
+      - label: "Image Mobile (428x428)"
+        name: "image_mobile"
+        widget: "image"
+        hint: "File name format: firstName-lastName-mobile.jpg"
+      - label: "Image Mobile WebP (428x428)"
+        name: "image_mobile_webp"
+        widget: "image"
+        hint: "File name format: firstName-lastName-mobile.webp"
       - {label: "PayPal Link", name: "paypal_link", widget: "string", required: false}
       - {label: "Go Fund Me Link", name: "gofundme_link", widget: "string", required: false}
   - name: "team"
@@ -83,8 +99,20 @@ collections:
         widget: "select"
         multiple: true
         options: ["design", "lead", "development", "art", "project/product", "marketing", "QA", "mentor", "founder", "co-founder"]
-      - {label: "Image 748x748", name: "image_large", widget: "image", hint: "File name format: firstName-lastName-large.jpg"}
-      - {label: "Image 748x748 WebP", name: "image_large_webp", widget: "image", required: false, hint: "File name format: firstName-lastName-large.webp"}
-      - {label: "Image 428x428", name: "image_mobile", widget: "image", hint: "File name format: firstName-lastName-mobile.jpg"}
-      - {label: "Image 428x428 WebP", name: "image_mobile_webp", widget: "image", required: false, hint: "File name format: firstName-lastName-mobile.webp"}
+      - label: "Image Large (748x748)"
+        name: "image_large"
+        widget: "image"
+        hint: "File name format: firstName-lastName-large.jpg"
+      - label: "Image Large WebP (748x748)"
+        name: "image_large_webp"
+        widget: "image"
+        hint: "File name format: firstName-lastName-large.webp"
+      - label: "Image Mobile (428x428)"
+        name: "image_mobile"
+        widget: "image"
+        hint: "File name format: firstName-lastName-mobile.jpg"
+      - label: "Image Mobile WebP (428x428)"
+        name: "image_mobile_webp"
+        widget: "image"
+        hint: "File name format: firstName-lastName-mobile.webp"
       - {label: "LinkedIn Link", name: "linkedin_link", widget: "string", required: false}
