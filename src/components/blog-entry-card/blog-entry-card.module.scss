@@ -64,3 +64,11 @@
 
   @media (min-width: breakpoints.$tablet-portrait) { margin: 15px 0 0; }
 }
+
+.arrow {
+  margin-left: 10px;
+
+  @media (min-width: breakpoints.$desktop) {
+    display: none;
+  }
+}

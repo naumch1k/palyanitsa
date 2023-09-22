@@ -23,7 +23,10 @@ export const BlogEntryCard = ({ data }) => {
         <img className={styles.image} src={image_mobile} alt={''}/>
       </picture>
       <p className={styles.date}>{date}</p>
-      <h2 className={styles.heading}>{heading}</h2>
+      <h2 className={styles.heading}>
+        {heading}
+        <span className={styles.arrow}>➞</span>
+      </h2>
     </Link>
   );
 };
