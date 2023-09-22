@@ -8,18 +8,19 @@
   gap: 40px;
   grid-template:
     "heading"
-    "body   "
-    "date   "
+    "body"
+    "date"
+    "shareLinks"
     /100%;
 
   @media (min-width: breakpoints.$mobile) { max-width: calc(100% - 96px); }
 
   @media (min-width: breakpoints.$tablet-landscape) {
     grid-template:
-      "heading heading"
-      "date   body   "
-      ".      body   "
-      /280px  1fr;
+      "heading    heading"
+      "date       body   "
+      "shareLinks body   "
+      /280px      1fr;
     grid-template-rows: min-content min-content 1fr;
   }
 

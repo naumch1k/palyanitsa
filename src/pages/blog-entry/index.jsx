@@ -39,7 +39,7 @@ const BlogEntry = () => {
             <ReactMarkdown>{blogEntry.content}</ReactMarkdown>
           </div>
           <p className={styles.date}>{blogEntry.date}</p>
-          <ShareLinks/>
+          <ShareLinks className={styles.shareLinks}/>
         </BlogEntryLayout.Content>
       </BlogEntryLayout>
     </AppLayout>
