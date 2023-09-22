@@ -1,0 +1,45 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/headline.scss" as headline;
+@use "../../shared/styles/mixins/text.scss" as text;
+
+.heading { grid-area: heading; }
+
+.image {
+  width: 100%;
+  height: 400px;
+  grid-area: image;
+  object-fit: cover;
+
+  @media (min-width: breakpoints.$mobile) { height: 640px; }
+
+  @media (min-width: breakpoints.$tablet-landscape) { height: 400px; }
+}
+
+.body { grid-area: body; }
+
+.intro,
+.paragraphs { text-align: justify; }
+
+.quote {
+  margin: 25px 30px;
+
+  @media (min-width: breakpoints.$mobile) { margin: 25px 48px; }
+}
+
+.paragraph {
+  @include text.text;
+  @include text.text-medium;
+
+  margin-bottom: 15px;
+
+  &:last-of-type { margin-bottom: 0; }
+}
+
+.donationLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  grid-area: donationLinks;
+}
+
+.shareLinks { grid-area: shareLinks; }

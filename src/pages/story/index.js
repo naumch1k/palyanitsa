@@ -1,6 +1,13 @@
 import { useParams, Navigate } from 'react-router-dom';
 import { AppLayout } from '../../components/app-layout';
 import SEO from '../../components/seo';
+import { PageTitle } from '../../components/page-title';
+import { PageSubtitle } from '../../components/page-subtitle';
+import { Quote } from '../../components/quote';
+import { ArrowLink } from '../../components/ui/arrow-link';
+import { ShareLinks } from '../../components/share-links';
+import StoryLayout from '../../components/story-layout';
+import styles from './story.module.scss';
 
 import stories from '../stories/mock-data.json';
 
@@ -17,7 +24,44 @@ const Story = () => {
         title={`Stories: ${story.heading}`}
         image={story.image_tablet}
       />
-      <p>{story.heading}</p>
+      <StoryLayout>
+        <StoryLayout.Title>
+          <PageTitle text="Stories"/>
+        </StoryLayout.Title>
+        <StoryLayout.Content>
+          <PageSubtitle className={styles.heading} text={story.heading}/>
+          <picture>
+            <source type="image/webp" media="(min-width: 428px)" srcSet={story.image_tablet_webp}/>
+            <source type="image/webp" srcSet={story.image_mobile_webp}/>
+
+            <source media="(min-width: 428px)" srcSet={story.image_tablet}/>
+            <img className={styles.image} src={story.image_mobile} alt={`${story.first_name}'s picture`}/>
+          </picture>
+          <div className={styles.body}>
+            <div className={styles.intro}>
+              {story.intro.map((paragraph, i) => (
+                <p className={styles.paragraph} key={i}>{paragraph}</p>
+              ))}
+            </div>
+            <Quote
+              className={styles.quote}
+              text={story.quote}
+            />
+            <div className={styles.paragraphs}>
+              {story.paragraphs.map((paragraph, i) => (
+                <p className={styles.paragraph} key={i}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+          {(story.paypal_link || story.gofundme_link)
+            && <div className={styles.donationLinks}>
+              {story.paypal_link && <ArrowLink href={story.paypal_link} linkText={`Join ${story.first_name}'s PayPal Campaign`}/>}
+              {story.gofundme_link && <ArrowLink href={story.gofundme_link} linkText={`Help ${story.first_name} on GoFundMe`}/>}
+            </div>
+          }
+          <ShareLinks className={styles.shareLinks}/>
+        </StoryLayout.Content>
+      </StoryLayout>
     </AppLayout>
   );
 };
