@@ -22,7 +22,8 @@ export const BlogEntryCard = ({ data }) => {
         <source media="(min-width: 428px)" srcSet={image_tablet}/>
         <img className={styles.image} src={image_mobile} alt={''}/>
       </picture>
-      <p className={styles.date}>{date}</p>
+      {/* TODO: remove conditional after setting up story card */}
+      {date && <p className={styles.date}>{date}</p>}
       <h2 className={styles.heading}>
         {heading}
         <span className={styles.arrow}>➞</span>
@@ -34,7 +35,7 @@ export const BlogEntryCard = ({ data }) => {
 BlogEntryCard.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
+    date: PropTypes.string,
     heading: PropTypes.string.isRequired,
     image_tablet: PropTypes.string.isRequired,
     image_tablet_webp: PropTypes.string,
