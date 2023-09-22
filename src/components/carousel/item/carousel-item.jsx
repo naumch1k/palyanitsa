@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const BlogCarouselItem = ({ children }) => {
+export const CarouselItem = ({ children }) => {
   return (
     <li className="keen-slider__slide">
       {children}
@@ -8,6 +8,6 @@ export const BlogCarouselItem = ({ children }) => {
   );
 };
 
-BlogCarouselItem.propTypes = {
+CarouselItem.propTypes = {
   children: PropTypes.node.isRequired,
 };

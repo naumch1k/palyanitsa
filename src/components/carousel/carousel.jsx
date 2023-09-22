@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import { SliderArrowButton } from '../ui/slider-arrow-button';
 import { SliderDots } from '../ui/slider-dots/slider-dots';
-import useBlogCarousel from '../../hooks/use-blog-carousel';
-import styles from './blog-carousel.module.scss';
+import useCarousel from '../../hooks/use-carousel';
+import styles from './carousel.module.scss';
 
-export const BlogCarousel = ({ children }) => {
+export const Carousel = ({ numberOfCenteredSlides = 2, children }) => {
   const {
     sliderRef,
     instanceRef,
     currentSlide,
     loaded,
-  } = useBlogCarousel({
-    numberOfCenteredSlides: 2,
+  } = useCarousel({
+    numberOfCenteredSlides: numberOfCenteredSlides,
     slideSpacing: 20,
   });
 
@@ -55,6 +55,7 @@ export const BlogCarousel = ({ children }) => {
   );
 };
 
-BlogCarousel.propTypes = {
+Carousel.propTypes = {
+  numberOfCenteredSlides: PropTypes.number,
   children: PropTypes.node,
 };

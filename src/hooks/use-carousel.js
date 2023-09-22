@@ -33,7 +33,7 @@ const calculateSlidesPerView = (screenInnerWidth, maxContentWidth, centeredSlide
   return centeredSlides + moreSlidesCanFit;
 };
 
-function useBlogCarousel({ numberOfCenteredSlides = 2, slideSpacing = 20 }) {
+function useCarousel({ numberOfCenteredSlides, slideSpacing = 20 }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [slidesOrigin, setSlidesOrigin] = useState(defaultCarouselSettings.slidesOrigin);
   const [slidesPerView, setSlidesPerView] = useState(defaultCarouselSettings.slidesPerView);
@@ -108,4 +108,4 @@ function useBlogCarousel({ numberOfCenteredSlides = 2, slideSpacing = 20 }) {
   };
 }
 
-export default useBlogCarousel;
+export default useCarousel;
