@@ -41,7 +41,7 @@ export const aboutData = {
   ],
   quotes: [
     {
-      text: 'I met amazing, very different people that I would not have known about under normal conditions, who gain and share experiences, unite in this project for common goals and change each other\'s lives.',
+      text: 'I have met amazing and diverse individuals through this project who share experiences, unite for common goals, and transform each other\'s lives in unexpected ways.',
       author: 'Nazar Pauk, Palianytsia',
     },
     {
@@ -49,35 +49,47 @@ export const aboutData = {
       author: 'Dmytro Palii, Blizzard Entertainment',
     },
     {
-      text: 'Being a part of this project is an incredible honor. It allows me not only to expand my programming expertise, but also collaborate with talented individuals, and gain hands-on experience in solving real-world problems.',
+      text: 'Being a part of this project is an incredible honor. It allows me to expand my programming expertise, collaborate with talented individuals, and gain hands-on experience in solving real-world problems.',
       author: 'Anna Barbon, Palianytsia',
     },
     {
-      text: 'Through lines of code and pixels brought to life, this project sculpted not only worlds within screens but also reshaped the contours of my own aspirations and ingenuity.',
+      text: 'Through lines of code and pixels brought to life, this project sculpted worlds within screens and reshaped the contours of my aspirations and ingenuity.',
       author: 'Vlad Kamyshenko, Palianytsia',
+    },
+    {
+      text: 'Joining the Palianytsia Foundation changed my life forever. It has helped me understand what I truly want to do in life. Being a part of this team is incredibly motivating. I am driven to work hard, continue learning, reach new heights, and fulfill my dreams. Nothing can compare to the happiness I feel as a member of the Palianytsia Foundation team!',
+      author: 'Artem Chukarin, Palianytsia',
     },
     {
       text: 'I feel a strong sense of pride seeing so many young minds come together; empowered by creative expression to accomplish their goals, and help paint a better world.',
       author: 'Jean Romero, Proletariat Inc',
     },
     {
-      text: 'This project has several positive influences on me. It boosts my motivation and passion for the work, leading to a greater sense of fulfillment and satisfaction. Additionally, the project provides opportunities for skill development and learning, helping me grow both personally and professionally.',
+      text: 'This project has a positive impact on me, boosting my motivation, passion, and sense of fulfillment. It also provides opportunities for personal and professional growth through skill development and learning.',
       author: 'Sergij Proskurnin, Palianytsia',
+    },
+    {
+      text: 'This project has been a tremendous growth opportunity for me. It allowed me to hone my skills and learn new management strategies. Witnessing our team collaborate to craft captivating gaming realms filled with fantastic narratives inspires me daily. I\'m grateful for the opportunity to lead this project and be a part of such a talented team!',
+      author: 'Mariia Ivanchenko, Palianytsia',
     },
     {
       text: 'This project has truly fueled my drive to further develop my abilities in 3D modeling and drawing. I feel a deep sense of gratitude for the opportunity to learn and collaborate with the art department, and it\'s inspiring me to keep pushing my creative boundaries.',
       author: 'Ivan Tsyvinskiy, Palianytsia',
     },
     {
-      text: 'Palianytsia Game Dev Studio offers a unique opportunity for young developers to learn new skills and improve their talents. It has been an honor mentoring these dedicated students as they learn about the tech industry and develop their abilities.',
+      text: 'Palianytsia Foundation offers a unique opportunity for young developers to learn new skills and improve their talents. It has been an honor mentoring these dedicated students as they learn about the tech industry and develop their abilities.',
       author: 'Becca Gray, Blizzard Entertainment',
     },
     {
-      text: 'This project gives me a chance to grow, learn, and hone my skills. Each challenge encountered is an invitation to transcend my own limits, push the boundaries of what I thought possible, and discover new dimensions of my artistic prowess.',
-      author: 'Vasylyna Tsyvinska, Palianytsia',
+      text: 'This project profoundly impacted me, highlighting the importance of teamwork. Through collaboration, we achieved more than we could ever have individually. Challenges became a chance to grow, fostering a lasting passion for learning. This experience completely reshaped me, igniting a desire for team projects and personal growth.',
+      author: 'Nazarii Kozachenko, Palianytsia',
     },
     {
-      text: 'The project had a significant impact on me. It provided me with a clear vision of my future and brought about positive changes in various aspects of my life. One notable example is the enhancement of my discipline and planning abilities. This project also played a pivotal role in channeling my knowledge and skills toward the right path, offering a sense of structure, reliability, and a boost in self-confidence.',
+      text: 'This project has been a big adventure that changed my life in ways I never thought of. I met fantastic people, learned new things, and found a passion that will serve me well in the future. I grew as a team member and individual. This experience has given me a sense of fulfillment and purpose, which brings me happiness.',
+      author: 'Sofiia Kryzhanovska, Palianytsia',
+    },
+    {
+      text: 'This project gave me a clear vision of my future and positively changed various aspects of my life. One notable example is the enhancement of my discipline and planning abilities. This project also played a pivotal role in channeling my knowledge and skills toward the right path, offering a sense of structure, reliability, and a boost in self-confidence.',
       author: 'Platon Todorashko, Palianytsia',
     },
     {
@@ -85,11 +97,15 @@ export const aboutData = {
       author: 'Christopher Chacko, Proletariat Inc.',
     },
     {
+      text: 'This project gives me a chance to grow, learn, and hone my skills. Each challenge encountered is an invitation to transcend my own limits, push the boundaries of what I thought possible, and discover new dimensions of my artistic prowess.',
+      author: 'Vasylyna Tsyvinska, Palianytsia',
+    },
+    {
       text: 'The effects of this project on me are manifold. It elevates my motivation and work enthusiasm, culminating in an increased sense of contentment and gratification. Furthermore, the project presents avenues for skill enhancement and education, fostering growth in both my personal and professional spheres.',
       author: 'Yaroslav Zarutskyi, Palianytsia',
     },
     {
-      text: 'This project has introduced me to awesome people and taught me so much. It\'s given me more confidence and made life much more fun. Following my passion not only helps me succeed but also makes my life much brighter.',
+      text: 'This project has introduced me to incredible people and taught me so much. It\'s given me more confidence and made my day-to-day life much more fun. Following my passion not only brings success but also brightens my life.',
       author: 'Daria Zhygyr, Palianytsia',
     },
   ]
