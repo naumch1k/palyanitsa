@@ -1,0 +1,20 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+@use "../../shared/styles/mixins/text.scss" as text;
+
+.root {
+  @include text.text;
+  @include text.text-medium;
+
+  max-width: 800px;
+  margin: 0 16px 40px;
+
+  @media (min-width: breakpoints.$mobile) { margin: 0 48px 40px; }
+
+  @media (min-width: breakpoints.$tablet-portrait) { margin: 0 0 70px; }
+
+  @media (min-width: breakpoints.$tablet-landscape) { margin: 0 0 70px 48px; }
+
+  @media (min-width: breakpoints.$desktop) { margin-left: calc((100% - 1170px) / 2); }
+
+  @media (min-width: breakpoints.$large-desktop) { margin-left: calc((100% - 1280px) / 2); }
+}

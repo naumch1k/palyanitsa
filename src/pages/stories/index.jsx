@@ -2,6 +2,7 @@ import { AppLayout } from '../../components/app-layout';
 import SEO from '../../components/seo';
 import { PageTitle } from '../../components/page-title';
 import BlogLayout from '../../components/blog-layout';
+import { StoriesIntro } from '../../components/stories-intro';
 import Carousel from '../../components/carousel';
 import { BlogEntryCard } from '../../components/blog-entry-card';
 
@@ -15,6 +16,7 @@ const Stories = () => {
         <BlogLayout.Title>
           <PageTitle text="Stories"/>
         </BlogLayout.Title>
+        <StoriesIntro/>
         <Carousel numberOfCenteredSlides={3}>
           {data.map((item, i) => (
             <Carousel.Item key={i}>
