@@ -4,7 +4,7 @@ import { PageTitle } from '../../components/page-title';
 import BlogLayout from '../../components/blog-layout';
 import { StoriesIntro } from '../../components/stories-intro';
 import Carousel from '../../components/carousel';
-import { BlogEntryCard } from '../../components/blog-entry-card';
+import { StoryCard } from '../../components/story-card/story-card';
 
 import data from './mock-data.json';
 
@@ -20,7 +20,7 @@ const Stories = () => {
         <Carousel numberOfCenteredSlides={3}>
           {data.map((item, i) => (
             <Carousel.Item key={i}>
-              <BlogEntryCard data={item}/>
+              <StoryCard data={item}/>
             </Carousel.Item>
           ))}
         </Carousel>

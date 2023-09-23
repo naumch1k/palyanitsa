@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import styles from './blog-entry-card.module.scss';
+import styles from './story-card.module.scss';
 
-export const BlogEntryCard = ({ data }) => {
+export const StoryCard = ({ data }) => {
   const {
     id,
-    date,
     heading,
     image_tablet,
     image_tablet_webp,
@@ -22,7 +21,6 @@ export const BlogEntryCard = ({ data }) => {
         <source media="(min-width: 428px)" srcSet={image_tablet}/>
         <img className={styles.image} src={image_mobile} alt={''}/>
       </picture>
-      <p className={styles.date}>{date}</p>
       <h2 className={styles.heading}>
         {heading}
         <span className={styles.arrow}>➞</span>
@@ -31,10 +29,9 @@ export const BlogEntryCard = ({ data }) => {
   );
 };
 
-BlogEntryCard.propTypes = {
+StoryCard.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    date: PropTypes.string,
     heading: PropTypes.string.isRequired,
     image_tablet: PropTypes.string.isRequired,
     image_tablet_webp: PropTypes.string,
