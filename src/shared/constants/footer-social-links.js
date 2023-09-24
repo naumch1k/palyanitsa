@@ -8,8 +8,8 @@ const footerSocialLinks = [
     href: 'https://www.youtube.com/@p-foundation',
   },
   {
-    text: 'Venmo',
-    href: 'https://account.venmo.com/u/p-foundation',
+    text: 'Facebook',
+    href: 'https://www.facebook.com/PalianytsiaFoundation',
   },
   {
     text: 'Buy Me a Coffee',
