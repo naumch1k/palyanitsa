@@ -4,7 +4,7 @@ import styles from './contact-form.module.scss';
 import { TextInput } from '../ui/text-input';
 import { TextArea } from '../ui/text-area';
 import { Button } from '../ui/button/button';
-import useFormWithValidation from '../../hooks/useFormWithValidation';
+import useFormWithValidation from '../../hooks/use-form-with-validation';
 import emailjsConfig from '../../shared/constants/emailjs-config';
 import CustomValidationMessages from '../../shared/constants/custom-validation-messages';
 export const ContactForm = () => {
