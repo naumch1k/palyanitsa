@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ArrowLink } from '../ui/arrow-link';
+import { ArrowButton } from '../ui/arrow-button';
 import styles from './donations-card.module.scss';
 
 export const DonationsCard = ({ data }) => {
@@ -30,9 +30,12 @@ export const DonationsCard = ({ data }) => {
           ))
         )}
         {link && (
-          <ArrowLink
+          <ArrowButton
+            isLink
             href={link}
-            linkText={linkText}
+            text={linkText}
+            target="_blank"
+            rel="noopener noreferrer"
           />
         )}
       </div>

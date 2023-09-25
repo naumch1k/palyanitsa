@@ -4,7 +4,7 @@ import SEO from '../../components/seo';
 import { PageTitle } from '../../components/page-title';
 import { PageSubtitle } from '../../components/page-subtitle';
 import { Quote } from '../../components/quote';
-import { ArrowLink } from '../../components/ui/arrow-link';
+import { ArrowButton } from '../../components/ui/arrow-button';
 import { ShareLinks } from '../../components/share-links';
 import StoryLayout from '../../components/story-layout';
 import styles from './story.module.scss';
@@ -55,8 +55,24 @@ const Story = () => {
           </div>
           {(story.paypal_link || story.gofundme_link)
             && <div className={styles.donationLinks}>
-              {story.paypal_link && <ArrowLink href={story.paypal_link} linkText={`Join ${story.first_name}'s PayPal Campaign`}/>}
-              {story.gofundme_link && <ArrowLink href={story.gofundme_link} linkText={`Help ${story.first_name} on GoFundMe`}/>}
+              {story.paypal_link && (
+                <ArrowButton
+                  isLink
+                  href={story.paypal_link}
+                  text={`Join ${story.first_name}'s PayPal Campaign`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              )}
+              {story.gofundme_link && (
+                <ArrowButton
+                  isLink
+                  href={story.gofundme_link}
+                  text={`Help ${story.first_name} on GoFundMe`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              )}
             </div>
           }
           <ShareLinks className={styles.shareLinks}/>

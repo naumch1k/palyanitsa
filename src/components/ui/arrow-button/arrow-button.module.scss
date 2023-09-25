@@ -2,15 +2,23 @@
 @use "../../../shared/styles/mixins/headline.scss" as headline;
 
 .link {
-  @include headline.headline;
-  @include headline.headline-small;
-
   display: flex;
   max-width: max-content;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: unset;
   color: var(--color-text-secondary);
+  cursor: pointer;
+  gap: 10px;
   outline: none;
   text-decoration: none;
   transition: var(--common-transition);
+}
+
+.text {
+  @include headline.headline;
+  @include headline.headline-small;
 }
 
 .arrows {
@@ -19,19 +27,22 @@
   overflow: hidden;
   width: 24px;
   height: 24px;
-  margin-left: 10px;
+  align-items: center;
 }
 
-.link.left .arrows {
-  margin-right: 10px;
-  margin-left: 0;
-  transform: rotate(180deg);
+.link.left {
+  flex-direction: row-reverse;
+
+  & .arrows {
+    transform: scale(-1, 1);
+  }
 }
 
 .arrow {
+  @include headline.headline;
+  @include headline.headline-small;
+
   position: absolute;
-  font-size: inherit;
-  line-height: inherit;
   transition: transform .3s ease;
 
   &:nth-child(2) { transform: translate(-40px); }

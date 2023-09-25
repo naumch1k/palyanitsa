@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ArrowLink } from '../ui/arrow-link';
+import { ArrowButton } from '../ui/arrow-button';
 import styles from './ways-to-help-card.module.scss';
 
 export const WaysToHelpCard = ({ data }) => {
@@ -28,10 +28,13 @@ export const WaysToHelpCard = ({ data }) => {
         ))
       )}
       {link && (
-        <ArrowLink
+        <ArrowButton
           className={styles.link}
+          isLink
           href={link}
-          linkText={linkText}
+          text={linkText}
+          target="_blank"
+          rel="noopener noreferrer"
         />
       )}
     </div>
