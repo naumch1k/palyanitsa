@@ -13,7 +13,7 @@ const footerSocialLinks = [
   },
   {
     text: 'Buy Me a Coffee',
-    href: 'https://www.buymeacoffee.com/pfoundation',
+    href: 'https://www.buymeacoffee.com/pfoundation/posts',
   },
 ];
 
