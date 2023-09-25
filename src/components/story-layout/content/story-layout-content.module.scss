@@ -20,7 +20,7 @@
       "donationLinks body   "
       "shareLinks    body   "
       /400px         1fr;
-    grid-template-rows: min-content min-content 1fr;
+    grid-template-rows: min-content min-content min-content 1fr;
   }
 
   @media (min-width: breakpoints.$desktop) { padding-bottom: 100px; }
