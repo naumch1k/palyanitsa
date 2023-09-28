@@ -1,9 +1,28 @@
+import GoFundMeQRCode from '../images/gofundme-qr-code.png';
+import GoFundMeQRCodeWebp from '../images/gofundme-qr-code.webp';
 import PayPalQRCode from '../images/paypal-qr-code.png';
 import PayPalQRCodeWebp from '../images/paypal-qr-code.webp';
 import VenmoQRCode from '../images/venmo-qr-code.png';
 import VenmoQRCodeWebp from '../images/venmo-qr-code.webp';
 
 const donationPlatforms = [
+  {
+    name: 'GoFundMe',
+    note: '2.9% + $0.30 per transaction',
+    description: [
+      `Choose GoFundMe to make your donation and experience the power
+      of community-driven giving. Unlike other platforms, GoFundMe is designed
+      specifically for supporting charitable causes, making it a go-to choice
+      for many donors. Rigorous policies for verifying fundraisers
+      and protecting supporter interests ensure full transparency
+      in how your donations are utilized.`
+    ],
+    full_description: [],
+    link: 'https://gofund.me/f8a577d7',
+    linkText: 'Continue to GoFundMe',
+    qrCode: GoFundMeQRCode,
+    qrCodeWebp: GoFundMeQRCodeWebp,
+  },
   {
     name: 'PayPal',
     note: '3.49% + $0.49 per transaction',
@@ -29,7 +48,7 @@ const donationPlatforms = [
       supports our mission.`
     ],
     full_description: [],
-    link: 'https://www.venmo.com/u/pfoundation',
+    link: 'https://www.venmo.com/u/p-foundation',
     linkText: 'Continue to Venmo',
     qrCode: VenmoQRCode,
     qrCodeWebp: VenmoQRCodeWebp,
