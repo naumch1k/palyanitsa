@@ -19,6 +19,7 @@ import { callToActionData } from './assets/homepage-call-to-action/mock-data';
 import { partnersData } from './assets/homepage-partners/mock-data';
 
 import team from './assets/homepage-team/mock-data.json';
+import donationPlatforms from '../../shared/constants/donation-platforms';
 
 const Home = () => {
   return (
@@ -70,7 +71,7 @@ const Home = () => {
           headlineImages={donationsData.headline_images}
         >
           <AccordionList type="donate">
-            {donationsData.donation_platforms.map(platform => (
+            {donationPlatforms.map(platform => (
               <AccordionList.Item key={platform.name} heading={`Donate with ${platform.name}`}>
                 <DonationsCard data={platform}/>
               </AccordionList.Item>

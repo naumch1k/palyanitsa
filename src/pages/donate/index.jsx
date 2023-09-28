@@ -6,7 +6,8 @@ import AccordionList from '../../components/accordion-list';
 import { WaysToHelpCard } from '../../components/ways-to-help-card';
 import { WaysToHelpMessage } from '../../components/ways-to-help-message/ways-to-help-message';
 
-import { donationsData } from '../home/assets/homepage-donations/mock-data';
+import donationPlatforms from '../../shared/constants/donation-platforms';
+import otherWaysToHelp from '../../shared/constants/other-ways-to-help';
 
 const Donate = () => {
   return (
@@ -19,7 +20,7 @@ const Donate = () => {
         <WaysToHelpLayout.Content>
           <WaysToHelpLayout.Section title="Support financially">
             <AccordionList type="ways-to-help">
-              {donationsData.donation_platforms.map(platform => (
+              {donationPlatforms.map(platform => (
                 <AccordionList.Item key={platform.name} heading={`Donate with ${platform.name}`} note={platform.note}>
                   <WaysToHelpCard data={platform}/>
                 </AccordionList.Item>
@@ -28,7 +29,7 @@ const Donate = () => {
           </WaysToHelpLayout.Section>
           <WaysToHelpLayout.Section title="More ways to help">
             <AccordionList type="ways-to-help">
-              {donationsData.other.map(item => (
+              {otherWaysToHelp.map(item => (
                 <AccordionList.Item key={item.name} heading={item.name}>
                   <WaysToHelpCard data={item}/>
                 </AccordionList.Item>
