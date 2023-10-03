@@ -16,3 +16,16 @@
 
 .arrowLeft { left: -55px; }
 .arrowRight { right: -55px; }
+
+.progressBar {
+  margin-top: 40px;
+
+  @media (min-width: breakpoints.$mobile) {
+    max-width: 60%;
+    margin: 40px auto 0;
+  }
+
+  @media (min-width: breakpoints.$tablet-landscape) {
+    margin: 20px auto 0;
+  }
+}

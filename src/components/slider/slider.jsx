@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useKeenSlider } from 'keen-slider/react';
-import styles from './slider.module.scss';
 import { SliderArrowButton } from '../ui/slider-arrow-button';
-import { SliderDots } from '../ui/slider-dots';
+import { ProgressBar } from '../ui/progress-bar/progress-bar';
+import useProgressBar from '../../hooks/use-progress-bar';
+import styles from './slider.module.scss';
 
 export const Slider = ({
   darkTheme = false,
@@ -25,9 +26,10 @@ export const Slider = ({
     },
   });
 
+  const completedPercentage = useProgressBar(children.length, currentSlide);
+
   const handleLeftArrowClick = evt => evt.stopPropagation() || instanceRef.current?.prev();
   const handleRightArrowClick = evt => evt.stopPropagation() || instanceRef.current?.next();
-  const handleSliderDotClick = i => instanceRef.current?.moveToIdx(i);
 
   return (
     <div className={styles.wrapper}>
@@ -56,11 +58,10 @@ export const Slider = ({
         </>
       )}
       {loaded && instanceRef.current && (
-        <SliderDots
+        <ProgressBar
           darkTheme={darkTheme}
-          count={children.length}
-          currentSlide={currentSlide}
-          onSliderDotClick={handleSliderDotClick}
+          className={styles.progressBar}
+          completed={completedPercentage}
         />
       )}
     </div>
