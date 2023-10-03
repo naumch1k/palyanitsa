@@ -1,7 +1,6 @@
 @use "../../../shared/breakpoints.scss" as breakpoints;
 
 .root {
-  display: none;
   padding: 0;
   border: 0;
   background-color: unset;
@@ -15,8 +14,6 @@
     cursor: auto;
     opacity: .3;
   }
-
-  @media (min-width: breakpoints.$mobile) { display: flex; }
 
   @media (min-width: breakpoints.$desktop) {
     &:hover:not(:disabled) { opacity: .7; }

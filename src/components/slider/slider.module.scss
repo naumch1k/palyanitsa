@@ -1,3 +1,5 @@
+@use "../../shared/breakpoints.scss" as breakpoints;
+
 .wrapper {
   position: relative;
   max-width: 100%;
@@ -11,7 +13,10 @@
 .arrow {
   position: absolute;
   top: 50%;
+  display: none;
   transform: translateY(-50%);
+
+  @media (min-width: breakpoints.$mobile) { display: flex; }
 }
 
 .arrowLeft { left: -55px; }
