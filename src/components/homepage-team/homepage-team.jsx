@@ -66,7 +66,7 @@ HomepageTeam.propTypes = {
   team: PropTypes.arrayOf(
     PropTypes.shape({
       first_name: PropTypes.string.isRequired,
-      last_name: PropTypes.string.isRequired,
+      last_name: PropTypes.string,
       roles: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
       image_large: PropTypes.string.isRequired,
       image_large_webp: PropTypes.string,

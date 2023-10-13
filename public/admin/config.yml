@@ -93,7 +93,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string", hint: "Format as: firstName-lastName"}
       - {label: "First Name", name: "first_name", widget: "string"}
-      - {label: "Last Name", name: "last_name", widget: "string"}
+      - {label: "Last Name", name: "last_name", widget: "string", required: false}
       - label: "Roles"
         name: "roles"
         widget: "select"

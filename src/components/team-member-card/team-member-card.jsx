@@ -27,7 +27,7 @@ export const TeamMemberCard = ({ data }) => {
         <h3 className={styles.name}>
           {first_name}{' '}
           <span className={styles.nonBreakable}>
-            {last_name}
+            {last_name && last_name}
             {linkedin_link
             && <a
               href={linkedin_link}
@@ -50,7 +50,7 @@ export const TeamMemberCard = ({ data }) => {
 TeamMemberCard.propTypes = {
   data: PropTypes.shape({
     first_name: PropTypes.string.isRequired,
-    last_name: PropTypes.string.isRequired,
+    last_name: PropTypes.string,
     roles: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     image_large: PropTypes.string.isRequired,
     image_large_webp: PropTypes.string,
