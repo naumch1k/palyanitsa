@@ -101,10 +101,6 @@ export const aboutData = {
       author: 'Vasylyna Tsyvinska, Palianytsia',
     },
     {
-      text: 'The effects of this project on me are manifold. It elevates my motivation and work enthusiasm, culminating in an increased sense of contentment and gratification. Furthermore, the project presents avenues for skill enhancement and education, fostering growth in both my personal and professional spheres.',
-      author: 'Yaroslav Zarutskyi, Palianytsia',
-    },
-    {
       text: 'This project has introduced me to incredible people and taught me so much. It\'s given me more confidence and made my day-to-day life much more fun. Following my passion not only brings success but also brightens my life.',
       author: 'Daria Zhygyr, Palianytsia',
     },
