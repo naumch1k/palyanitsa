@@ -122,13 +122,14 @@ const processBlogDirectory = () => {
         const metadataIndices = lines.reduce(getMetadataIndices, []);
         const metadata = parseMetadata({ lines, metadataIndices });
         const content = parseContent({ lines, metadataIndices });
-        const publishedDate = formatDate(metadata.date);
+        const formattedDate = formatDate(metadata.date);
         const id = metadata.heading.replace(/ /g, '-').replace(/[^a-zA-Z0-9-]+/g, '').toLowerCase();
 
         item = {
           id,
           heading: metadata.heading,
-          date: publishedDate,
+          date: metadata.date,
+          formatted_date: formattedDate,
           og_image: metadata.og_image,
           image_desktop: metadata.image_desktop,
           image_desktop_webp: metadata.image_desktop_webp,
@@ -141,8 +142,10 @@ const processBlogDirectory = () => {
 
         blog.push(item);
 
+        const blogSortedByDate = blog.sort((a, b) => new Date(b.date) - new Date(a.date));
+
         if (blog.length === files.length) {
-          let data = JSON.stringify(blog);
+          let data = JSON.stringify(blogSortedByDate);
           fs.writeFileSync('src/pages/blog/mock-data.json', data);
         };
       });

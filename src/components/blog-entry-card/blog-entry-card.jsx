@@ -5,7 +5,7 @@ import styles from './blog-entry-card.module.scss';
 export const BlogEntryCard = ({ data }) => {
   const {
     id,
-    date,
+    formatted_date,
     heading,
     image_desktop,
     image_desktop_webp,
@@ -26,7 +26,7 @@ export const BlogEntryCard = ({ data }) => {
         <source media="(min-width: 428px)" srcSet={image_tablet}/>
         <img className={styles.image} src={image_mobile} alt={''}/>
       </picture>
-      <p className={styles.date}>{date}</p>
+      <p className={styles.date}>{formatted_date}</p>
       <h2 className={styles.heading}>
         {heading}
         <span className={styles.arrow}>➞</span>
@@ -38,7 +38,7 @@ export const BlogEntryCard = ({ data }) => {
 BlogEntryCard.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    date: PropTypes.string,
+    formatted_date: PropTypes.string,
     heading: PropTypes.string.isRequired,
     image_desktop: PropTypes.string.isRequired,
     image_desktop_webp: PropTypes.string,
