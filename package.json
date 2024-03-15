@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "3.11.0",
-    "gh-pages": "^6.0.0",
     "keen-slider": "6.8.6",
     "react": "18.2.0",
     "react-collapsed": "4.0.2",
@@ -22,9 +21,7 @@
     "build": "node public/main.js && react-scripts build",
     "lint:js": "npx eslint src/**/*.js src/**/*.jsx --fix",
     "lint:scss": "stylelint \"src/**/*.css\" --fix and stylelint \"src/**/*.scss\" --fix",
-    "precommit": "npm run lint:js && npm run lint:scss",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "precommit": "npm run lint:js && npm run lint:scss"
   },
   "browserslist": {
     "production": [
